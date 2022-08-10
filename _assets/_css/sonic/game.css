@@ -1,0 +1,74 @@
+
+.home_screen {
+    z-index: 3;
+    position: relative;
+    height: 500px;
+    background-image: url(../../_img/sonic/home_screen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home_screen img {
+    width: 30VW;
+    cursor: pointer;
+    margin-bottom: 80px;
+    margin-right: 14vw;
+    animation: initialization 1.5s ease-in-out;
+}
+
+.gameover_screen {
+    z-index: 8;
+    position: relative;
+    height: 500px;
+    background-image: url(../../_img/sonic/background_game_over.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: initialization-gameover 2s ease-in-out;
+}
+
+.gameover_screen img {
+    width: 60%;   
+    animation: initialization 1.5s ease-in-out;
+}
+
+.sonic {
+    z-index: 4;
+    position: absolute;
+    left: 60px;
+    bottom: -35px;
+    width: 30%;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.island1 {
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    width: 25%;
+    margin-right: 2500px;
+}
+
+.island2 {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 25%;
+    margin-right: 1500px;
+}
+
+.island3 {
+    z-index: 1;
+    position: absolute;
+    right: -300;
+    bottom: -30px;
+    width: 25%;
+}

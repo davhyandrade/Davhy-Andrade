@@ -1,0 +1,165 @@
+@media screen and (max-width: 799px){
+
+    /*-----------<  Menu  >-----------*/
+
+    .menu {
+        align-items: center;
+    }
+
+    .logo_menu {
+        margin-top: 0;
+    }
+
+    .logo_menu img {
+        width: 60px;
+    }
+
+    #nome {
+        font-size: 25px;
+        display: flex;
+    }
+
+    .btn_menu {
+        display: none;
+    }
+
+    .btn-menu-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn-menu-mobile input {
+        width: 35px;
+        margin: 3px 0;
+    }
+
+    .menu-mobile {
+        width: 100vw;
+        height: 90vh;
+        background: #0d0d0d;
+        transition: 1s;
+        background-origin: content-box;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 99;
+        top: 150px;
+    }
+    
+    .menu-mobile > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-mobile a {
+        color: white;
+        font-size: 25px;
+    }
+
+    .menu-mobile img {
+        width: 20px;
+        margin-left: 15px;
+    }
+    
+    .menu-mobile a:active {
+        color: #2494d6;
+    }
+    
+    .menu-mobile li {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .menu-mobile li::after {
+        content: '';
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0;
+        height: 2px;
+        width: 70vw;
+        background: linear-gradient(45deg, transparent, #212121, transparent);
+    }
+    
+    .menu-mobile li:nth-child(4) {
+        margin-bottom: 150px;
+    }
+    
+    .menu-mobile li:nth-child(4)::after {
+        content: none;
+    }
+
+    .dropdown-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-mobile  a {
+        margin-left: 100px;
+        padding: 35px 30vw;
+        background: linear-gradient(90deg, transparent, #242323, transparent);
+    }
+
+    .btn-top {
+        right: 5vw;
+        padding: 15px 15px;
+    }
+
+    .btn-top img {
+        width: 25px;
+    }
+
+    #landing-page-footer {
+        position: relative;
+        top: 30vh;
+        z-index: 10;
+    }
+
+    .btn-exit img {
+        width: 10vw;
+    }
+
+    .btn-exit {
+        width: 90vw;
+    }
+
+    .field-pop-up {
+        width: 75vw;
+        margin-bottom: 100px;
+    }
+
+    .field-pop-up img {
+        width: 60vw;
+    }
+
+    .field-pop-up > div {
+        height: 60%;
+    }
+
+    .field-pop-up p {
+        width: 55vw;
+        margin-bottom: 35px;
+    }
+
+    .field-pop-up h1::after {
+        width: 15vw;
+    }
+
+    /*-----------<  Menu  >-----------*/
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+
+    #nome {
+        display: none;
+    }
+
+    .btn_menu a {
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,14 @@
+h1, p {
+    cursor: default;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(../_img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover
+}

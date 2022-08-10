@@ -1,0 +1,158 @@
+@keyframes island_animation {
+
+    from {
+        right: -3000px;
+    }
+
+    to {
+        right: 100%;
+    }
+    
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 250px;
+    }
+
+    50% {
+        bottom: 250px;
+    }
+
+    60% {
+        bottom: 250px;
+    }
+    
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes initialization {
+
+    from {
+        opacity: 0%;
+        transform: scale(0) translateY(200px);
+    }
+
+    to {
+        opacity: 100%;
+        transform: scale(1) translateY(0px);
+    }
+
+}
+
+@keyframes initialization-gameover {
+
+    from {
+        opacity: 0%;
+        transform:translateX(80vw);
+        filter: blur(20px);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+
+}
+
+@keyframes btn-hide {
+    
+    from {
+        transform: translateY(15px);
+    }
+
+}
+
+@keyframes btn-mobile-linha3 {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
+@keyframes btn-mobile-desfazendo-linha3 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes btn-mobile-linha1 {
+    from {
+        transform: rotate(0);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+
+    to {
+        transform: rotate(-45deg);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+}
+
+@keyframes btn-mobile-desfazendo-linha1 {
+    from {
+        transform: rotate(-45deg);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+
+    to {
+        transform: rotate(0);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+}
+
+@keyframes btn-mobile-linha2 {
+    from {
+        transform: rotate(0);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+
+    to {
+        transform: rotate(45deg);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+}
+
+@keyframes btn-mobile-desfazendo-linha2 {
+    from {
+        transform: rotate(45deg);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+
+    to {
+        transform: rotate(0);
+        position: absolute;
+        right: 5vw;
+        top: 8.2vh;
+    }
+}
+

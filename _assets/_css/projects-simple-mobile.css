@@ -1,0 +1,39 @@
+@media screen and (max-width: 799px){
+    
+    .menu-simple > div {
+        justify-content: center;
+    }
+
+    .btn_container1 {   
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .header-tabs {
+        display: none;
+    }
+
+    .field-txt {
+        width: 100%;
+    }
+
+    .header-bar-disable {
+        display: none;
+    }
+
+    .header-bar {
+        height: auto;
+        margin-top: 60px;
+        width: 95%;
+    }
+
+    .header-bar h1 {
+        font-size: 8vw;
+    }
+
+}

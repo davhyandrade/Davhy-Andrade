@@ -1,0 +1,59 @@
+ footer {
+    margin-top: 30vh;
+}
+
+.footer_position {
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+}
+
+footer a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff75;
+}
+
+footer a:hover {
+    color: white;
+    transition: 1s;
+}
+
+footer p {
+    margin: 20px 0px;
+    font-size: 13px;
+    color: #ffffff75;
+}
+
+.btn_txt {
+    display: flex;
+    width: 450px;
+    justify-content: space-around;
+}
+
+.btn_rodape {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_rodape div {
+    width: 210px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_rodape input {
+    width: 30px;
+    background: #00000059;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.btn_rodape input:hover {
+    background: #282828;
+    transition: 1s;
+}
+

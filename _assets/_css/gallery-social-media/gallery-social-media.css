@@ -1,0 +1,176 @@
+
+.img-gallery:nth-child(2):hover::after {
+    content:  'Evento de Dj fictício';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -40px;
+}
+
+.img-gallery:nth-child(3):hover::after {
+    content:  'Aniversário de Criança';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(4):hover::after {
+    content:  'Evento de Música';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(5):hover::after {
+    content:  'Identidade Visual';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(6):hover::after {
+    content:  'Workshop';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(7):hover::after {
+    content:  'Palestra';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(7):hover::after {
+    content:  'Palestra';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(8):hover::after {
+    content:  'Evento de Música';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(9):hover::after {
+    content:  'Indentidade Visual';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(10):hover::after {
+    content:  'Social Media';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+div > .img-gallery:nth-child(1):hover::after {
+    content:  'Evento de Música';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}

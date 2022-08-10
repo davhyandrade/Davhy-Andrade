@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo do Sonic desenvolvido através do JavaScript">
+    <title>Davhy - Mini Game Sonic</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="_assets/_css/reset.css">
+    <link rel="stylesheet" href="_assets/_css/normalize.css">
+    <link rel="stylesheet" href="_assets/_css/animation.css">
+    <link rel="stylesheet" href="_assets/_css/menu.css">
+    <link rel="stylesheet" href="_assets/_css/footer.css">
+    <link rel="stylesheet" href="_assets/_css/menu-mobile.css">
+    <link rel="stylesheet" href="_assets/_css/footer-mobile.css">
+    <link rel="stylesheet" href="_assets/_css/sonic/sonic.css">
+    <link rel="stylesheet" href="_assets/_css/sonic/game.css">    
+    <link rel="stylesheet" href="_assets/_css/sonic/sonic-mobile.css">
+    <!--CSS-->
+    <!--JavaScript-->
+    <script src="_assets/_js/script.js" defer></script>
+    <script src="_assets/_js/button-top.js" defer></script>
+    <script src="_assets/_js/menu.js" defer></script>
+    <script src="_assets/_js/footer.js" defer></script>
+    <script src="_assets/_js/sonic/sonic.js" defer></script>
+    <script src="_assets/_js/sonic/pop-up-sonic.js" defer></script>
+    <script src="_assets/_js/pop-up.js" defer></script>
+    <script src="_assets/_js/pace.min.js"></script>
+    <!--JavaScript-->
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="_favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="_favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="_favicon/favicon.ico" type="image/x-icon">
+    <!--Favicon-->
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <!--Fonte-->
+</head>
+<body>
+
+    <audio autoplay loop src="_assets/_sounds/musica_sonic.mp3" id="background_music"></audio>
+    <audio src="_assets/_sounds/jump_sonic.mp3" id="jump_music"></audio>
+    <audio src="_assets/_sounds/gameover.mp3" id="gameover"></audio>
+    <audio src="_assets/_sounds/gameover_fala.mp3" id="gameover-fala"></audio>
+
+    <nav class="menu">
+        <div class="position_menu">
+            <div class="logo_menu">
+                <a href="index.html">
+                    <img src="_assets/_img/menu/logo.png" alt="logo">
+                </a>
+                <a id="nome">Davhy Andrade</a>
+                <div class="info">
+                    <img src="_assets/_img/menu/triangulo2.png" alt="Triângulo" class="triangulo1">
+                    <div>
+                        <div>
+                            <div>
+                                <p>Hey, my name is David de Andrade, Front-End Developer, to whom discover that my passion is writing code and developing solutions to help other people solve their problems</p>
+                                <a href="index.html">learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="btn_menu">
+                <a href="index.html">Home</a>
+                <li>
+                    <a>Projects</a>
+                    <ul>
+                        <li><a href="hospital.html">Hospital</a></li>
+                        <li><a href="pokedex.html">Pokédex</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Games</a>
+                    <ul>
+                        <li><a href="sonic.html">Sonic</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Design</a>
+                    <ul>
+                        <li><a href="gallery-social-media.html">Social Media</a></li>
+                        <li><a href="gallery-manipulacao.html">Manipulação de Imagens</a></li>
+                        <li><a href="gallery-esportivos.html">Esportivos</a></li>
+                    </ul>
+                </li>
+                <a id="contato">
+                    <img src="_assets/_img/menu/vetor_telefone.png" alt="Telefone" class="telefone1">
+                    <img src="_assets/_img/menu/vetor_telefone2.png" alt="Telefone" class="telefone2">
+                    <hr>
+                    Contact
+                </a>
+                <div class="contato">
+                    <img src="_assets/_img/menu/triangulo.png" alt="Triângulo" class="triangulo2">
+                    <div>
+                        <li>
+                            <input type="radio" class="rdb_tabs" id="tab1" name="tabs" checked>
+                            <label for="tab1" id="btn_whatsapp">
+                                <img src="_assets/_img/menu/vetor_whatsapp_contato2.png" alt="WhatsApp" class="btn_contato_white">
+                                <img src="_assets/_img/menu/vetor_whatsapp_contato.png" alt="WhatsApp" >
+                            </label>
+                            <div class="content_contato">
+                                <hr id="hr_whatsapp">
+                                <div>
+                                    <div>
+                                        <h1>WhatsApp</h1>
+                                        <div class="position_contato">
+                                            <div>
+                                                <img id="img_contato_whatsapp" src="_assets/_img/menu/whatsapp.png" alt="WhatsApp">
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <div class="mynumber">
+                                                        <p id="number"><span id="bluedark">+55</span> <span id="blue"> 11 </span>93464-3395</p>
+                                                        <img src="_assets/_img/menu/btn_copy.png" alt="Copiar" class="btn_copy" id="btn-copy1">
+                                                    </div>
+                                                    <hr>
+                                                    <a id="btn_message_link" href="https://api.whatsapp.com/send?phone=5511934643395">
+                                                        <input type="submit" value="Send Message" class="btn_message" >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" class="rdb_tabs" id="tab2" name="tabs">
+                            <label for="tab2" id="btn_instagram">
+                                <img src="_assets/_img/menu/vetor_instagram_contato2.png" alt="Instagram" class="btn_contato_white">
+                                <img src="_assets/_img/menu/vetor_instagram_contato.png" alt="Instagram">
+                            </label>
+                            <div class="content_contato" id="content_instagram"> 
+                                <hr id="hr_instagram">
+                                <div>
+                                    <div>
+                                        <h1>Instagram</h1>
+                                        <div class="position_contato">
+                                            <div>
+                                                <img id="img_contato_whatsapp" src="_assets/_img/menu/instagram.png" alt="WhatsApp">
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <div class="mynumber">
+                                                        <p id="insta"><span id="white">@</span> <span id="blue">_davhy</span></p>
+                                                    <img src="_assets/_img/menu/btn_copy.png" alt="Copiar" class="btn_copy" id="btn-copy2">
+                                                    </div>
+                                                    <hr>
+                                                    <a id="btn_message_link" href="https://www.instagram.com/_davhy/">
+                                                        <input type="submit" value="Open Link" class="btn_message" >
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" class="rdb_tabs" id="tab3" name="tabs">
+                            <label for="tab3" id="btn_email">
+                                <img src="_assets/_img/menu/vetor_email_contato2.png" alt="Email" class="btn_contato_white">
+                                <img src="_assets/_img/menu/vetor_email_contato.png" alt="Email">
+                            </label>
+                            <div class="content_contato" id="content_email">
+                                <hr id="hr_email">
+                                <div>
+                                    <div>
+                                        <h1>Email</h1>
+                                        <div class="position_contato">
+                                            <div>
+                                                <img id="img_contato_whatsapp" src="_assets/_img/menu/email.png" alt="Email">
+                                            </div>
+                                            <form action="mailto:davhydesign@gmail.com" method="post" enctype="text/plain">
+                                                <input id="btn_txt_nome" type="text" name="nome" placeholder="Your name">
+                                                <input id="btn_txt_email" type="text" name="email" placeholder="Email">
+                                                <hr>
+                                                <input id="btn_submit_email"  class="btn_message"  type="submit" value="Submit">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>  
+            <div class="btn-menu-mobile" >
+                <input type="image" src="_assets/_img/menu/btn_menu_mobile.png" alt="Botao Menu Mobile">
+                <input type="image" src="_assets/_img/menu/btn_menu_mobile.png" alt="Botao Menu Mobile">
+                <input type="image" src="_assets/_img/menu/btn_menu_mobile.png" alt="Botao Menu Mobile">
+            </div>
+        </div>
+        <div class="menu-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <ul>
+                    <li><a class="anchor-menu-mobile" >Projects<img src="_assets/_img/btn_games_closed.png" alt="Botao Fechado"></a></li>
+                    <ul class="dropdown-mobile">
+                        <li><a href="hospital.html">Hospital</a></li>
+                        <li><a href="pokedex.html">Pokédex</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><a class="anchor-menu-mobile" >Games<img src="_assets/_img/btn_games_closed.png" alt="Botao Fechado"></a></li>
+                    <ul class="dropdown-mobile">
+                        <li><a href="sonic.html">Sonic</a></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><a class="anchor-menu-mobile" >Design<img src="_assets/_img/btn_games_closed.png" alt="Botao Fechado"></a></li>
+                    <ul class="dropdown-mobile">
+                        <li><a href="gallery-social-media.html">SocialMedia</a></li>
+                        <li><a href="gallery-manipulacao.html">Manipulação</a></li>
+                        <li><a href="gallery-esportivos.html">Esportivos</a></li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+    </nav><!--Menu-->
+    
+    <section>
+
+        <div class="game"> 
+            
+            <div class="header-bar">
+                <div class="position_title">
+                    <div>
+                        <div class="open_tabs">
+                            <a class="txt_categoria" href="index.html">Home</a>
+                            <a class="txt_maiorque">></a>
+                            <a class="txt_categoria">Games</a>
+                            <a class="txt_maiorque">></a>
+                            <a class="txt_categoria">Sonic</a>
+                        </div>
+                        <h1>Sonic Headshot Adventure</h1>
+                    </div>
+                    <div class="header-tabs">
+                        <div>
+                            <a id="btn-games">Games</a>
+                            <img id="img-games" src="_assets/_img/btn_games_closed.png" alt="Botão Fechadou ou Aberto">
+                            <ul class="dropdown-games">
+                                <li>
+                                    <a href="sonic.html">Sonic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fullscreen_game">
+
+                <div class="game_board">
+                    <div class="home_screen">
+                        <img src="_assets/_img/sonic/btn_start.png" alt="Botão Start" class="start">
+                    </div>
+                    <div class="gameover_screen">
+                        <img src="_assets/_img/sonic/game_over.png" alt="Game Over">
+                    </div>
+                    <img src="_assets/_img/sonic/sonic_esperando.gif" alt="Sonic" class="sonic">
+                    <img src="_assets/_img/sonic/island1.png" alt="Ilha" class="island1">
+                    <img src="_assets/_img/sonic/island2.png" alt="Ilha" class="island2">
+                    <img src="_assets/_img/sonic/island3.png" alt="Ilha" class="island3">
+                </div>
+        
+                <div class="options_bar">
+                    <div>
+                        <div class="perfil_jogo">
+                            <img src="_assets/_img/sonic/sonic_perfil.png" alt="Sonic" class="sonic_perfil">
+                            <p>Sonic - Headshot Adventure</p>
+                        </div>
+                        <div class="btn_options_bar">
+                            <img src="_assets/_img/audio_pausado.png" alt="Botão Audio" class="audio" >
+                            <img src="_assets/_img/fullscreen.png" alt="Botão Tela Cheia" class="fullscreen">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="field-carrossel-sonic">
+                <img id="btn-voltar-carrossel-sonic" class="btn-carrossel-sonic" src="_assets/_img/btn_voltar.png" alt="Botao Voltar">
+                <img id="carrossel-sonic" src="_assets/_img/sonic/carrossel_sonic.png" alt="Carrossel Sonic">
+                <img id="btn-avancar-carrossel-sonic" class="btn-carrossel-sonic" src="_assets/_img/btn_avancar.png" alt="Botao Avançar">
+            </div> 
+
+            <div class="position_bar">
+                <div class="board1">
+                    <div>
+                        <h1>Sobre este jogo</h1>
+                        <hr>
+                        <p>Jogo desenvolvido com HTML, CSS e JavaScript ao qual foi trabalhado lógica de programação e sprites, com o objetivo apenas em agregar conhecimento e experiência em relação ao JavaScript. <br> <br> Baseado no clássico da Sega, franquia de aventura Sonic, com jogabilidade bem fiel só que com gráficos bem viajados em relação ao clássico.</p>
+                    </div>
+                </div>
+                <div class="board2">
+                    <div>
+                        <div class="board2_parte1">
+                            <div>
+                                <img src="_assets/_img/sonic/sonic.png" alt="Sonic">
+                                <p class="txt_sonic">Sonic foi criado como um ouriço, mas muitas vezes é confundido com um porco-espinho, animal que também usa seus espinhos como forma de proteção. <br> <br>A Sega queria um personagem capaz de girar uma bola para se adequar à jogabilidade do jogo e estava indecisa entre um tatu ou um ouriço.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board2_parte2_position">
+                        <div>
+                            <div>
+                                <div class="board2_parte2">
+                                    <p class="txt_titulo">TITLE:</p>
+                                    <p class="txt_nomes2">Sonic Headshot Adventure</p>
+                                </div>
+                                <div class="board2_parte2">
+                                    <p class="txt_titulo">GENRE:</p>
+                                    <p class="txt_nomes">Racing, Adventure</p>
+                                </div>
+                                <div class="board2_parte2">
+                                    <p class="txt_titulo">DEVELOPER:</p>
+                                    <p class="txt_nomes">Davhy Andrade</p>
+                                </div>
+                                <div class="board2_parte2">
+                                    <p class="txt_titulo">SERIES:</p>
+                                    <p class="txt_nomes">Sonic</p>
+                                </div>
+                                <div class="board2_parte2">
+                                    <p class="txt_titulo">RELEASE DATE:</p>
+                                    <p class="txt_nomes">07/05/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+        </div>
+
+    </section><!--Principal-->
+
+    <footer>
+        <div>
+            <div class="footer_position">
+                <div>
+                    <div class="btn_txt">
+                        <a href="index.html">Home</a>
+                        <a id="btn_footer_contact">Contact</a>
+                        <a href="mailto:davhydesign@gmail.com">Email</a>
+                        <a id="btn_footer_Home_screen">Home screen</a>
+                        <a href="">Reload</a>
+                    </div>
+                    <p>My Portfólio © 2022</p>
+                    <div class="btn_rodape">
+                        <div>
+                            <a href="https://www.deviantart.com/davhyzk"><input type="image" src="_assets/_img/footer/vetor_deviantart.png" alt="Deviant Art"></a>
+                            <a href="mailto:davhydesign@gmail.com"><input type="image" src="_assets/_img/footer/vetor_google.png" alt="Google"></a>
+                            <a href="https://github.com/Davhyandrade"><input type="image" src="_assets/_img/footer/vetor_github.png" alt="GitHub"></a>
+                            <a href="https://www.instagram.com/_davhy/"><input type="image" src="_assets/_img/footer/vetor_instagram.png" alt="Instagram"></a>
+                            <a href="https://api.whatsapp.com/send?phone=5511934643395"><input type="image" src="_assets/_img/footer/vetor_whatsapp.png" alt="WhatsApp"></a>
+                            <a href="https://www.behance.net/davhyandrade"><input type="image" src="_assets/_img/footer/vetor_behance.png" alt="Behance"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>2
+        </div>
+    </footer><!--Rodapé-->
+
+</body>
+</html>

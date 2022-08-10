@@ -1,0 +1,362 @@
+@media screen and (max-width: 799px){
+
+    /*-----------<  Landing Page  >-----------*/
+
+    .landing-page {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../../_img/home/background_mobile_landing_page.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .field-landing-page {
+        display: flex;
+        justify-content: center;
+        height: 25vh;
+    }
+
+    .field-landing-page > div {
+        width: 95%;
+    }
+
+    .field-landing-page p:nth-child(1) {
+        font-size: 4.3vw;
+    }
+
+    .field-landing-page p {
+        font-size: 5vw;
+    }
+
+    .field-landing-page h1 {
+        font-size: 8.5vw;
+    }
+
+    #btn-contato-landing-page {
+        font-size: 6vw;
+    }
+
+    .field-landing-page > div > a {
+        top: 30vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 75vw;
+    }
+
+    .btns-landing-page input {
+        width: 8vw;
+    }
+
+    .field-landing-page img {
+        display: none;
+    }
+
+    #landing-page-footer {
+        height: 165px;
+    }
+
+    .btns-landing-page::before {
+        width: 430px;
+    }
+
+    .btns-landing-page {
+        margin-top: -85px;
+    }
+
+    /*-----------<  Landing Page  >-----------*/
+
+    /*=================================================*/
+
+    /*-----------<  Container 1  >-----------*/
+
+    .container:nth-child(4) {
+        height: 1100px;
+    }
+
+    .position-section1 {
+        width: 100%;
+    }
+
+    .position-section1 > div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .position-section1 > div > img {
+        margin-bottom: 35px;
+    }
+
+    .position-section1 > div > div {
+        width: 100%;
+    }
+
+    .position-section1 > div > div > p:nth-child(1) {
+        font-size: 6.8vw;
+    }
+
+    .position-section1 > div > div > p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    /*-----------<  Container 1  >-----------*/
+
+    /*=================================================*/
+
+    /*-----------<  Container 2  >-----------*/
+
+    .container:nth-child(5) {
+        height: 1000px;
+    }
+
+    .position-section2 {
+        width: 100%;
+    }
+
+    .position-section2 > div:nth-child(2) {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
+
+    .position-section2 > div > div {
+        width: 100%;
+    }
+        
+    .position-section2 > div > div > p:nth-child(1) {
+        font-size: 4.1vw;
+    }
+
+    .position-section2 > div > div > p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    .position-section2 > div > img {
+        width: 85vw;
+        margin-top: 35px;
+    }
+
+    /*-----------<  Container 2  >-----------*/
+
+    /*=================================================*/
+
+    /*-----------<  Container 3  >-----------*/
+
+    .container:nth-child(6) {
+        height: 800px;
+    }
+
+    .header-tabs {
+        display: none;
+    }
+
+    .position-section3 {
+        width: 100%;
+    }
+
+    .item-projetos {
+        width: 85%;
+    }
+
+    .item-projetos > div > div {
+        width: 80%;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .item-projetos h1 {
+        font-size: 5.5vw;
+    }
+
+    .txt-info {
+        font-size: 4vw;
+        margin-bottom: 30px;
+    }
+
+    .position-section3 > h1 {
+        margin-left: 10vw;
+    }
+
+    .field-projetos {
+        margin-top: 25px;
+    }
+
+    /*-----------<  Container 3  >-----------*/
+
+    /*=================================================*/
+
+    /*-----------<  Container 4  >-----------*/
+
+    .container:nth-child(7) {
+        height: 800px;
+    }
+
+    .position-section4 {
+        width: 100%;
+    }
+
+    .field-servico {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .board-servico {
+        width: 75vw;
+        border-radius: 10px;
+    }
+
+    .board-servico:nth-child(1) {
+         margin-bottom: 15px;
+    }
+
+    .board-servico p {
+        font-size: 15px;
+    }
+
+    /*-----------<  Container 4  >-----------*/
+
+}
+
+
+@media screen and (width: 800px){
+
+    .landing-page {
+        height: 135vh;
+    }
+
+    .field-landing-page img {
+        display: none;
+    }
+
+    .field-landing-page h1 {
+        font-size: 7vw;
+    }
+
+    .field-landing-page p:nth-child(1) {
+        font-size: 3.3vw;
+    }
+
+    .field-landing-page p {
+        font-size: 4vw;
+    }
+
+    #btn-contato-landing-page {
+        font-size: 2.5vw;
+    }
+
+    .btns-landing-page input {
+        width: 5vw;
+    }
+
+    .position-section1 > div > div {
+        width: 60%;
+    }
+
+    .position-section1 > div > div > p:nth-child(1) {
+        font-size: 21px;
+    }
+
+    .position-section1 > div > img {
+        object-fit: cover;
+    }
+
+    .position-section2 > div > img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .header-tabs {
+        width: 65%;
+    }
+
+    #landing-page-footer {
+        top: 115vh;
+    }
+
+    #nome {
+        display: none;
+    }
+
+    .btn_menu a {
+        margin: 0;
+    }
+
+    .position-section1 {
+        width: 90%;
+    }
+
+    .position-section1 > div:nth-child(2) {
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .position-section2 {
+        width: 90%;
+    }
+
+    .position-section4 {
+        width: 90%;
+    }
+
+    .board-servico {
+        width: 40vw;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px){
+
+    .field-landing-page img {
+        width: 60%;
+    }
+
+    .btn_menu a {
+        margin: 0;
+    }
+
+    #nome {
+        display: none;
+    }
+
+    .position-section1 {
+        width: 90%;
+    }
+
+    .position-section1 > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .position-section2 {
+        width: 90%;
+    }
+
+    .item-projetos {
+        width: 100%;
+    }
+
+    .position-section4 {
+        width: 90%;
+    }
+
+    .board-servico {
+        width: 40vw;
+    }
+
+    #landing-page-footer {
+        top: 85vh;
+    }
+
+    .field-landing-page {
+        height: 60vh;
+    }
+
+}

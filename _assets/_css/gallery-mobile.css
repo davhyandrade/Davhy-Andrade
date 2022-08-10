@@ -1,0 +1,67 @@
+@media screen and (max-width: 799px){
+
+    .section {
+        width: 85%;
+    }
+
+    .header-tabs {
+        display: none;
+    }
+
+    .header-bar h1 {
+        font-size: 6vw;
+    }
+
+    .field-carrossel-image {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .carrossel-image {
+        width: 55%;
+    }
+
+    .carrossel-image img {
+        width: 100%;
+    }
+    
+    #btn-voltar-carrossel-gallery {
+        padding: 20% 4.7vw 20% 2vw;
+    }
+
+    #btn-avancar-carrossel-gallery {
+        padding: 20% 4.7vw 20% 2vw;
+    }
+
+    #option-bar-gallery {
+        display: none;
+    }
+
+    .field-txt {
+        display: none;
+    }
+
+    .img-gallery:nth-child(2) {
+        margin: 0.5vw 0;
+    }
+
+    .img-gallery {
+        width: 42vw;
+    }
+
+    .img-gallery > img {
+        width: 42vw;
+    }
+
+    .img-gallery {
+        margin: 0.5vw 0;
+    }
+
+    #primeira-imagem {
+        display: none;
+    }
+
+    #adicionar-imagem-mobile {
+        display: contents;
+    }
+}

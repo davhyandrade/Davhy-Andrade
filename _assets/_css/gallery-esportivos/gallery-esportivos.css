@@ -1,0 +1,206 @@
+.img-gallery:nth-child(9) {
+    width: 52.5vw;
+}
+
+.img-gallery:nth-child(9) > img {
+    width: 52.5vw;
+}
+
+.field-carrossel-tabelas {
+    border-radius: 5px;
+    height: 300px;
+    background: #28292c;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#carrossel-tabelas {
+    height: 300px;
+    width: 23%;
+    position: relative;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+}
+
+#carrossel-tabelas > div {
+    display: flex;
+    transition: 0.5s ease-out;
+}
+
+#carrossel-tabelas > div > img {
+    width: 100%;
+}
+
+.btn-carrossel-tabelas {
+    width: 40px;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#btn-voltar-carrossel-tabelas {
+    left: 10%;
+    padding: 130px  120px 130px  30px;
+    background: linear-gradient(90deg, #28292c,#28292c94, transparent);
+}
+
+#btn-avancar-carrossel-tabelas {
+    right: 10%;
+    padding: 130px  30px 130px  120px;
+    background: linear-gradient(270deg, #28292c,#28292c94, transparent);    
+}
+
+#btn-voltar-carrossel-tabelas:hover {
+    background: linear-gradient(90deg, black,rgba(0, 0, 0, 0.503), transparent);
+}
+
+#btn-avancar-carrossel-tabelas:hover {
+    background: linear-gradient(270deg, black,rgba(0, 0, 0, 0.503), transparent);
+}
+
+.img-gallery:nth-child(2):hover::after {
+    content:  'Campeão do campeonato de Pes Mobile';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -40px;
+}
+
+.img-gallery:nth-child(3):hover::after {
+    content:  'Banner do Jogo Destaque da Rodada';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(4):hover::after {
+    content:  'Banner do Jogo Destaque da Rodada';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(5):hover::after {
+    content:  'Banner do Jogo Destaque da Rodada';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(6):hover::after {
+    content:  'Campeão do campeonato de Pes Mobile';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(7):hover::after {
+    content:  'Post do campeonato de Pes Mobile';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(8):hover::after {
+    content:  'Semi-Final do Campeonato';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
+
+.img-gallery:nth-child(9):hover::after {
+    content:  'Comunicado da Atlética';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 52.5vw;
+    margin-top: -30px;
+}
+
+div > .img-gallery:nth-child(1):hover::after {
+    content:  'Banner de Jogo Amistoso';
+    display: block;
+    height: 40px;
+    transition: 1s ease-out;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 25.5vw;
+    margin-top: -30px;
+}
