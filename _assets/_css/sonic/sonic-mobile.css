@@ -8,6 +8,10 @@
         display: none;
     }
 
+    .header-bar {
+        margin-top: 20px;
+    }
+
     .header-bar h1 {
         font-size: 6vw;
     }

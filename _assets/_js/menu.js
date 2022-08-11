@@ -119,8 +119,8 @@ btn_menu_mobile.addEventListener('click', () => {
       btn_menu_mobile_imput[2].style.display = 'none';
     }, 500);
     setTimeout(() => {
-      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 1s linear';
-      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 1s linear';
+      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 0.5s linear';
+      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 0.5s linear';
       setTimeout(() => {
         btn_menu_mobile_imput[0].style.right = '5vw';
         btn_menu_mobile_imput[1].style.right = '5vw';
@@ -130,7 +130,7 @@ btn_menu_mobile.addEventListener('click', () => {
         btn_menu_mobile_imput[1].style.position = 'absolute';
         btn_menu_mobile_imput[0].style.transform = 'rotate(-45deg)';
         btn_menu_mobile_imput[1].style.transform = 'rotate(45deg)';
-      }, 1000);
+      }, 500);
     }, 500);
 
   } 
@@ -151,9 +151,9 @@ btn_menu_mobile.addEventListener('click', () => {
     if(btnMobile == true) {
       
       btn_menu_mobile_imput[2].style.display = 'block';
-      btn_menu_mobile_imput[2].style.animation = 'btn-mobile-desfazendo-linha3 1s linear';
-      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-desfazendo-linha1 1s linear';
-      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-desfazendo-linha2 1s linear';
+      btn_menu_mobile_imput[2].style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
+      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-desfazendo-linha1 0.5s linear';
+      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-desfazendo-linha2 0.5s linear';
   
       setTimeout(() => {
         btn_menu_mobile_imput[0].style.position = 'relative';
@@ -164,7 +164,7 @@ btn_menu_mobile.addEventListener('click', () => {
         btn_menu_mobile_imput[1].style.top = 'auto';
         btn_menu_mobile_imput[0].style.transform = 'rotate(0)';
         btn_menu_mobile_imput[1].style.transform = 'rotate(0)';
-      }, 1000);
+      }, 500);
 
       btnMobile = false;
 

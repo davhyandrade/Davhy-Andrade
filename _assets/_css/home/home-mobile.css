@@ -30,11 +30,11 @@
     }
 
     .field-landing-page p {
-        font-size: 5.5vw;
+        font-size: 5vw;
     }
 
     .field-landing-page h1 {
-        font-size: 11vw;
+        font-size: 10vw;
     }
 
     #btn-contato-landing-page {
@@ -80,7 +80,7 @@
     /*-----------<  Container 1  >-----------*/
 
     .container:nth-child(4) {
-        height: 1100px;
+        height: 1200px;
     }
 
     .position-section1 {
@@ -103,7 +103,7 @@
     }
 
     .position-section1 > div > div > p:nth-child(1) {
-        font-size: 6.88vw;
+        font-size: 6.9vw;
     }
 
     .position-section1 > div > div > p:nth-child(2) {
