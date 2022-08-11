@@ -5,6 +5,7 @@
     .menu {
         align-items: center;
         position: relative;
+        height: 160px;
     }
 
     .logo_menu {
@@ -52,7 +53,7 @@
     }
 
     .menu-mobile > ul > li {
-        margin-top: 100px;
+        margin-top: 65px;
     }
     
     .menu-mobile > ul {
@@ -62,7 +63,7 @@
 
     .menu-mobile a {
         color: white;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .menu-mobile img {
@@ -83,7 +84,7 @@
         content: '';
         display: flex;
         flex-direction: column;
-        margin: 40px 0;
+        margin: 30px 0;
         height: 2px;
         width: 70vw;
         background: linear-gradient(45deg, transparent, #212121, transparent);
@@ -105,7 +106,8 @@
 
     .dropdown-mobile  a {
         margin-left: 100px;
-        padding: 35px 30vw;
+        padding: 25px 30vw;
+        font-size: 17px;
         background: linear-gradient(90deg, transparent, #242323, transparent);
     }
 

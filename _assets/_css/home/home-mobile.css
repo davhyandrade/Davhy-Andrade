@@ -31,11 +31,11 @@
     }
 
     .field-landing-page p {
-        font-size: 5vw;
+        font-size: 5.5vw;
     }
 
     .field-landing-page h1 {
-        font-size: 10vw;
+        font-size: 11vw;
     }
 
     #btn-contato-landing-page {
@@ -60,8 +60,8 @@
 
     #landing-page-footer {
         height: 165px;
-        position: relative;
-        top: 38vh;
+        position: absolute;
+        bottom: -2px;
         z-index: 10;
     }
 
