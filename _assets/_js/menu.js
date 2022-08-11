@@ -44,17 +44,19 @@ function copyText2() {
 const nome = document.querySelector('#nome');
 const info = document.querySelector('.info');
 
-nome.addEventListener('click', () => {
-  if (isActive) {
-    isActive = false;
-    info.style.display = 'flex';
-    nome.style.color = '#2494d6';
-  } else {
-    isActive = true;
-    info.style.display = 'none';
-    nome.style.color = 'white';
-  }
-});
+if(window.innerWidth > 800) {
+  nome.addEventListener('click', () => {
+    if (isActive) {
+      isActive = false;
+      info.style.display = 'flex';
+      nome.style.color = '#2494d6';
+    } else {
+      isActive = true;
+      info.style.display = 'none';
+      nome.style.color = 'white';
+    }
+  });
+}
 
 //===================================================================
 
@@ -94,7 +96,8 @@ btn_menu_mobile.addEventListener('click', () => {
 
   if (isActive) {
     isActive = false;
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflowY = 'hidden';
+    document.body.style.overflowY = "hidden";
     document.body.scroll = "no";
     menu_mobile.style.display = 'flex';
     menu_mobile.style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
@@ -135,7 +138,8 @@ btn_menu_mobile.addEventListener('click', () => {
   else {
 
     isActive = true;
-    document.documentElement.style.overflow = 'auto';
+    document.documentElement.style.overflowY = 'auto';
+    document.body.style.overflowY = "auto";
     document.body.scroll = "yes";
     menu_mobile.style.display = 'none';
     menu_mobile.style.animation = 'btn-mobile-linha3 0.5s linear';
@@ -182,7 +186,7 @@ anchor_menu_mobile[0].addEventListener('click', () => {
   if (isActive) {
     isActive = false;
     dropdown_mobile[0].style.display = 'flex';
-    anchor_menu_mobile_img[0].src = '_assets/_img/btn_games_open.png';
+    anchor_menu_mobile_img[0].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[1].style.display = 'none';
     dropdown_mobile[2].style.display = 'none';
     anchor_menu_mobile2[2].style.display = 'none';
@@ -192,7 +196,7 @@ anchor_menu_mobile[0].addEventListener('click', () => {
     dropdown_mobile[0].style.display = 'none';
     anchor_menu_mobile2[2].style.display = 'block';
     anchor_menu_mobile2[4].style.display = 'block';
-    anchor_menu_mobile_img[0].src = '_assets/_img/btn_games_closed.png';
+    anchor_menu_mobile_img[0].src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
   }
 });
 
@@ -200,7 +204,7 @@ anchor_menu_mobile[1].addEventListener('click', () => {
   if (isActive) {
     isActive = false;
     dropdown_mobile[1].style.display = 'flex';
-    anchor_menu_mobile_img[1].src = '_assets/_img/btn_games_open.png';
+    anchor_menu_mobile_img[1].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[0].style.display = 'none';
     dropdown_mobile[2].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'none';
@@ -210,7 +214,7 @@ anchor_menu_mobile[1].addEventListener('click', () => {
     dropdown_mobile[1].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'block';
     anchor_menu_mobile2[4].style.display = 'block';
-    anchor_menu_mobile_img[1].src = '_assets/_img/btn_games_closed.png';
+    anchor_menu_mobile_img[1].src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
   }
 });
 
@@ -218,7 +222,7 @@ anchor_menu_mobile[2].addEventListener('click', () => {
   if (isActive) {
     isActive = false;
     dropdown_mobile[2].style.display = 'flex';
-    anchor_menu_mobile_img[2].src = '_assets/_img/btn_games_open.png';
+    anchor_menu_mobile_img[2].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[0].style.display = 'none';
     dropdown_mobile[1].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'none';
@@ -228,7 +232,7 @@ anchor_menu_mobile[2].addEventListener('click', () => {
     dropdown_mobile[2].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'block';
     anchor_menu_mobile2[2].style.display = 'block';
-    anchor_menu_mobile_img[2].src = '_assets/_img/btn_games_closed.png';
+    anchor_menu_mobile_img[2].src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
   }
 });
 

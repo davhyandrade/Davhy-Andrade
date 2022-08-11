@@ -10,11 +10,11 @@ btn_dropdown.addEventListener('click', () => {
     if (isActive) {
         isActive = false;
         dropdown.style.display = 'block';
-        img_dropdown.src = '_assets/_img/btn_games_open.png';
+        img_dropdown.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
         isActive = true;
         dropdown.style.display = 'none';
-        img_dropdown.src = '_assets/_img/btn_games_closed.png';
+        img_dropdown.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }
 }); 
 
@@ -48,7 +48,7 @@ btn_fullscreen_gallery.addEventListener("click", ()=>{
         carrossel[0].style.transform = `translateX(0)`;
 
         field_carrossel_image.classList.add('fullscreen');
-        btn_fullscreen_gallery.src = "_assets/_img/fullscreen_exit.png";
+        btn_fullscreen_gallery.src = "https://i.postimg.cc/mgDJ39GS/fullscreen-exit.png";
         btn_fullscreen_gallery.textContent = "Exit Fullscreen";
     }
 
@@ -72,7 +72,7 @@ btn_fullscreen_gallery.addEventListener("click", ()=>{
         carrossel[0].style.transform = `translateX(0)`;
 
         field_carrossel_image.classList.remove('fullscreen');
-        btn_fullscreen_gallery.src = "_assets/_img/fullscreen.png";
+        btn_fullscreen_gallery.src = "https://i.postimg.cc/dtngTBg1/fullscreen.png";
         btn_fullscreen_gallery.textContent = "Go Fullscreen";
     }
 

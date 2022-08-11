@@ -33,10 +33,10 @@ btn.addEventListener('click', () => {
     if (isActive) {
         isActive = false;
         dropdown.style.display = 'block';
-        img.src = '_assets/_img/btn_games_open.png';
+        img.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
         isActive = true;
         dropdown.style.display = 'none';
-        img.src = '_assets/_img/btn_games_closed.png';
+        img.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }
 });

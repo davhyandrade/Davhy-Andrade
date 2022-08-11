@@ -11,7 +11,7 @@
     }
 
     .btn-hide-fixed img {
-        width: 15.5vw;
+        width: 12vw;
     }
 
     .position_btn_container1 {
@@ -50,6 +50,7 @@
 
     .section1 {
         height: 65vh;
+        background-repeat: no-repeat;
     }
 
     .section1 h1 {

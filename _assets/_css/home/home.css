@@ -1,7 +1,7 @@
 .landing-page {
     width: 100%;
     height: 110vh;
-    background-image: url(../../_img/home/background_landing_page.png);
+    background-image: url(https://i.postimg.cc/nc3Jx0LZ/background-landing-page.png);
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -56,6 +56,7 @@ span {
     padding: 10px 35px;
     letter-spacing: 2px;
     cursor: pointer;
+    border: none;
 }
 
 #btn-contato-landing-page:hover {
@@ -81,9 +82,9 @@ span {
 }
 
 .field-landing-page img {
-    width: 55%;
+    width: 60%;
     position: absolute;
-    right: 7vw;
+    right: 6vw;
     top: 25vh;
     z-index: 1;
 }
@@ -418,37 +419,37 @@ span {
 }
 
 .item-projetos1 {
-    background-image: url(../../_img/home/background_field_projetos1.png);
+    background-image: url(https://i.postimg.cc/jqGfX4Tx/background-field-projetos1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item-projetos2 {
-    background-image: url(../../_img/home/background_field_projetos2.png);
+    background-image: url(https://i.postimg.cc/28hZXLj4/background-field-projetos2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item-projetos3 {
-    background-image: url(../../_img/home/background_field_projetos3.png);
+    background-image: url(https://i.postimg.cc/fbTSLHcK/background-field-projetos3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item-projetos4 {
-    background-image: url(../../_img/home/background_field_projetos4.png);
+    background-image: url(https://i.postimg.cc/FHxJhtLz/background-field-projetos4.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item-projetos5 {
-    background-image: url(../../_img/home/background_field_projetos5.png);
+    background-image: url(https://i.postimg.cc/HLZc7Q3C/background-field-projetos5.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .item-projetos6 {
-    background-image: url(../../_img/home/background_field_projetos6.png);
+    background-image: url(https://i.postimg.cc/8zG68ksx/background-field-projetos6.png);
     background-repeat: no-repeat;
     background-size: cover;
 }

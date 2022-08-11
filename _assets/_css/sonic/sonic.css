@@ -168,6 +168,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }   
 
 #carrossel-sonic {
@@ -184,13 +185,13 @@
 }
 
 #btn-voltar-carrossel-sonic {
-    left: 10%;
+    left: 0;
     padding: 55px 120px 55px 30px;
     background: linear-gradient(90deg, #28292c,#28292cb1, transparent);
 }
 
 #btn-avancar-carrossel-sonic {
-    right: 10%;
+    right: 0;
     padding: 55px 30px 55px 120px;
     background: linear-gradient(270deg, #28292c,#28292cb1, transparent);    
 }

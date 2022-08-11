@@ -5,15 +5,21 @@
     .landing-page {
         width: 100%;
         height: 100vh;
-        background-image: url(../../_img/home/background_mobile_landing_page.png);
+        background-image: url(https://i.postimg.cc/d0bFX3Vy/background-mobile-landing-page.png);
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .field-landing-page {
         display: flex;
         justify-content: center;
         height: 25vh;
+        margin: 0;
+        margin-top: 30px;
+        width: 85%;
     }
 
     .field-landing-page > div {
@@ -21,7 +27,7 @@
     }
 
     .field-landing-page p:nth-child(1) {
-        font-size: 4.3vw;
+        font-size: 6vw;
     }
 
     .field-landing-page p {
@@ -29,19 +35,19 @@
     }
 
     .field-landing-page h1 {
-        font-size: 8.5vw;
+        font-size: 10vw;
     }
 
     #btn-contato-landing-page {
         font-size: 6vw;
+        margin-top: 0;
     }
 
     .field-landing-page > div > a {
-        top: 30vh;
+        top: 35vh;
         display: flex;
         justify-content: center;
         position: relative;
-        width: 75vw;
     }
 
     .btns-landing-page input {
@@ -54,14 +60,18 @@
 
     #landing-page-footer {
         height: 165px;
+        position: relative;
+        top: 38vh;
+        z-index: 10;
     }
 
     .btns-landing-page::before {
         width: 430px;
+        margin-left: 0;
     }
 
     .btns-landing-page {
-        margin-top: -85px;
+        margin-top: -65px;
     }
 
     /*-----------<  Landing Page  >-----------*/
@@ -94,7 +104,7 @@
     }
 
     .position-section1 > div > div > p:nth-child(1) {
-        font-size: 6.8vw;
+        font-size: 6.88vw;
     }
 
     .position-section1 > div > div > p:nth-child(2) {
@@ -159,6 +169,11 @@
 
     .item-projetos {
         width: 85%;
+        height: 120px;
+    }
+
+    .item-projetos > div {
+        height: 120px;
     }
 
     .item-projetos > div > div {
@@ -175,7 +190,6 @@
 
     .txt-info {
         font-size: 4vw;
-        margin-bottom: 30px;
     }
 
     .position-section3 > h1 {
@@ -193,7 +207,7 @@
     /*-----------<  Container 4  >-----------*/
 
     .container:nth-child(7) {
-        height: 800px;
+        height: 700px;
     }
 
     .position-section4 {
@@ -208,7 +222,7 @@
     }
 
     .board-servico {
-        width: 75vw;
+        width: 85vw;
         border-radius: 10px;
     }
 

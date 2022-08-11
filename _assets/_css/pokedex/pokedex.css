@@ -18,10 +18,10 @@ body {
 }
 
 .pokedex {
-    width: 30vw;
+    width: 27vw;
     margin-top: 60px;
     margin-left: 5%;
-}
+}       
 
 #img-pokedex {
     width: 100%;
@@ -31,8 +31,8 @@ body {
 .img-pokemon {
     width: 8%;
     position: absolute;
-    left: 21%;
-    top: 44%;
+    left: 20.5%;
+    top: 41%;
 }
 
 .pokemon-data {
@@ -53,9 +53,9 @@ body {
 
 .form {
     position: absolute;
-    width: 24%;
+    width: 25.5%;
     top: 72%;
-    left: 12%;
+    left: 11%;
     display: flex;
 }
 
@@ -91,9 +91,9 @@ body {
 .buttons {
     display: flex;
     position: absolute;
-    width: 23.9%;
+    width: 24.9%;
     bottom: 10%;
-    left: 12%;
+    left: 10.8%;
 }
 
 .button {
@@ -122,26 +122,26 @@ body {
 @media screen and (max-width: 799px){
 
     .pokedex {
-        width: 80vw;
+        width: 100%;
         margin-left: 0; 
         margin-top: 10px;
     }
 
     .img-pokemon {
-        width: 20%;
-        left: 39%;
-        top: 28.5%;
+        width: 24%;
+        left: 36%;
+        top: 32%;
     }
 
     .pokemon-data {
-        top: 38.3%;
-        right: 28%;
+        top: 43.7%;
+        right: 23%;
     }
 
     .form {
-        width: 56%;
-        top: 41.8%;
-        left: 19%;
+        width: 72%; 
+        top: 48.5%;
+        left: 10%;
     }
 
     .input-search {
@@ -156,10 +156,10 @@ body {
     .buttons {
         display: flex;
         position: absolute;
-        width: 56%;
-        top: 47%;
+        width: 73%;
+        top: 54%;
         bottom: auto;
-        left: 19%;
+        left: 10%;
     }
 
     .button {
@@ -175,18 +175,20 @@ body {
     }
 
     .pokemon-data {
-        top: 49.5%;
+        top: 52%;
     }
 
     .form {
-        top: 56.5%;
-        left: 13%;
+        top: 59.5%;
+        width: 25%;
+        left: 11.5%;
     }
 
     .buttons {
-        width: 23%;
-        top: 64%;
+        width: 24%;
+        top: 68%;
         bottom: auto;
+        left: 11.4%;
     }
 
 }

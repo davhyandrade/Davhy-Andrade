@@ -56,4 +56,4 @@ btnVoltarCarrosselSonic.addEventListener('click', () => {
 
 //----------------< Imagem - "Adicionando Imagem no mobile" >
 
-primeiraImagem.innerHTML = '<img src="_assets/_img/pagina-esportivos/img-gallery-esportivos1.png" alt="Imagem">';
+primeiraImagem.innerHTML = '<img src="https://i.postimg.cc/TYrNrcSm/img-gallery-esportivos-slide4.png" alt="Imagem">';

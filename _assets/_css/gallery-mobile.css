@@ -1,7 +1,7 @@
 @media screen and (max-width: 799px){
 
     .section {
-        width: 85%;
+        width:90%;
     }
 
     .header-tabs {
@@ -17,20 +17,8 @@
         margin-bottom: 5px;
     }
 
-    .carrossel-image {
-        width: 55%;
-    }
-
     .carrossel-image img {
         width: 100%;
-    }
-    
-    #btn-voltar-carrossel-gallery {
-        padding: 20% 4.7vw 20% 2vw;
-    }
-
-    #btn-avancar-carrossel-gallery {
-        padding: 20% 4.7vw 20% 2vw;
     }
 
     #option-bar-gallery {
@@ -46,11 +34,11 @@
     }
 
     .img-gallery {
-        width: 42vw;
+        width: 44vw;
     }
 
     .img-gallery > img {
-        width: 42vw;
+        width: 44vw;
     }
 
     .img-gallery {

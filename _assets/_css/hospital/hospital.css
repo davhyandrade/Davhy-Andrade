@@ -45,7 +45,7 @@ h1, p {
 }
 
 .section1 {
-    background-image: url("../../_img/hospital/hospital.png");
+    background-image: url("https://i.postimg.cc/CL0w4RRB/hospital.png");
     background-repeat: round;
     background-size: cover;
     width: 100%;
@@ -297,7 +297,7 @@ h1, p {
 }
 
 .section4 {
-    background-image: url("../../_img/hospital/wallpaper_medical.png");
+    background-image: url("https://i.postimg.cc/XqQ1F1Zg/wallpaper-medical.png");
     background-repeat: round;
     background-size: cover;
     height: 600px;
@@ -474,7 +474,7 @@ h1, p {
 } 
 
 .section6 {
-    background-image: url(../../_img/hospital/background_section6.png);
+    background-image: url('https://i.postimg.cc/8Pdz8h2m/background-section6.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

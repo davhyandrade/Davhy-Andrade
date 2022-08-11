@@ -3,7 +3,7 @@
     z-index: 3;
     position: relative;
     height: 500px;
-    background-image: url(../../_img/sonic/home_screen.png);
+    background-image: url(https://i.postimg.cc/B67b7DVB/home-screen.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -23,7 +23,7 @@
     z-index: 8;
     position: relative;
     height: 500px;
-    background-image: url(../../_img/sonic/background_game_over.png);
+    background-image: url(https://i.postimg.cc/SN38x0Vf/background-game-over.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: none;

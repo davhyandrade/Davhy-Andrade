@@ -4,14 +4,18 @@
 
     .menu {
         align-items: center;
+        position: relative;
+        height: 38vw;
     }
 
     .logo_menu {
         margin-top: 0;
+        margin-left: 0;
     }
 
     .logo_menu img {
         width: 60px;
+        margin-top: 0;
     }
 
     #nome {
@@ -43,10 +47,13 @@
         background-origin: content-box;
         display: none;
         justify-content: center;
-        align-items: center;
         position: absolute;
         z-index: 99;
         top: 150px;
+    }
+
+    .menu-mobile > ul > li {
+        margin-top: 100px;
     }
     
     .menu-mobile > ul {
@@ -105,17 +112,10 @@
 
     .btn-top {
         right: 5vw;
-        padding: 15px 15px;
     }
 
     .btn-top img {
         width: 25px;
-    }
-
-    #landing-page-footer {
-        position: relative;
-        top: 30vh;
-        z-index: 10;
     }
 
     .btn-exit img {

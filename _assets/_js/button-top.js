@@ -2,7 +2,7 @@ var adicionar = document.querySelector('body');
 var btnTop = document.createElement('div');
 
 btnTop.classList.add('btn-top');
-btnTop.innerHTML = '<img src="_assets/_img/btn_hide.png" alt="Botão Topo">';
+btnTop.innerHTML = '<img src="https://i.postimg.cc/fbBXf4zp/btn-hide.png" alt="Botão Topo">';
 adicionar.prepend(btnTop);
 
 //===================================================================

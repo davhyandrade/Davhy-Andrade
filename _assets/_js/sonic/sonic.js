@@ -10,11 +10,11 @@ btn_games.addEventListener('click', () => {
     if (isActive) {
         isActive = false;
         dropdown_games.style.display = 'block';
-        img_games.src = '_assets/_img/btn_games_open.png';
+        img_games.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
         isActive = true;
         dropdown_games.style.display = 'none';
-        img_games.src = '_assets/_img/btn_games_closed.png';
+        img_games.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }
 });
 
@@ -47,7 +47,7 @@ btn.addEventListener("click", ()=>{
         else if(myDocument.webkitRequestFullscreen) {
             myDocument.webkitRequestFullscreen();
         }
-        btn.src = "_assets/_img/fullscreen_exit.png";
+        btn.src = "https://i.postimg.cc/mgDJ39GS/fullscreen-exit.png";
         btn.textContent = "Exit Fullscreen";
     }
 
@@ -67,7 +67,7 @@ btn.addEventListener("click", ()=>{
         game_board.style.height = '500px';
         game_board.style.margin = '3vh 0 0 0';
         options_bar.style.margin = '5px 0 0 0';
-        btn.src = "_assets/_img/fullscreen.png";
+        btn.src = "https://i.postimg.cc/dtngTBg1/fullscreen.png";
         btn.textContent = "Go Fullscreen";
     }
 
@@ -141,14 +141,14 @@ btn_audio.addEventListener('click', function() {
     if(audio.paused) {    
         audio.play();
         status_btn = true;
-        btn_audio.src = '_assets/_img/audio.png'
+        btn_audio.src = 'https://i.postimg.cc/wxXC9HVD/audio.png'
         return status_btn;
     } 
      
     else {
         audio.pause();
         status_btn = false;
-        btn_audio.src = '_assets/_img/audio_pausado.png'
+        btn_audio.src = 'https://i.postimg.cc/ncn6z5Rg/audio-pausado.png'
         return status_btn;
     }
 
@@ -176,7 +176,7 @@ function jogue() {
 
 start.addEventListener('click', () => {
     audio.play();
-    btn_audio.src = '_assets/_img/audio.png'
+    btn_audio.src = 'https://i.postimg.cc/wxXC9HVD/audio.png'
     sonic.style.left = '0';
     sonic.style.bottom = '-20';
     sonic.style.width = '150px';
@@ -189,7 +189,7 @@ document.addEventListener('keyup', start => {
     if (start.code === 'Space') {
         if(status_btn == true) {
             audio.play();
-            btn_audio.src = '_assets/_img/audio.png'
+            btn_audio.src = 'https://i.postimg.cc/wxXC9HVD/audio.png'
         }
         sonic.style.left = '0';
         sonic.style.bottom = '-20';
@@ -263,7 +263,7 @@ document.addEventListener('keyup', key => {
 
         sonic.classList.add('jump');
         sound_jump.play();
-        sonic.src = ('_assets/_img/sonic/sonic_correndo.gif');
+        sonic.src = ('https://i.postimg.cc/bvH2gZPm/sonic-correndo.gif');
 
         sonic.style.width = ('200px');
         sonic.style.bottom = ('0');
@@ -281,7 +281,7 @@ document.addEventListener('keyup', key => {
 
         sonic.classList.add('jump');
         sound_jump.play();
-        sonic.src = ('_assets/_img/sonic/sonic_correndo.gif');
+        sonic.src = ('https://i.postimg.cc/bvH2gZPm/sonic-correndo.gif');
 
         sonic.style.width = ('200px');
         sonic.style.bottom = ('0');
@@ -297,7 +297,7 @@ document.addEventListener('keyup', key => {
 
     if (key.code === 'ArrowDown') {
 
-        sonic.src = ('_assets/_img/sonic/sonic_rolando.png');
+        sonic.src = ('https://i.postimg.cc/y6r3L4qC/sonic-rolando.gif');
 
         sonic.style.width = ('70px');
         sonic.style.bottom = ('0');
@@ -334,7 +334,7 @@ function loop(){
             sonic.style.bottom = `${sonicPosition}px`;
     
             sonic.style.transition = '1s';
-            sonic.src = ('_assets/_img/sonic/sonic_gameover.png');
+            sonic.src = ('https://i.postimg.cc/c4ggj9Zg/sonic-gameover.png');
             sonic.style.width = ('350px');
             
             gameover();
@@ -354,7 +354,7 @@ function loop(){
             sonic.style.animation = 'none';
             sonic.style.bottom = `${sonicPosition}px`;
     
-            sonic.src = ('_assets/_img/sonic/sonic_gameover.png')
+            sonic.src = ('https://i.postimg.cc/c4ggj9Zg/sonic-gameover.png')
             sonic.style.width = ('350px')
 
             gameover();
@@ -375,7 +375,7 @@ function loop(){
             sonic.style.animation = 'none';
             sonic.style.bottom = `${sonicPosition}px`;
             
-            sonic.src = ('_assets/_img/sonic/sonic_gameover.png')
+            sonic.src = ('https://i.postimg.cc/c4ggj9Zg/sonic-gameover.png')
             sonic.style.width = ('350px')
 
             gameover();

@@ -4,10 +4,10 @@ var pop_up = document.createElement('div');
 
 pop_up.classList.add('pop-up');
 pop_up.innerHTML = `<div class="btn-exit">
-                            <img src="_assets/_img/pop-up/btn_exit.png" alt="Sair">
+                            <img src="https://i.postimg.cc/vTMyzmQt/btn-exit.png" alt="Sair">
                           </div>
                           <div class="field-pop-up">
-                            <img src="_assets/_img/pop-up/img_pop_up.png" alt="Vetor">
+                            <img src="https://i.postimg.cc/brThFjrc/img-pop-up.png" alt="Vetor">
                             <div>
                               <h1>Aviso</h1>
                               <p>${textPopUp}</p>

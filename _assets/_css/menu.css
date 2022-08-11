@@ -38,7 +38,7 @@ a {
 }
 
 .menu-hide {
-    background-image: url("../_img/menu/background2.png");
+    background-image: url("https://i.postimg.cc/C5fm2Mdz/background2.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: none;
@@ -221,7 +221,7 @@ a {
     width: 460.8px;
     height: 230px;
     border-radius: 15px;
-    background-image: url('../_img/menu/background_dark.gif');
+    background-image: url('https://i.postimg.cc/Gpq78SZh/background-dark.gif');
     display: none;
     justify-content: center;
     align-items: center;

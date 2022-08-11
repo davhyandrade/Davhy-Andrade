@@ -49,12 +49,12 @@
     }
 
     #btn-voltar-carrossel-tabelas {
-        left: auto; 
+        left: 0; 
         padding: 105px 120px 105px 30px;
     }
 
     #btn-avancar-carrossel-tabelas {
-        right: 7%;
+        right: 0;
         padding: 105px 30px 105px 120px;
     }
 

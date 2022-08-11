@@ -1,7 +1,7 @@
 @media screen and (max-width: 799px){
 
     .game {
-        width: 85%;
+        width: 90%;
     }
 
     .header-tabs {
@@ -32,8 +32,13 @@
         margin-right: 13vw;
     }
 
+    .perfil_jogo p {
+        font-size: 15px;
+        width: 50%;
+    }
+
     .home_screen {
-        background-image: url(../../_img/sonic/home_screen_mobile.png);
+        background-image: url(https://i.postimg.cc/vZ51844G/home-screen-mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -41,14 +46,6 @@
     .gameover_screen img {
         width: 90%;
         margin-bottom: 130px;
-    }
-
-    #btn-voltar-carrossel-sonic {
-        left: auto; 
-    }
-
-    #btn-avancar-carrossel-sonic {
-        right: 7%;
     }
 
     .btn-carrossel-sonic {
