@@ -16,13 +16,9 @@
     .field-landing-page {
         display: flex;
         justify-content: center;
-        height: 25vh;
+        height: 20vh;
         margin: 0;
         width: 85%;
-    }
-
-    .field-landing-page > div {
-        width: 95%;
     }
 
     .field-landing-page p:nth-child(1) {
@@ -70,7 +66,7 @@
     }
 
     .btns-landing-page {
-        margin-top: -65px;
+        display: none;
     }
 
     /*-----------<  Landing Page  >-----------*/
@@ -103,7 +99,7 @@
     }
 
     .position-section1 > div > div > p:nth-child(1) {
-        font-size: 6.9vw;
+        font-size: 7vw;
     }
 
     .position-section1 > div > div > p:nth-child(2) {

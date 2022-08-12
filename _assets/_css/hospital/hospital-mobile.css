@@ -4,12 +4,6 @@
         padding: 0;
     }
 
-    .btn-footer-menu {
-        display: flex;
-        justify-content: center;
-        right: auto;
-    }
-
     .btn-hide-fixed img {
         width: 12vw;
     }

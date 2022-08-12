@@ -182,9 +182,11 @@ const dropdown_mobile = document.querySelectorAll('.dropdown-mobile');
 const anchor_menu_mobile_img = document.querySelectorAll('.anchor-menu-mobile img');
 const anchor_menu_mobile2 = document.querySelectorAll('.menu-mobile ul ul');
 
+let isActiveAnchor = true;
+
 anchor_menu_mobile[0].addEventListener('click', () => {
-  if (isActive) {
-    isActive = false;
+  if (isActiveAnchor) {
+    isActiveAnchor = false;
     dropdown_mobile[0].style.display = 'flex';
     anchor_menu_mobile_img[0].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[1].style.display = 'none';
@@ -192,7 +194,7 @@ anchor_menu_mobile[0].addEventListener('click', () => {
     anchor_menu_mobile2[2].style.display = 'none';
     anchor_menu_mobile2[4].style.display = 'none';
   } else {
-    isActive = true;
+    isActiveAnchor = true;
     dropdown_mobile[0].style.display = 'none';
     anchor_menu_mobile2[2].style.display = 'block';
     anchor_menu_mobile2[4].style.display = 'block';
@@ -201,8 +203,8 @@ anchor_menu_mobile[0].addEventListener('click', () => {
 });
 
 anchor_menu_mobile[1].addEventListener('click', () => {
-  if (isActive) {
-    isActive = false;
+  if (isActiveAnchor) {
+    isActiveAnchor = false;
     dropdown_mobile[1].style.display = 'flex';
     anchor_menu_mobile_img[1].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[0].style.display = 'none';
@@ -210,7 +212,7 @@ anchor_menu_mobile[1].addEventListener('click', () => {
     anchor_menu_mobile2[0].style.display = 'none';
     anchor_menu_mobile2[4].style.display = 'none';
   } else {
-    isActive = true;
+    isActiveAnchor = true;
     dropdown_mobile[1].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'block';
     anchor_menu_mobile2[4].style.display = 'block';
@@ -219,8 +221,8 @@ anchor_menu_mobile[1].addEventListener('click', () => {
 });
 
 anchor_menu_mobile[2].addEventListener('click', () => {
-  if (isActive) {
-    isActive = false;
+  if (isActiveAnchor) {
+    isActiveAnchor = false;
     dropdown_mobile[2].style.display = 'flex';
     anchor_menu_mobile_img[2].src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     dropdown_mobile[0].style.display = 'none';
@@ -228,7 +230,7 @@ anchor_menu_mobile[2].addEventListener('click', () => {
     anchor_menu_mobile2[0].style.display = 'none';
     anchor_menu_mobile2[2].style.display = 'none';
   } else {
-    isActive = true;
+    isActiveAnchor = true;
     dropdown_mobile[2].style.display = 'none';
     anchor_menu_mobile2[0].style.display = 'block';
     anchor_menu_mobile2[2].style.display = 'block';

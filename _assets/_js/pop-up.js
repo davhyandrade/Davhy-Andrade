@@ -30,6 +30,10 @@ function popUp() {
     })
   }
   
+if(isPopupPc == true) {
+    popUp();
+}
+
 if(window.innerWidth < 800) {
     popUp();
 }

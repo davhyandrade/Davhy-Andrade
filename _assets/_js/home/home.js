@@ -11,40 +11,41 @@ const dropdown_option_bar3 = document.querySelector('.dropdown-option-bar3')
 const btn_option_bar3 = document.querySelector('.btn-option-bar3')
 const img_option_bar3 = document.querySelector('.img-option-bar3')
 
+let isActiveDropdownHome1 = true;
+let isActiveDropdownHome2 = true;
+let isActiveDropdownHome3 = true;
+
 btn_option_bar.addEventListener('click', () => {
-    console.log(isActive);
-    if (isActive) {
-        isActive = false;
+    if (isActiveDropdownHome1) {
+        isActiveDropdownHome1 = false;
         dropdown_option_bar.style.display = 'flex';
         img_option_bar.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
-        isActive = true;
+        isActiveDropdownHome1 = true;
         dropdown_option_bar.style.display = 'none';
         img_option_bar.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }
 });
 
 btn_option_bar2.addEventListener('click', () => {
-    console.log(isActive);
-    if (isActive) {
-        isActive = false;
+    if (isActiveDropdownHome2) {
+        isActiveDropdownHome2 = false;
         dropdown_option_bar2.style.display = 'flex';
         img_option_bar2.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
-        isActive = true;
+        isActiveDropdownHome2 = true;
         dropdown_option_bar2.style.display = 'none';
         img_option_bar2.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }
 });
 
 btn_option_bar3.addEventListener('click', () => {
-    console.log(isActive);
-    if (isActive) {
-        isActive = false;
+    if (isActiveDropdownHome3) {
+        isActiveDropdownHome3 = false;
         dropdown_option_bar3.style.display = 'flex';
         img_option_bar3.src = 'https://i.postimg.cc/LXJTq4tN/btn-games-open.png';
     } else {
-        isActive = true;
+        isActiveDropdownHome3 = true;
         dropdown_option_bar3.style.display = 'none';
         img_option_bar3.src = 'https://i.postimg.cc/BvYpQPKj/btn-games-closed.png';
     }

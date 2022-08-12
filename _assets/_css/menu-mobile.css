@@ -7,6 +7,12 @@
         position: relative;
         height: 160px;
     }
+    
+    .btn-footer-menu {
+        display: flex;
+        justify-content: center;
+        right: auto;
+    }
 
     .logo_menu {
         margin-top: 0;
@@ -21,6 +27,7 @@
     #nome {
         font-size: 25px;
         display: flex;
+        margin-left: 3px;
     }
 
     .btn_menu {
