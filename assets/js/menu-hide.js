@@ -343,11 +343,12 @@ btn_menu_mobile.addEventListener('click', () => {
 
   if (isActive) {
     isActive = false;
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflowY = 'hidden';
+    document.body.style.overflowY = "hidden";
     document.body.scroll = "no";
     menu_mobile.style.display = 'flex';
-    menu_mobile.style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
-    menuFixed.style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
+    menu_mobile.style.animation = 'btn-mobile-desfazendo-linha3 0.3s linear';
+    menuFixed.style.animation = 'btn-mobile-desfazendo-linha3 0.3s linear';
 
     setTimeout(() => {
       if(window.scrollY < 700) {
@@ -356,17 +357,17 @@ btn_menu_mobile.addEventListener('click', () => {
       if(window.scrollY > 700) {
         menuFixed.style.height = '150px';
       }
-    }, 500)
+    }, 300)
 
     btnMobile = true;
 
-    btn_menu_mobile_imput[2].style.animation = 'btn-mobile-linha3 0.5s linear';
+    btn_menu_mobile_imput[2].style.animation = 'btn-mobile-linha3 0.3s linear';
     setTimeout(() => {
       btn_menu_mobile_imput[2].style.display = 'none';
-    }, 500);
+    }, 300);
     setTimeout(() => {
-      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 1s linear';
-      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 1s linear';
+      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 0.3s linear';
+      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 0.3s linear';
       setTimeout(() => {
         btn_menu_mobile_imput[0].style.right = '5vw';
         btn_menu_mobile_imput[1].style.right = '5vw';
@@ -376,29 +377,30 @@ btn_menu_mobile.addEventListener('click', () => {
         btn_menu_mobile_imput[1].style.position = 'absolute';
         btn_menu_mobile_imput[0].style.transform = 'rotate(-45deg)';
         btn_menu_mobile_imput[1].style.transform = 'rotate(45deg)';
-      }, 1000);
-    }, 500);
+      }, 300);
+    }, 300);
 
   } 
   
   else {
 
     isActive = true;
-    document.documentElement.style.overflow = 'auto';
+    document.documentElement.style.overflowY = 'auto';
+    document.body.style.overflowY = "auto";
     document.body.scroll = "yes";
     menu_mobile.style.display = 'none';
-    menu_mobile.style.animation = 'btn-mobile-linha3 0.5s linear';
+    menu_mobile.style.animation = 'btn-mobile-linha3 0.3s linear';
 
-    menuFixed.style.animation = 'btn-mobile-linha3 0.5s linear';
+    menuFixed.style.animation = 'btn-mobile-linha3 0.3s linear';
   
     loopMenu();
 
     if(btnMobile == true) {
       
       btn_menu_mobile_imput[2].style.display = 'block';
-      btn_menu_mobile_imput[2].style.animation = 'btn-mobile-desfazendo-linha3 1s linear';
-      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-desfazendo-linha1 1s linear';
-      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-desfazendo-linha2 1s linear';
+      btn_menu_mobile_imput[2].style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
+      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-desfazendo-linha1 0.5s linear';
+      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-desfazendo-linha2 0.5s linear';
   
       setTimeout(() => {
         btn_menu_mobile_imput[0].style.position = 'relative';
@@ -409,7 +411,7 @@ btn_menu_mobile.addEventListener('click', () => {
         btn_menu_mobile_imput[1].style.top = 'auto';
         btn_menu_mobile_imput[0].style.transform = 'rotate(0)';
         btn_menu_mobile_imput[1].style.transform = 'rotate(0)';
-      }, 1000);
+      }, 500);
 
       btnMobile = false;
 
