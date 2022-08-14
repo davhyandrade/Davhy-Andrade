@@ -135,13 +135,13 @@ body {
     }
 
     .pokemon-data {
-        top: 43.7%;
+        top: 42%;
         right: 23%;
     }
 
     .form {
         width: 72%; 
-        top: 48.5%;
+        top: 46.5%;
         left: 10%;
     }
 
@@ -158,7 +158,7 @@ body {
         display: flex;
         position: absolute;
         width: 73%;
-        top: 54%;
+        top: 51.5%;
         bottom: auto;
         left: 10%;
     }
