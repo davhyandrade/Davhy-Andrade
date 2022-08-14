@@ -65,6 +65,7 @@
 
     .board1 {
         width: 100%;
+        background: linear-gradient(180deg, #28292c, #28292c,transparent);
     }
 
     .board1 > div {

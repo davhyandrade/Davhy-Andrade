@@ -30,7 +30,7 @@
     }
 
     .field-landing-page h1 {
-        font-size: 10vw;
+        font-size: 10.5vw;
     }
 
     #btn-contato-landing-page {
@@ -39,7 +39,7 @@
     }
 
     .field-landing-page > div > a {
-        top: 35vh;
+        top: 40vh;
         display: flex;
         justify-content: center;
         position: relative;
@@ -99,7 +99,7 @@
     }
 
     .position-section1 > div > div > p:nth-child(1) {
-        font-size: 7vw;
+        font-size: 7.5vw;
     }
 
     .position-section1 > div > div > p:nth-child(2) {

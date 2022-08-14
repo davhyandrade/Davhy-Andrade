@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="simulação de Pokédex, utilizando o JavaScript através da API Pokeapi.">
-    <title>Davhy - Pokédex</title>
+    <meta name="description" content="Calculadora desenvolvida com JavaScript.">
+    <title>Davhy - Calculadora</title>
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/animation.css">
-    <link rel="stylesheet" href="assets/css/pokedex/pokedex.css">
+    <link rel="stylesheet" href="assets/css/calculadora/calculadora.css">
     <link rel="stylesheet" href="assets/css/projects-simple.css">
     <link rel="stylesheet" href="assets/css/projects-simple-mobile.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/menu.css">      
     <link rel="stylesheet" href="assets/css/menu-mobile.css">
     <link rel="stylesheet" href="assets/css/footer-mobile.css">
     <!--CSS-->
     <!--JavaScript-->
     <script src="assets/js/script.js" defer></script>
-    <script src="assets/js/pokedex/pokedex.js" defer></script>
+    <script src="assets/js/calculadora/calculadora.js" defer></script>
     <script src="assets/js/projects-simple.js" defer></script>
     <script src="assets/js/menu-hide.js" defer></script>
     <script src="assets/js/pace.min.js"></script>
@@ -59,27 +59,32 @@
 
         <main>
 
-            <div class="pokedex">
+            <div class="content-calculadora">
 
-                <img src="#" alt="Pokemon" class="img-pokemon">
-    
-                <h1 class="pokemon-data">
-                    <span class="pokemon-number"></span> -
-                    <span class="pokemon-name"></span>
-                </h1>
-    
-                <form class="form">
-                    <input type="search" class="input-search" placeholder="Name or Number" required>
-                    <input id="btn-search" type="image" src="https://i.postimg.cc/2yt8kDdp/vetor-lupa.png" alt="Pesquisar">
-                </form>
-    
-                <div class="buttons">
-                    <button class="button btn-prev">Prev &lt;</button>
-                    <button class="button btn-next">Next &gt;</button>
+                <div class="output">
+                    <div data-previous-operand class="previous-operand"></div>
+                    <div data-current-operand class="current-operand"></div>
                 </div>
-    
-                <img id="img-pokedex" src="https://i.postimg.cc/QCnXxbqF/pokedex.png" alt="Pokédex">
-           
+
+                <button data-all-clear class="span-two">AC</button>
+                <button data-delete>DEL</button>
+                <button data-operator class="operator">÷</button>
+                <button data-number>1</button>
+                <button data-number>2</button>
+                <button data-number>3</button>
+                <button data-operator class="operator">×</button>
+                <button data-number>4</button>
+                <button data-number>5</button>
+                <button data-number>6</button>
+                <button data-operator class="operator">+</button>
+                <button data-number>7</button>
+                <button data-number>8</button>
+                <button data-number>9</button>
+                <button data-operator class="operator">-</button>
+                <button data-number class="span-two">.</button>
+                <button data-number>0</button>
+                <button data-equals class="operator-equals">=</button>
+
             </div>
 
             <div>
@@ -92,9 +97,9 @@
                             <a class="txt_maiorque">></a>
                             <a class="txt_categoria">Projects</a>
                             <a class="txt_maiorque">></a>
-                            <a class="txt_categoria">Pokédex</a>
+                            <a class="txt_categoria">Calculadora</a>
                         </div>
-                        <h1>Projeto Pokédex</h1>
+                        <h1>Projeto Calculadora</h1>
                     </div>
          
                     <div class="header-tabs">
@@ -120,7 +125,7 @@
                 <div class="field-txt">
                     <div class="position-txt">
                         <h1>Sobre o Projeto</h1>
-                        <p>Projeto desenvolvido pelo HTML, CSS e JavaScript, através de uma API ao qual foi feito a simulação de uma Pokédex, acessório do anime Pokemon, também conhecida como Poké-Agenda.<br><br> É uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon transportam para registra todas as espécies diferentes de Pokémon que são encontradas durante a sua viagem como treinadores.</p>
+                        <p>Projeto desenvolvido pelo HTML, SASS e JavaScript, ao qual foi trabalhado lógica de programação dando vida a uma Calculadora.<br><br>Calculadora é um dispositivo para a realização de cálculos numéricos. São considerados distinto das máquinas calculadoras e dos computadores, no sentido em que a calculadora é um dispositivo voltado para fins específicos e que não pode ser qualificada como uma Máquina de Turing.</p>
                     </div>
                 </div>
 

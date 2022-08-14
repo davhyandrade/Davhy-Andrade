@@ -1,0 +1,115 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: inline-flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 80%;
+    align-items: center;
+}
+
+section {
+    @include flexCenter();
+    flex-direction: column;
+}
+
+body {
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+.content-calculadora {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 90px);
+    margin-top: 42px;
+    margin-left: 6%;
+    
+    @media screen and (max-width: 799px) {
+
+        margin-top: 15px;
+        margin-left: 0;
+        grid-template-columns: repeat(4, 85px);
+        grid-template-rows: minmax(95px, auto) repeat(5, 85px);
+        min-height: 60vh;
+
+    }
+    
+    button {
+
+        @include flexCenter();
+        font-size: 25px;
+        color: white; 
+        padding: 29%;
+        cursor: pointer;
+        background-color: #3c4043;
+        border: none;
+        border-radius: 5px;
+        margin: 1px;
+
+        &:hover {
+            transition: 0.5s;
+            background-color: #575b5d;
+        }
+
+        &:active {
+            transition: 0.1s;
+            background-color: white;
+            color: black;
+        }
+
+    }
+
+    .output {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-direction: column;
+        grid-column: 1 / -1;
+        background: #2021247a;
+        width: 95%;
+        height: 100px;
+        border: 1px solid #3c4043;
+        border-radius: 5px;
+        padding: 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+
+        .previous-operand {
+            font-size: 1.5rem;
+            color: rgb(219, 219, 219);
+        }
+
+        .current-operand {
+            font-size: 2.5rem;
+            color: white;
+        }
+            
+        @media screen and (max-width: 799px) { 
+            width: 93%;
+        }
+
+    }
+
+    .operator {
+        background-color: #5f6368;
+    }
+
+    .span-two {
+        grid-column: span 2;
+        padding: 14.5%;
+    }
+
+    .operator-equals {
+        background-color: #2494d6;
+    }
+}

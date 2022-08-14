@@ -3,6 +3,7 @@ main {
     position: relative;
     justify-content: space-evenly;
     width: 80%;
+    align-items: center;
 }
 
 section {

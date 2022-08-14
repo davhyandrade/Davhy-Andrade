@@ -117,10 +117,10 @@ btn_menu_mobile.addEventListener('click', () => {
     btn_menu_mobile_imput[2].style.animation = 'btn-mobile-linha3 0.5s linear';
     setTimeout(() => {
       btn_menu_mobile_imput[2].style.display = 'none';
-    }, 500);
+    }, 300);
     setTimeout(() => {
-      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 0.5s linear';
-      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 0.5s linear';
+      btn_menu_mobile_imput[0].style.animation = 'btn-mobile-linha1 0.3s linear';
+      btn_menu_mobile_imput[1].style.animation = 'btn-mobile-linha2 0.3s linear';
       setTimeout(() => {
         btn_menu_mobile_imput[0].style.right = '5vw';
         btn_menu_mobile_imput[1].style.right = '5vw';
@@ -130,8 +130,8 @@ btn_menu_mobile.addEventListener('click', () => {
         btn_menu_mobile_imput[1].style.position = 'absolute';
         btn_menu_mobile_imput[0].style.transform = 'rotate(-45deg)';
         btn_menu_mobile_imput[1].style.transform = 'rotate(45deg)';
-      }, 500);
-    }, 500);
+      }, 300);
+    }, 300);
 
   } 
   
@@ -142,9 +142,9 @@ btn_menu_mobile.addEventListener('click', () => {
     document.body.style.overflowY = "auto";
     document.body.scroll = "yes";
     menu_mobile.style.display = 'none';
-    menu_mobile.style.animation = 'btn-mobile-linha3 0.5s linear';
+    menu_mobile.style.animation = 'btn-mobile-linha3 0.3s linear';
 
-    menuFixed.style.animation = 'btn-mobile-linha3 0.5s linear';
+    menuFixed.style.animation = 'btn-mobile-linha3 0.3s linear';
   
     loopMenu();
 

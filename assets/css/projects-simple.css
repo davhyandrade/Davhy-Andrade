@@ -75,8 +75,8 @@
 .dropdown {
     background: rgba(64, 64, 64, 0.5);
     position: absolute;
-    top: 95px;
-    right: 1.7%;
+    top: 115px;
+    right: 2.9%;
     z-index: 99;
     width: 150px;
     display: none;
@@ -133,6 +133,7 @@
 }
 
 .header-bar h1 {
+    width: 30vw;
     font-size: 2.28vw;
     font-weight: normal;
     text-align: start;
@@ -174,6 +175,7 @@
     margin-top: 15px;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .position-txt {

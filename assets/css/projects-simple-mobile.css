@@ -34,6 +34,7 @@
 
     .header-bar h1 {
         font-size: 8vw;
+        width: 100%;
     }
 
 }
