@@ -11,9 +11,9 @@ headerBar.innerHTML = ` <div class="field-title">
                                 <a class="txt_maiorque">></a>
                                 <a class="txt_categoria">Projects</a>
                                 <a class="txt_maiorque">></a>
-                                <a class="txt_categoria">Pokédex</a>
+                                <a class="txt_categoria">${textPagina}</a>
                             </div>
-                            <h1>Projeto Pokédex</h1>
+                            <h1>${textTitleProjectSimple}</h1>
                         </div>`;
 
 if(window.innerWidth < 800) {

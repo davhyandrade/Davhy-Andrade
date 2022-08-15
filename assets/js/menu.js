@@ -100,8 +100,8 @@ btn_menu_mobile.addEventListener('click', () => {
     document.body.style.overflowY = "hidden";
     document.body.scroll = "no";
     menu_mobile.style.display = 'flex';
-    menu_mobile.style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
-    menuFixed.style.animation = 'btn-mobile-desfazendo-linha3 0.5s linear';
+    menu_mobile.style.animation = 'btn-mobile-desfazendo-linha3 0.3s linear';
+    menuFixed.style.animation = 'btn-mobile-desfazendo-linha3 0.3s linear';
 
     setTimeout(() => {
       if(window.scrollY < 700) {
@@ -110,11 +110,11 @@ btn_menu_mobile.addEventListener('click', () => {
       if(window.scrollY > 700) {
         menuFixed.style.height = '150px';
       }
-    }, 500)
+    }, 300)
 
     btnMobile = true;
 
-    btn_menu_mobile_imput[2].style.animation = 'btn-mobile-linha3 0.5s linear';
+    btn_menu_mobile_imput[2].style.animation = 'btn-mobile-linha3 0.3s linear';
     setTimeout(() => {
       btn_menu_mobile_imput[2].style.display = 'none';
     }, 300);

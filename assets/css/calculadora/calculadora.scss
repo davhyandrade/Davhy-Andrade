@@ -9,7 +9,6 @@ main {
     position: relative;
     justify-content: space-evenly;
     width: 80%;
-    align-items: center;
 }
 
 section {
@@ -28,8 +27,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 90px);
+    grid-template-columns: repeat(4, 6.5vw);
+    grid-template-rows: minmax(100px, auto) repeat(6, 90px);
     margin-top: 42px;
     margin-left: 6%;
     
@@ -112,4 +111,5 @@ body {
     .operator-equals {
         background-color: #2494d6;
     }
+    
 }

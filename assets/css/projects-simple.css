@@ -75,8 +75,8 @@
 .dropdown {
     background: rgba(64, 64, 64, 0.5);
     position: absolute;
-    top: 115px;
-    right: 2.9%;
+    top: 95px;
+    right: 2.7%;
     z-index: 99;
     width: 150px;
     display: none;
@@ -118,7 +118,7 @@
 }
 
 .header-bar {
-    height: 80px;
+    height: 100px;
     color: #3a444d;
     margin-top: 50px;
     display: flex;
