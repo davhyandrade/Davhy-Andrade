@@ -1,7 +1,7 @@
 @media screen and (max-width: 799px){
 
     .section {
-        width:95%;
+        width:90%;
     }
 
     .header-tabs {
@@ -10,10 +10,6 @@
 
     .header-bar h1 {
         font-size: 6vw;
-    }
-
-    .position_title {
-        width: 92%;
     }
 
     .field-carrossel-image {
@@ -38,11 +34,11 @@
     }
 
     .img-gallery {
-        width: 47vw;
+        width: 44vw;
     }
 
     .img-gallery > img {
-        width: 47vw;
+        width: 44vw;
     }
 
     .img-gallery {
