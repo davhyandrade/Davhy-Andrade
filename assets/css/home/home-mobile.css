@@ -284,11 +284,7 @@
     .header-tabs {
         width: 65%;
     }
-
-    #landing-page-footer {
-        top: 115vh;
-    }
-
+    
     #nome {
         display: none;
     }
@@ -358,10 +354,6 @@
 
     .board-servico {
         width: 40vw;
-    }
-
-    #landing-page-footer {
-        top: 85vh;
     }
 
     .field-landing-page {
