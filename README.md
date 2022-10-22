@@ -15,5 +15,5 @@ Portanto foi desenvolvido no Vanilla, `HTML`, `CSS` e `JavaScript` puro, em brev
 
 # Interface
 
-Realizado com o tema escuro e alguns conceitos baseados no site da `Steam`
+Realizado com o tema escuro e alguns conceitos baseados no site da `Steam`.
 
