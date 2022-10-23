@@ -4,7 +4,7 @@
 
 ## Davhy Andrade
 
-<img src="https://i.postimg.cc/prgzH5Yy/bank-small.png" alt="bank-small" width="100%">
+<img src="https://i.postimg.cc/VvGYgxLz/briefing.png" alt="brienfing" width="100%">
 
 Site Pessoal, com um intuito de compartilhar meus projetos e servir como Portfólio.
 
