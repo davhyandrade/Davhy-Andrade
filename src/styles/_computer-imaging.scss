@@ -1,0 +1,72 @@
+.computer-imaging-field {
+  width: 74%;
+  min-height: 77vh;
+  position: absolute;
+  right: -7%;
+  top: 0;
+  z-index: 1;
+
+  svg {
+    position: absolute;
+  }
+
+  #image-computer {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  #image-orange-gear {
+    width: 17%;
+    height: 17%;
+    top: 7.5%;
+    right: 55%;
+    animation: counterclockwiseRotation 3s infinite linear;
+  }
+
+  #image-blue-gear {
+    width: 12%;
+    height: 12%;
+    top: 28%;
+    right: 5%;
+    animation: hourlyRotation 1.3s infinite ease-in-out;
+  }
+
+  #image-screwdriver {
+    transform: rotate(340deg);
+    width: 20%;
+    height: 30%;
+    top: 30%;
+    right: 2%;
+    animation: screwdriver 5s infinite linear;
+  }
+
+  @keyframes counterclockwiseRotation {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes hourlyRotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes screwdriver {
+    0% {
+      transform: rotate(360deg);
+    }
+    50% {
+      transform: rotate(330deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+}

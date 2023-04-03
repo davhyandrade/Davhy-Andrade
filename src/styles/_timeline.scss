@@ -1,0 +1,196 @@
+.timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+
+  > div {
+    position: relative;
+
+    > div:nth-child(1) {
+      display: flex;
+      
+      > div:nth-child(1) {
+        position: relative;
+        margin-top: 25px;
+
+        svg {
+          z-index: 10;
+          position: inherit;
+        }
+    
+        .gear-field svg {
+          filter: invert(1);
+          z-index: 1 !important;
+    
+          &:nth-child(1) {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+            animation: counterclockwiseRotation 3s infinite linear;
+          }
+          
+          &:nth-child(2) {
+            position: absolute;
+            top: 42px;
+            left: 4px;
+            width: 37px;
+            height: 37px;
+            animation: counterclockwiseRotation 10s infinite linear;
+          }
+          
+          &:nth-child(3) {
+            position: absolute;
+            top: 56px;
+            left: 37px;        
+            width: 34px;
+            height: 34px;
+            animation: hourlyRotation 1.3s infinite ease-in-out;
+          }
+        }
+    
+        @keyframes counterclockwiseRotation {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0deg);
+          }
+        }
+      
+        @keyframes hourlyRotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }  
+      }
+
+      #horizontal-line {
+        margin-top: 42px;
+        margin-left: -45px;
+        height: 2px;
+        height: 2px;
+        width: 30%;
+        background: linear-gradient(-45deg, transparent, transparent, #3c0a4a, #23a6d5, #23d5ab);
+        z-index: 2;
+        filter: drop-shadow(0 0px 15px #0077cb);
+      }
+
+      #button-source-code {
+        width: 70%;
+        height: 70px;
+        cursor: pointer;
+        padding: 35px 5px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--bg-panel);
+        border: 1px solid var(--color-border);
+        
+        &:hover {
+          transition: 1s;
+          background-color: transparent;
+          opacity: 70%;
+
+          .arrow_svg__octicon-chevrow-stem {
+            display: flex;
+          }
+        }
+        
+        &:active {
+          transition: 0.1s;
+          opacity: 20%;
+        }
+        
+        svg {
+          &:nth-child(1) {
+            width: 30%;
+            height: 50px;
+          }
+
+          &:nth-child(3) {
+            width: 16px;
+            height: 16px;
+            color: var(--color-headings) !important;
+            margin-right: 15px;
+          }
+        }
+        
+        > div {
+          width: 55%;
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            color: var(--color-headings);
+            font-weight: normal;
+            font-size: 1.2rem;
+          }
+
+          span {
+            color: var(--color-text);
+            font-size: 0.9rem;
+          }
+        }
+
+        .arrow_svg__octicon-chevrow-stem {
+          display: none;
+        }
+      }
+    }
+
+    .line-field {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -15px;
+
+      .vertical-line {
+        width: 3px;
+        background: linear-gradient(-45deg, #6236a4, #3c0a4a, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        z-index: 2 !important;
+        animation: verticalGradient 5s ease infinite;
+        filter: drop-shadow(0 0px 15px #0077cb);
+        
+        &:nth-child(1) {
+          height: 15px;
+        }
+        
+        &:nth-child(3) {
+          height: 515px;
+        }
+        
+        &:nth-child(5) {
+          animation: none !important;
+          background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+          height: 220px;
+        }
+      }
+  
+      @keyframes verticalGradient {
+        0% {
+          background-position: 50% 0%
+        }
+        50% {
+          background-position: 50% 100%
+        }
+        100% {
+          background-position: 50% 00%
+        }
+      }
+  
+      .title-timeline {
+        filter: drop-shadow(0 0px 30px #3c0a4a);
+        margin: 15px;
+      }
+    }
+  }
+}
