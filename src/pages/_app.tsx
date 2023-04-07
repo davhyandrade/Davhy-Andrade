@@ -1,3 +1,4 @@
+import Context from "@/context/layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -10,7 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="google-site-verification" content="XkGW891zLEowrfoj-68YJMFUDcQLKe_jqNEkFfDo1Rs" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <Context>
+        <Component {...pageProps} />
+      </Context>
     </>
   );
 }

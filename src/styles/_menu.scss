@@ -37,6 +37,7 @@
       display: flex;
       align-items: center;
       z-index: 99;
+      position: relative;
       
       a, button {
         margin: 0px 10px;
@@ -83,6 +84,24 @@
             transition: 0.5s;
             background-color: var(--color-primary);
           }
+        }
+      }
+
+      .dropdown-button-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 200px;
+        background-color: var(--color-headings);
+        border: 1px solid #edeff0;
+        border-radius: 5px;
+
+        a {
+          color: #808080 !important;
         }
       }
 

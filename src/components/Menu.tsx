@@ -61,11 +61,27 @@ export default function Menu() {
     },
   ];
 
+  const contactDropdown = [
+    {
+      name: 'WhatsApp',
+      url: '',
+    },
+    {
+      name: 'E-mail',
+      url: '',
+    },
+    {
+      name: 'Instagram',
+      url: '',
+    },
+  ]
+
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
   });
 
   function handleButtonsMenu(id: number) {
+    setIsActiveDropdown(false);
     if (isActiveButtonsMenu.numberActive !== id) return setIsActiveButtonsMenu({ isActive: true, numberActive: id });    
     if (isActiveButtonsMenu.isActive) {
       return setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
@@ -78,7 +94,7 @@ export default function Menu() {
 
   function handleClickOutside(event: any) {
     if (menu.current && !menu.current.contains(event.target)) {
-      return setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
+      return [setIsActiveButtonsMenu({ isActive: false, numberActive: undefined }), setIsActiveDropdown(false)];
     }
   }
 
@@ -93,6 +109,17 @@ export default function Menu() {
   }, []);
 
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
+  
+  const [isActiveDropdown, setIsActiveDropdown] = useState<boolean>(false);
+
+  function handleDropdown() {
+    setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
+    if (isActiveDropdown) {
+      return setIsActiveDropdown(false);
+    } else {
+      return setIsActiveDropdown(true);
+    }
+  }
 
   return (
     <nav className="menu">
@@ -122,11 +149,20 @@ export default function Menu() {
               </li>
             );
           })}
-          <button onMouseEnter={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
+          <button onClick={handleDropdown} onMouseEnter={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
             {!isMouseOver ? <VectorPhone/> : <VectorPhoneBlue/>}
             <hr />
             Contact
           </button>
+          {isActiveDropdown &&
+            <div className="dropdown-button-contact">
+              {contactDropdown.map((item, id) => {
+                return (
+                  <Link href={item.url} key={id}>{item.name}</Link>
+                )
+              })}
+            </div>
+          }
         </ul>
       </div>
     </nav>
