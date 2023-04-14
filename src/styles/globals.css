@@ -18,6 +18,7 @@
   --bg-panel: #181b1e;
   --bg-panel-menu: #20262e40;
   --color-text: #9ea1a9;
+  --color-text2: #808080;
   --color-primary: #2494d6;
   --color-border: rgb(255 255 255 / 10%);
   --color-headings: white;
@@ -64,6 +65,8 @@ section {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  z-index: 99;
+  position: relative;
 }
 .menu .position {
   width: 90%;
@@ -94,17 +97,19 @@ section {
   z-index: 99;
   position: relative;
 }
-.menu .position .btns-menu a, .menu .position .btns-menu button {
+.menu .position .btns-menu a, .menu .position .btns-menu span, .menu .position .btns-menu button {
   margin: 0px 10px;
   padding: 7px 20px;
   border: 2px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   color: var(--color-headings);
   border: 2px solid transparent;
+  cursor: pointer;
 }
-.menu .position .btns-menu a:hover, .menu .position .btns-menu button:hover {
+.menu .position .btns-menu a:hover, .menu .position .btns-menu span:hover, .menu .position .btns-menu button:hover {
   transition: 0.1s;
   border: 2px solid var(--color-headings);
+  color: var(--color-headings);
 }
 .menu .position .btns-menu button {
   display: flex;
@@ -114,6 +119,7 @@ section {
   cursor: pointer;
   background-color: transparent;
   font-size: 1rem;
+  color: var(--color-headings);
 }
 .menu .position .btns-menu button svg {
   width: 15px;
@@ -121,7 +127,7 @@ section {
 }
 .menu .position .btns-menu button hr {
   height: 20px;
-  background: white;
+  background: var(--color-headings);
   border: none;
   width: 1px;
   margin: 0 10px;
@@ -135,65 +141,103 @@ section {
   transition: 0.5s;
   background-color: var(--color-primary);
 }
-.menu .position .btns-menu .dropdown-button-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  width: 200px;
-  background-color: var(--color-headings);
-  border: 1px solid #edeff0;
-  border-radius: 5px;
+.menu .position .btns-menu .active-contact {
+  border: 2px solid var(--bg-panel) !important;
+  color: var(--color-text2);
 }
-.menu .position .btns-menu .dropdown-button-contact a {
-  color: #808080 !important;
+.menu .position .btns-menu .active-contact hr {
+  background-color: var(--color-text2);
+}
+.menu .position .btns-menu .active-contact svg {
+  opacity: 40%;
+}
+.menu .position .btns-menu .dropdown-button-contact {
+  display: flex !important;
+  min-width: 200px !important;
+  top: 28px;
+  right: 10px;
 }
 .menu .position .btns-menu .active-button {
-  border: 3px solid rgba(255, 255, 255, 0.0588235294);
-  color: rgba(255, 255, 255, 0.1294117647);
-  font-weight: bold;
+  border: 2px solid var(--bg-panel);
+  color: var(--color-text2);
 }
 .menu .position .btns-menu .dropdown {
+  min-width: 25%;
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.0588235294);
+  background-color: var(--bg-color);
   margin-top: 20px;
   margin-left: 10px;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  border: 1px solid var(--color-border);
   overflow: hidden;
 }
-.menu .position .btns-menu .dropdown li {
-  padding: 2px 10px;
+.menu .position .btns-menu .dropdown .header {
   width: 100%;
+  height: 15px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--bg-panel);
+}
+.menu .position .btns-menu .dropdown li {
+  display: flex;
   text-align: center;
-  border: 2px solid transparent;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
 }
-.menu .position .btns-menu .dropdown li:hover {
+.menu .position .btns-menu .dropdown li:hover a {
   transition: 0.1s;
-  border: 2px solid var(--color-headings);
-  border-radius: 10px;
+  transform: translateX(10px);
+  color: var(--color-headings) !important;
 }
-.menu .position .btns-menu .dropdown li:active {
+.menu .position .btns-menu .dropdown li:active a {
   transition: 0.1s;
   opacity: 10%;
 }
-.menu .position .btns-menu .dropdown li > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-headings);
+.menu .position .btns-menu .dropdown li:nth-last-child(1) {
+  border-bottom: none;
 }
-.menu .position .btns-menu .dropdown li > a:hover {
-  transition: 0.1s;
-  border: 2px solid transparent;
+.menu .position .btns-menu .dropdown li a {
+  color: var(--color-text2) !important;
+  border: none;
+  padding: 0;
 }
 .menu .position .btns-menu .active-dropdown {
   display: flex;
+}
+
+.menu-small {
+  position: fixed;
+  height: 68px;
+  background-color: var(--bg-color);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.356));
+}
+.menu-small .position {
+  width: 80%;
+}
+.menu-small .position #logo {
+  margin: 0 !important;
+}
+.menu-small .position #logo svg {
+  display: none;
+}
+.menu-small .position #logo span {
+  font-size: 1.3rem !important;
+}
+
+.page-progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: 0;
+}
+.page-progress-bar > div {
+  height: 100%;
+  background-color: var(--bg-panel);
 }
 
 .landing-page {
@@ -668,7 +712,7 @@ section {
   background: linear-gradient(-45deg, #6236a4, #3c0a4a, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   z-index: 2 !important;
-  animation: verticalGradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
   filter: drop-shadow(0 0px 15px #0077cb);
 }
 .timeline > div .line-field .vertical-line:nth-child(1) {
@@ -682,7 +726,7 @@ section {
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
   height: 220px;
 }
-@keyframes verticalGradient {
+@keyframes gradient {
   0% {
     background-position: 50% 0%;
   }
@@ -835,4 +879,37 @@ section {
 }
 .loading-page > div {
   margin-bottom: 20vh;
+}
+
+.top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 998;
+  color: var(--color-text2);
+}
+.top-button:hover svg {
+  transition: 1s;
+  color: var(--color-headings) !important;
+}
+.top-button:active {
+  transition: 0.1s;
+  opacity: 50%;
+}
+.top-button .arrow_svg__octicon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(270deg);
+}
+.top-button .arrow_svg__octicon .arrow_svg__octicon-chevrow-stem {
+  display: none;
 }/*# sourceMappingURL=globals.css.map */

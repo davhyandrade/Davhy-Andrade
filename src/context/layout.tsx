@@ -1,4 +1,5 @@
 import LoadingPage from "@/components/LoadingPage";
+import TopButton from "@/components/TopButton";
 import { ReactNode, createContext, useState, useEffect } from "react"
 import { createGlobalStyle } from 'styled-components';
 
@@ -29,8 +30,17 @@ export default function Layout({ children }: ComponentProps) {
         }, 2500);
     }
 
+    function teste() {
+        console.log('test');
+    }
+    
+    function scroll() {
+        console.log(window.screen.height);
+    }
+
     useEffect(() => {
         handlePageLoaded();
+        console.log(document.documentElement.scrollHeight);
     }, [])
 
     return (
@@ -38,7 +48,8 @@ export default function Layout({ children }: ComponentProps) {
             <GlobalStyles isActiveLoading={isActiveLoading} />
             {isActiveLoading && <LoadingPage />}
             <Context.Provider value={{}}>   
-                <section>{children}</section>
+                <section onScroll={scroll} onLoad={teste}>{children}</section>
+                <TopButton/>
             </Context.Provider>       
         </>
     )

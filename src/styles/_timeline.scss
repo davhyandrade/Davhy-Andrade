@@ -157,7 +157,7 @@
         background: linear-gradient(-45deg, #6236a4, #3c0a4a, #23a6d5, #23d5ab);
         background-size: 400% 400%;
         z-index: 2 !important;
-        animation: verticalGradient 5s ease infinite;
+        animation: gradient 5s ease infinite;
         filter: drop-shadow(0 0px 15px #0077cb);
         
         &:nth-child(1) {
@@ -175,7 +175,7 @@
         }
       }
   
-      @keyframes verticalGradient {
+      @keyframes gradient {
         0% {
           background-position: 50% 0%;
         }
@@ -186,7 +186,7 @@
           background-position: 50% 00%;
         }
       }
-  
+
       .title-timeline {
         filter: drop-shadow(0 0px 30px #3c0a4a);
         margin: 15px;

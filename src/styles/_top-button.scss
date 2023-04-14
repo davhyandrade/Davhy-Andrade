@@ -1,0 +1,36 @@
+.top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 998;
+  color: var(--color-text2);
+
+  &:hover svg {
+    transition: 1s;
+    color: var(--color-headings) !important;
+  }
+
+  &:active {
+    transition: 0.1s;
+    opacity: 50%;
+  }
+
+  .arrow_svg__octicon {
+    width: 16px;
+    height: 16px;
+    transform: rotate(270deg);
+
+    .arrow_svg__octicon-chevrow-stem {
+      display: none;
+    }
+  }
+}

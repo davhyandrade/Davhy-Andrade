@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   user-select: none;
+  z-index: 99;
+  position: relative;
 
   .position {
     width: 90%;
@@ -39,17 +41,19 @@
       z-index: 99;
       position: relative;
       
-      a, button {
+      a, span, button {
         margin: 0px 10px;
         padding: 7px 20px;
         border: 2px solid rgba(255, 255, 255, 0);
         border-radius: 10px;
         color: var(--color-headings);
         border: 2px solid transparent;
+        cursor: pointer;
 
         &:hover {
           transition: 0.1s;
           border: 2px solid var(--color-headings);
+          color: var(--color-headings);
         }
       }
 
@@ -61,6 +65,7 @@
         cursor: pointer;
         background-color: transparent;
         font-size: 1rem;
+        color: var(--color-headings);
 
         svg {
           width: 15px;
@@ -69,7 +74,7 @@
 
         hr {
           height: 20px;
-          background: white;
+          background: var(--color-headings);
           border: none;
           width: 1px;
           margin: 0 10px;
@@ -87,68 +92,78 @@
         }
       }
 
-      .dropdown-button-contact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        width: 200px;
-        background-color: var(--color-headings);
-        border: 1px solid #edeff0;
-        border-radius: 5px;
+      .active-contact {
+        border: 2px solid var(--bg-panel) !important; 
+        color: var(--color-text2);
 
-        a {
-          color: #808080 !important;
+        hr {
+          background-color: var(--color-text2);
+        }
+
+        svg {
+          opacity: 40%;
         }
       }
 
+      .dropdown-button-contact {
+        display: flex !important;
+        min-width: 200px !important;
+        top: 28px;
+        right: 10px;
+      }
+
       .active-button {
-        border: 3px solid #ffffff0f;
-        color: #ffffff21;
-        font-weight: bold;
+        border: 2px solid var(--bg-panel);  
+        color: var(--color-text2);
       }
 
       .dropdown {
+        min-width: 25%;
         display: none;
         position: absolute;
-        background-color: #ffffff0f;
+        background-color: var(--bg-color);
         margin-top: 20px;
         margin-left: 10px;
         flex-direction: column;
         align-items: center;
         border-radius: 10px;
+        border: 1px solid var(--color-border);
         overflow: hidden;
 
-        li {
-          padding: 2px 10px;
+        .header {
           width: 100%;
-          text-align: center;
-          border: 2px solid transparent;
+          height: 15px;
+          border-bottom: 1px solid var(--color-border);
+          background-color: var(--bg-panel);
+        }
 
-          &:hover {
+        li {
+          display: flex;
+          text-align: center;
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid var(--color-border);
+
+          &:hover a {
             transition: 0.1s;
-            border: 2px solid var(--color-headings);
-            border-radius: 10px;
+            transform: translateX(10px);
+            color: var(--color-headings) !important;
           }
 
-          &:active {
+          &:active a{
             transition: 0.1s;
             opacity: 10%;
           }
 
-          > a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--color-headings);
+          &:nth-last-child(1) {
+            border-bottom: none;
+          }
             
-            &:hover {
-              transition: 0.1s;
-              border: 2px solid transparent;
-            }
+          a {
+            color: var(--color-text2) !important;
+            border: none;
+            padding: 0;
           }
         }
       }
@@ -157,5 +172,41 @@
         display: flex;
       }
     }
+  }
+}
+
+.menu-small {
+  position: fixed;
+  height: 68px;
+  background-color: var(--bg-color);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.356));
+  
+  .position {
+    width: 80%;
+
+    #logo {
+      margin: 0 !important;
+  
+      svg {
+        display: none;
+      }
+  
+      span {
+        font-size: 1.3rem !important;
+      }
+    }
+  }
+}
+
+.page-progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: 0;
+
+  > div {
+    height: 100%;
+    background-color: var(--bg-panel); 
   }
 }

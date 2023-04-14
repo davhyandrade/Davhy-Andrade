@@ -6,8 +6,8 @@ import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import { useEffect, useRef, useState } from 'react';
 
 interface IActiveButtonMenu {
-  isActive: boolean,
-  numberActive?: number
+  isActive: boolean;
+  numberActive?: number;
 }
 
 export default function Menu() {
@@ -15,7 +15,7 @@ export default function Menu() {
     {
       name: 'Home',
       url: '/',
-      nameUrl: ''
+      nameUrl: '',
     },
     {
       name: 'Projects',
@@ -64,7 +64,7 @@ export default function Menu() {
   const contactDropdown = [
     {
       name: 'WhatsApp',
-      url: '',
+      url: 'https://api.whatsapp.com/send?phone=5511934643395',
     },
     {
       name: 'E-mail',
@@ -72,9 +72,9 @@ export default function Menu() {
     },
     {
       name: 'Instagram',
-      url: '',
+      url: 'https://www.instagram.com/_davhy/',
     },
-  ]
+  ];
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
@@ -82,7 +82,7 @@ export default function Menu() {
 
   function handleButtonsMenu(id: number) {
     setIsActiveDropdown(false);
-    if (isActiveButtonsMenu.numberActive !== id) return setIsActiveButtonsMenu({ isActive: true, numberActive: id });    
+    if (isActiveButtonsMenu.numberActive !== id) return setIsActiveButtonsMenu({ isActive: true, numberActive: id });
     if (isActiveButtonsMenu.isActive) {
       return setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
     } else {
@@ -102,14 +102,36 @@ export default function Menu() {
     document.addEventListener('mousedown', handleClickOutside);
   }, [menu]);
 
-  const [pathname, setPathname] = useState<any>()
+  const [pathname, setPathname] = useState<any>();
 
   useEffect(() => {
     setPathname(Router.pathname.split('/')[1]);
   }, []);
 
+  const [scroll, setScroll] = useState<number>(0);
+
+  const refProgressBar = useRef<any>(null);
+
+  function handlePageProgressBar() {
+    const porcentagem =
+      scroll / (document.documentElement.scrollHeight / 100) + document.documentElement.scrollHeight / 100;
+    console.log('porcentagem', porcentagem);
+    console.log(scroll);
+    return (refProgressBar.current.style.width = `${porcentagem}%`);
+  }
+
+  useEffect(() => {
+    if (scroll > 850) handlePageProgressBar();
+  }, [scroll]);
+
+  useEffect(() => {
+    setInterval(() => {
+      return setScroll(window.scrollY);
+    }, 0);
+  }, []);
+
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
-  
+
   const [isActiveDropdown, setIsActiveDropdown] = useState<boolean>(false);
 
   function handleDropdown() {
@@ -122,49 +144,88 @@ export default function Menu() {
   }
 
   return (
-    <nav className="menu">
-      <div className="position">
-        <Link href="/" id="logo">
-          <Logo />
-          <span>Davhy Andrade</span>
-        </Link>
-        <ul className="btns-menu" ref={menu}>
-          {buttonsMenu.map((item, id) => {
-            return (
-              <li key={id}>
-                <Link className={`${isActiveButtonsMenu.numberActive === id ? 'active-button' : pathname === item.nameUrl && 'active-button'}`} onClick={() => handleButtonsMenu(id)} href={`${typeof item.url !== 'undefined' ? item.url : ''}`}>
-                  {item.name}
-                </Link>
-                {item.dropdown && (
-                  <ul className={`dropdown ${isActiveButtonsMenu.numberActive === id && 'active-dropdown'}`}>
-                    {item.dropdown?.map((item, id) => {
-                      return (
-                        <li key={id}>
-                          <Link href={item.url}>{item.name}</Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
-              </li>
-            );
-          })}
-          <button onClick={handleDropdown} onMouseEnter={() => setIsMouseOver(true)} onMouseLeave={() => setIsMouseOver(false)}>
-            {!isMouseOver ? <VectorPhone/> : <VectorPhoneBlue/>}
-            <hr />
-            Contact
-          </button>
-          {isActiveDropdown &&
-            <div className="dropdown-button-contact">
-              {contactDropdown.map((item, id) => {
-                return (
-                  <Link href={item.url} key={id}>{item.name}</Link>
-                )
-              })}
-            </div>
-          }
-        </ul>
-      </div>
-    </nav>
+    <>
+      <nav className={`menu ${scroll > 850 && 'menu-small'}`}>
+        <div className="position">
+          <Link href="/" id="logo">
+            <Logo />
+            <span>Davhy Andrade</span>
+          </Link>
+          <ul className="btns-menu" ref={menu}>
+            {buttonsMenu.map((item, id) => {
+              return (
+                <li key={id}>
+                  {typeof item.url !== 'undefined' ? (
+                    <Link
+                      className={`${
+                        isActiveButtonsMenu.numberActive === id
+                          ? 'active-button'
+                          : pathname === item.nameUrl && 'active-button'
+                      }`}
+                      onClick={() => handleButtonsMenu(id)}
+                      href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <span
+                      className={`${
+                        isActiveButtonsMenu.numberActive === id
+                          ? 'active-button'
+                          : pathname === item.nameUrl && 'active-button'
+                      }`}
+                      onClick={() => handleButtonsMenu(id)}
+                    >
+                      {item.name}
+                    </span>
+                  )}
+                  {item.dropdown && (
+                    <ul className={`dropdown ${isActiveButtonsMenu.numberActive === id && 'active-dropdown'}`}>
+                      <div className="header"></div>
+                      {item.dropdown?.map((item, id) => {
+                        return (
+                          <li key={id}>
+                            <Link href={item.url}>{item.name}</Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+            <li>
+              <button
+                className={`${isActiveDropdown && 'active-contact'}`}
+                onClick={handleDropdown}
+                onMouseEnter={() => setIsMouseOver(true)}
+                onMouseLeave={() => setIsMouseOver(false)}
+              >
+                {!isMouseOver ? <VectorPhone /> : <VectorPhoneBlue />}
+                <hr />
+                Contact
+              </button>
+              {isActiveDropdown && (
+                <div className="dropdown dropdown-button-contact">
+                  <div className="header"></div>
+                  {contactDropdown.map((item, id) => {
+                    return (
+                      <li key={id}>
+                        <Link href={item.url}>{item.name}</Link>
+                      </li>
+                    );
+                  })}
+                </div>
+              )}
+            </li>
+          </ul>
+        </div>
+        {scroll > 850 && (
+          <div className="page-progress-bar">
+            <div ref={refProgressBar}></div>
+          </div>
+        )}
+      </nav>
+    </>
   );
 }
