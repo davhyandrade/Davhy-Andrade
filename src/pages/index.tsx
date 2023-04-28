@@ -16,7 +16,7 @@ export default function Home() {
         <div className="position">
           <Timeline />
           <div className="introduction-field">
-            <h1 translate="no">Programming World</h1>
+            <h1 translate="no">Programming</h1>
             <p>
               <span>Os primeiros 90%</span> do código representam os <span>primeiros 10%</span> do tempo de
               desenvolvimento. Os <span>10% restantes</span> do código é para mostrar aos outros os <span>90%</span> do
