@@ -4,6 +4,9 @@ import Logo from 'public/images/menu/logo-davhy.svg';
 import VectorPhone from 'public/images/menu/vector-phone.svg';
 import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Context } from "@/context/layout";
+import { useContext } from "react";
 
 interface IActiveButtonMenu {
   isActive: boolean;
@@ -11,70 +14,7 @@ interface IActiveButtonMenu {
 }
 
 export default function Menu() {
-  const buttonsMenu = [
-    {
-      name: 'Home',
-      url: '/',
-      nameUrl: '',
-    },
-    {
-      name: 'Projects',
-      nameUrl: 'projects',
-      dropdown: [
-        {
-          name: 'YourQuiz',
-          url: 'https://yourquiz.vercel.app/',
-        },
-        {
-          name: 'Sonic',
-          url: '/games/sonic',
-        },
-      ],
-    },
-    {
-      name: 'Games',
-      nameUrl: 'games',
-      dropdown: [
-        {
-          name: 'Sonic',
-          url: '/games/sonic',
-        },
-      ],
-    },
-    {
-      name: 'Design',
-      nameUrl: 'design',
-      dropdown: [
-        {
-          name: 'Social Media',
-          url: '/design/social-media',
-        },
-        {
-          name: 'Manipulação de Imagens',
-          url: '/design/image-manipulation',
-        },
-        {
-          name: 'Esportivos',
-          url: '/design/sporting',
-        },
-      ],
-    },
-  ];
-
-  const contactDropdown = [
-    {
-      name: 'WhatsApp',
-      url: 'https://api.whatsapp.com/send?phone=5511934643395',
-    },
-    {
-      name: 'E-mail',
-      url: '',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/_davhy/',
-    },
-  ];
+  const { buttonsMenu, contactDropdown } = useSelector((rootReducer: any) => rootReducer.menuReducer);
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
@@ -113,10 +53,7 @@ export default function Menu() {
   const refProgressBar = useRef<any>(null);
 
   function handlePageProgressBar() {
-    const porcentagem =
-      scroll / (document.documentElement.scrollHeight / 100) + document.documentElement.scrollHeight / 100;
-    console.log('porcentagem', porcentagem);
-    console.log(scroll);
+    const porcentagem = scroll / (document.documentElement.scrollHeight / 100) + document.documentElement.scrollHeight / 100;
     return (refProgressBar.current.style.width = `${porcentagem}%`);
   }
 
@@ -143,16 +80,27 @@ export default function Menu() {
     }
   }
 
+  const { handleOpenModalEmail } = useContext(Context);
+
+  function handleOptionsContactButton(name: string) {
+    switch (name) {
+      case 'E-mail':
+        return handleOpenModalEmail();
+      default:
+        return;
+    }
+  }
+
   return (
     <>
-      <nav className={`menu ${scroll > 850 && 'menu-small'}`}>
+      <nav className={`menu ${scroll > 1200 && 'menu-small'}`}>
         <div className="position">
           <Link href="/" id="logo">
             <Logo />
             <span>Davhy Andrade</span>
           </Link>
           <ul className="btns-menu" ref={menu}>
-            {buttonsMenu.map((item, id) => {
+            {buttonsMenu.map((item: any, id: number) => {
               return (
                 <li key={id}>
                   {typeof item.url !== 'undefined' ? (
@@ -168,7 +116,7 @@ export default function Menu() {
                       {item.name}
                     </Link>
                   ) : (
-                    <span
+                    <button
                       className={`${
                         isActiveButtonsMenu.numberActive === id
                           ? 'active-button'
@@ -177,12 +125,12 @@ export default function Menu() {
                       onClick={() => handleButtonsMenu(id)}
                     >
                       {item.name}
-                    </span>
+                    </button>
                   )}
                   {item.dropdown && (
                     <ul className={`dropdown ${isActiveButtonsMenu.numberActive === id && 'active-dropdown'}`}>
                       <div className="header"></div>
-                      {item.dropdown?.map((item, id) => {
+                      {item.dropdown?.map((item: any, id: number) => {
                         return (
                           <li key={id}>
                             <Link href={item.url}>{item.name}</Link>
@@ -196,7 +144,7 @@ export default function Menu() {
             })}
             <li>
               <button
-                className={`${isActiveDropdown && 'active-contact'}`}
+                className={`btn-contact ${isActiveDropdown && 'active-contact'}`}
                 onClick={handleDropdown}
                 onMouseEnter={() => setIsMouseOver(true)}
                 onMouseLeave={() => setIsMouseOver(false)}
@@ -208,9 +156,9 @@ export default function Menu() {
               {isActiveDropdown && (
                 <div className="dropdown dropdown-button-contact">
                   <div className="header"></div>
-                  {contactDropdown.map((item, id) => {
+                  {contactDropdown.map((item: any, id: number) => {
                     return (
-                      <li key={id}>
+                      <li key={id} onClick={() => handleOptionsContactButton(item.name)}>
                         <Link href={item.url}>{item.name}</Link>
                       </li>
                     );

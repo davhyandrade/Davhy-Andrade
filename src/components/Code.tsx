@@ -1,10 +1,4 @@
 export default function Code() {
-  const codeHeader = [
-    {
-      name: 'script.js',
-    },
-  ];
-
   return (
     <div className="code-field">
       <div className="code-header">

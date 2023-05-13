@@ -1,56 +1,75 @@
-import LoadingPage from "@/components/LoadingPage";
-import TopButton from "@/components/TopButton";
-import { ReactNode, createContext, useState, useEffect } from "react"
+import ModalEmail from '@/components/ModalEmail';
+import Footer from '@/components/Footer';
+import LoadingPage from '@/components/LoadingPage';
+import TopButton from '@/components/TopButton';
+import { ReactNode, createContext, useEffect, useRef, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
+import store from '@/redux/store';
+import { Provider } from 'react-redux';
 
-export const Context = createContext({});
-
-type ComponentProps = {
-    children: ReactNode;
+interface IContext {
+  handleOpenModalEmail?: any;
+  handleCloseModalEmail?: any;
+  isActiveModalEmail?: boolean | undefined;
 }
 
+export const Context = createContext<IContext>({});
+
+type ComponentProps = {
+  children: ReactNode;
+};
+
 interface IProps {
-    isActiveLoading: boolean | undefined;
+  isActiveLoading: boolean | undefined;
 }
 
 const GlobalStyles = createGlobalStyle<IProps>`    
     ${(props) =>
-        props.isActiveLoading &&
-        `body {
+      props.isActiveLoading &&
+      `body {
             overflow: hidden;
         }`}
 `;
 
 export default function Layout({ children }: ComponentProps) {
-    const [isActiveLoading, setIsActiveLoading] = useState<boolean>(true);
+  const [isActiveLoading, setIsActiveLoading] = useState<boolean>(true);
 
-    function handlePageLoaded() {
-        setTimeout(() => {
-            return setIsActiveLoading(false);
-        }, 2500);
-    }
+  function handlePageLoaded() {
+    setTimeout(() => {
+      return setIsActiveLoading(false);
+    }, 2500);
+  }
 
-    function teste() {
-        console.log('test');
-    }
+  useEffect(() => {
+    handlePageLoaded();
+  }, []);
+
+  const dialog = useRef<any>(null);
+  
+  const [isActiveModalEmail, setIsActiveModalEmail] = useState<boolean>(false);
+
+  function handleOpenModalEmail() {
+    return [setIsActiveModalEmail(true), dialog.current.showModal()];
+  }
+
+  function handleCloseModalEmail() {
+    console.log('foii');
     
-    function scroll() {
-        console.log(window.screen.height);
-    }
+    return [setIsActiveModalEmail(false), dialog.current.close()];
+  }
 
-    useEffect(() => {
-        handlePageLoaded();
-        console.log(document.documentElement.scrollHeight);
-    }, [])
-
-    return (
-        <>
-            <GlobalStyles isActiveLoading={isActiveLoading} />
-            {isActiveLoading && <LoadingPage />}
-            <Context.Provider value={{}}>   
-                <section onScroll={scroll} onLoad={teste}>{children}</section>
-                <TopButton/>
-            </Context.Provider>       
-        </>
-    )
+  return (
+    <>
+      <GlobalStyles isActiveLoading={isActiveLoading} />
+      {isActiveLoading && <LoadingPage />}
+      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail }}>
+        <Provider store={store}>
+          <section>{children}</section>
+          <ModalEmail dialog={dialog} />
+          <Footer/>
+          <TopButton />
+        </Provider>
+      </Context.Provider>
+    </>
+  );
 }

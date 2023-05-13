@@ -41,13 +41,15 @@
       z-index: 99;
       position: relative;
       
-      a, span, button {
+      a, button {
         margin: 0px 10px;
         padding: 7px 20px;
         border: 2px solid rgba(255, 255, 255, 0);
         border-radius: 10px;
         color: var(--color-headings);
         border: 2px solid transparent;
+        background-color: transparent;
+        font-size: 1rem;
         cursor: pointer;
 
         &:hover {
@@ -57,7 +59,7 @@
         }
       }
 
-      button {
+      .btn-contact {
         display: flex;
         align-items: center;
         border-radius: 15px;
@@ -95,6 +97,16 @@
       .active-contact {
         border: 2px solid var(--bg-panel) !important; 
         color: var(--color-text2);
+        
+        &:hover {
+          transition: 0.5s;
+          border: 2px solid var(--color-primary) !important;
+          
+          svg {
+            transition: 0.5s;
+            opacity: 100%;
+          }
+        }
 
         hr {
           background-color: var(--color-text2);
@@ -117,12 +129,16 @@
         color: var(--color-text2);
       }
 
+      li:nth-last-child(1) .dropdown {
+        margin-top: 19px;
+      }
+
       .dropdown {
         min-width: 25%;
         display: none;
         position: absolute;
         background-color: var(--bg-color);
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 10px;
         flex-direction: column;
         align-items: center;
