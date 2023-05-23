@@ -11,6 +11,8 @@ interface IContext {
   handleOpenModalEmail?: any;
   handleCloseModalEmail?: any;
   isActiveModalEmail?: boolean | undefined;
+  setIsActiveLoading?: any;
+  dialog?: any;
 }
 
 export const Context = createContext<IContext>({});
@@ -36,7 +38,7 @@ export default function Layout({ children }: ComponentProps) {
 
   function handlePageLoaded() {
     setTimeout(() => {
-      return setIsActiveLoading(false);
+      return setIsActiveLoading(false); 
     }, 2500);
   }
 
@@ -53,8 +55,6 @@ export default function Layout({ children }: ComponentProps) {
   }
 
   function handleCloseModalEmail() {
-    console.log('foii');
-    
     return [setIsActiveModalEmail(false), dialog.current.close()];
   }
 
@@ -62,10 +62,10 @@ export default function Layout({ children }: ComponentProps) {
     <>
       <GlobalStyles isActiveLoading={isActiveLoading} />
       {isActiveLoading && <LoadingPage />}
-      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail }}>
+      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail, setIsActiveLoading, dialog }}>
         <Provider store={store}>
           <section>{children}</section>
-          <ModalEmail dialog={dialog} />
+          <ModalEmail />
           <Footer/>
           <TopButton />
         </Provider>
