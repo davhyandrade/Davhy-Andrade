@@ -11,7 +11,7 @@ interface IContext {
   handleOpenModalEmail?: any;
   handleCloseModalEmail?: any;
   isActiveModalEmail?: boolean | undefined;
-  setIsActiveLoading?: any;
+  handlePageLoaded?: any;
   dialog?: any;
 }
 
@@ -37,9 +37,13 @@ export default function Layout({ children }: ComponentProps) {
   const [isActiveLoading, setIsActiveLoading] = useState<boolean>(true);
 
   function handlePageLoaded() {
-    setTimeout(() => {
-      return setIsActiveLoading(false); 
-    }, 2500);
+    if (isActiveLoading) {
+      setTimeout(() => {
+        return setIsActiveLoading(false); 
+      }, 2500);
+    } else {
+      return setIsActiveLoading(true); 
+    }
   }
 
   useEffect(() => {
@@ -62,7 +66,7 @@ export default function Layout({ children }: ComponentProps) {
     <>
       <GlobalStyles isActiveLoading={isActiveLoading} />
       {isActiveLoading && <LoadingPage />}
-      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail, setIsActiveLoading, dialog }}>
+      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail, handlePageLoaded, dialog }}>
         <Provider store={store}>
           <section>{children}</section>
           <ModalEmail />

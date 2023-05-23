@@ -154,7 +154,7 @@ export default function Menu() {
                 Contact
               </button>
               {isActiveDropdown && (
-                <div className="dropdown dropdown-button-contact">
+                <ul className="dropdown dropdown-button-contact">
                   <div className="header"></div>
                   {contactDropdown.map((item: any, id: number) => {
                     return (
@@ -163,7 +163,7 @@ export default function Menu() {
                       </li>
                     );
                   })}
-                </div>
+                </ul>
               )}
             </li>
           </ul>
