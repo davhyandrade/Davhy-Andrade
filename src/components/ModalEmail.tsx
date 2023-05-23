@@ -18,14 +18,15 @@ ${(props) =>
 `;
 
 export default function ModalEmail() {
-  const { isActiveModalEmail, handleCloseModalEmail, dialog, setIsActiveLoading } = useContext(Context);
+  const { isActiveModalEmail, handleCloseModalEmail, dialog, handlePageLoaded } = useContext(Context);
 
   async function sendEmail(event: FormEvent) {
     event.preventDefault();
-    setIsActiveLoading(true);
-    console.log('teste');
+    handleCloseModalEmail();
+    handlePageLoaded();
     
     try {
+      handlePageLoaded();
       const email = await axios.post('/api/modal-email', {
         email: refEmail.current.value,
         subject: refSubject.current.value,
@@ -34,12 +35,11 @@ export default function ModalEmail() {
       toast.success(email.data.msg, {
         theme: 'colored',
       });
-      setIsActiveLoading(false);
     } catch (error: any) {
       toast.error(error.response.data.msg, {
         theme: 'colored',
       });
-      setIsActiveLoading(false);
+      handlePageLoaded();
       console.log(error);
     }
   }
@@ -66,13 +66,13 @@ export default function ModalEmail() {
             </div>
             <div className="field-input">
               <label htmlFor="input-from">From:</label>
-              <input ref={refEmail} id="input-from" type="email" required />
+              <input ref={refEmail} id="input-from" type="email" placeholder='you@example.com' required />
             </div>
             <div className="field-input">
               <label htmlFor="input-subject">Subject:</label>
-              <input ref={refSubject} id="input-subject" type="text" required />
+              <input ref={refSubject} id="input-subject" type="text" placeholder='Insert the subject' required />
             </div>
-            <textarea ref={refContent} required></textarea>
+            <textarea ref={refContent} placeholder='Type your message...' required></textarea>
             <div className="footer">
               <div className="position">
                 <input type="submit" value="Send" />

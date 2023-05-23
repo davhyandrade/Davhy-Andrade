@@ -1004,7 +1004,7 @@ dialog {
   margin: -42.5vh -350px;
   width: 700px;
   max-height: 85vh;
-  background: #0f1113;
+  background-color: var(--bg-panel);
   border-radius: 15px;
   border: 1px solid var(--color-border);
   position: relative;
@@ -1036,11 +1036,11 @@ dialog > .position form .header svg {
   height: 16px;
   cursor: pointer;
   filter: invert(1);
-  opacity: 20%;
+  opacity: 40%;
 }
 dialog > .position form .header svg:hover {
   transition: 1s;
-  opacity: 50%;
+  opacity: 90%;
 }
 dialog > .position form .header svg:active {
   transition: 0.1s;
@@ -1061,12 +1061,13 @@ dialog > .position form div label {
 }
 dialog > .position form div input {
   width: 85%;
-  background-color: transparent;
+  background-color: var(--bg-panel);
   border: 1px solid var(--color-border);
   padding: 7px 12px;
   border-radius: 5px;
   color: var(--color-headings);
   outline: none;
+  filter: brightness(1.5);
 }
 dialog > .position form .field-input {
   margin-top: 15px;
@@ -1078,13 +1079,14 @@ dialog > .position form textarea {
   padding: 20px;
   color: var(--color-text);
   margin-top: 40px;
-  background-color: rgba(24, 27, 30, 0.2117647059);
+  background-color: var(--bg-panel);
   border: 1px solid var(--color-border);
   border-radius: 5px;
   outline: none;
   resize: none;
   font-size: 0.9rem;
   margin-bottom: 100px;
+  filter: brightness(1.5);
 }
 dialog > .position form textarea::-webkit-scrollbar {
   width: 10px;
@@ -1110,7 +1112,7 @@ dialog > .position form .footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #0f1113;
+  background-color: var(--bg-panel);
 }
 dialog > .position form .footer .position {
   display: flex;
@@ -1131,5 +1133,9 @@ dialog > .position form .footer .position input[type=submit]:active {
   opacity: 10%;
 }
 dialog::backdrop {
-  background: #181b1e;
+  background-image: url(https://i.postimg.cc/MHS5gztz/background-whatsapp-7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #181b1e;
+  filter: saturate(0) brightness(0.8);
 }/*# sourceMappingURL=globals.css.map */
