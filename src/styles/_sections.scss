@@ -1,16 +1,10 @@
-.section-break {
-  width: 100%;
-  height: 20vh;
-  background: linear-gradient(140deg, #0f0f11, #000000);
-}
-
 .section-about {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1700px;
-  background-image: url(https://i.postimg.cc/pLrTfwmr/background-landing-page4.png);
+  min-height: 1500px;
+  background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -21,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 100px;
 
     .introduction-field {
       width: 75%;
