@@ -134,7 +134,7 @@
       }
 
       .dropdown {
-        min-width: 25%;
+        min-width: 30%;
         display: none;
         position: absolute;
         background-color: var(--bg-color);
@@ -180,6 +180,31 @@
             color: var(--color-text2) !important;
             border: none;
             padding: 0;
+          }
+        }
+
+        .more-dropdown {
+          width: 100%;
+          display: flex;
+          justify-content: end;
+          background-color: var(--bg-panel);
+
+          span {
+            color: var(--color-text);
+            cursor: pointer;
+            padding: 5px;
+            font-size: 0.9rem;
+            margin-right: 5px;
+
+            &:hover {
+              transition: 1s;
+              color: var(--color-primary);
+            }
+
+            &:active {
+              transition: 1ms;
+              opacity: 30%;
+            }
           }
         }
       }

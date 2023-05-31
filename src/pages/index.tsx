@@ -3,8 +3,22 @@ import Timeline from '@/components/Timeline';
 import Graphic from '@/components/Graphic';
 import Head from 'next/head';
 import Code from '@/components/Code';
+import { useSelector } from 'react-redux';
+import Card from '@/components/Card';
+import { useState } from 'react';
+import CodeIcon from 'public/images/timeline/code.svg';
 
 export default function Home() {
+  const { buttonsMenu } = useSelector((rootReducer: any) => rootReducer.menuReducer);
+
+  let [quantCards, setQuantCards] = useState<number>(8);
+
+  const [projects, setProjects] = useState(buttonsMenu[1].dropdown);
+
+  function handleMoreButton() {
+    return setQuantCards((quantCards += 4));
+  }
+
   return (
     <>
       <Head>
@@ -30,7 +44,7 @@ export default function Home() {
                 , com sua capacidade de criar interfaces e experiências únicas que tornam a web muito mais interessante
                 e envolvente.
               </span>
-              <Code/>
+              <Code />
             </div>
           </div>
           <div className="about-field">
@@ -55,7 +69,39 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="section-break"></div>
+      <section className="section-projects">
+        <div className="position">
+          <div className="header">
+            <div>
+              <CodeIcon className="title-timeline" />
+              <div className="vertical-line"></div>
+            </div>
+            <div>
+              <h2>Projects</h2>
+              <p>Explore minha coleção de projetos, em constante desenvolvimento e aprimoramento com intuito de atender às necessidades dos futuros clientes.</p>
+            </div>
+          </div>
+          <div className="cards-field">
+            {projects.slice(0, quantCards).map((item: any, id: number) => {
+              return (
+                <Card
+                  key={id}
+                  url={item.url}
+                  image={item.imageUrl}
+                  title={item.name}
+                  description={item.description}
+                  date={item.date}
+                />
+              );
+            })}
+          </div>
+          {quantCards < projects.length && (
+            <div id="more-button">
+              <span onClick={handleMoreButton}>load more...</span>
+            </div>
+          )}
+        </div>
+      </section>
     </>
   );
 }

@@ -6,11 +6,19 @@ import { ReactNode, createContext, useEffect, useRef, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import store from '@/redux/store';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Menu from '@/components/Menu';
 
 interface IContext {
   handleOpenModalEmail?: any;
   handleCloseModalEmail?: any;
   isActiveModalEmail?: boolean | undefined;
+  handlePageLoaded?: any;
+  setIsActiveLoading?: any;
+  dialog?: any;
+  setIsActiveMenu?: any;
+  isActiveMenu?: boolean | undefined;
 }
 
 export const Context = createContext<IContext>({});
@@ -45,7 +53,7 @@ export default function Layout({ children }: ComponentProps) {
   }, []);
 
   const dialog = useRef<any>(null);
-  
+
   const [isActiveModalEmail, setIsActiveModalEmail] = useState<boolean>(false);
 
   function handleOpenModalEmail() {
@@ -53,21 +61,34 @@ export default function Layout({ children }: ComponentProps) {
   }
 
   function handleCloseModalEmail() {
-    console.log('foii');
-    
     return [setIsActiveModalEmail(false), dialog.current.close()];
   }
+
+  const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false);
 
   return (
     <>
       <GlobalStyles isActiveLoading={isActiveLoading} />
       {isActiveLoading && <LoadingPage />}
-      <Context.Provider value={{ handleOpenModalEmail, handleCloseModalEmail, isActiveModalEmail }}>
+      <Context.Provider
+        value={{
+          handleOpenModalEmail,
+          handleCloseModalEmail,
+          isActiveModalEmail,
+          handlePageLoaded,
+          setIsActiveLoading,
+          dialog,
+          setIsActiveMenu,
+          isActiveMenu,
+        }}
+      >
         <Provider store={store}>
+          {isActiveMenu && <Menu />}
           <section>{children}</section>
-          <ModalEmail dialog={dialog} />
-          <Footer/>
+          <ModalEmail />
+          <Footer />
           <TopButton />
+          <ToastContainer />
         </Provider>
       </Context.Provider>
     </>

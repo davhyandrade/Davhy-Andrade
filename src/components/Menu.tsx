@@ -4,7 +4,7 @@ import Logo from 'public/images/menu/logo-davhy.svg';
 import VectorPhone from 'public/images/menu/vector-phone.svg';
 import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Context } from "@/context/layout";
 import { useContext } from "react";
 
@@ -15,6 +15,8 @@ interface IActiveButtonMenu {
 
 export default function Menu() {
   const { buttonsMenu, contactDropdown } = useSelector((rootReducer: any) => rootReducer.menuReducer);
+
+  const { handleOpenModalEmail, isActiveMenu, setIsActiveMenu } = useContext(Context);
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
@@ -80,8 +82,6 @@ export default function Menu() {
     }
   }
 
-  const { handleOpenModalEmail } = useContext(Context);
-
   function handleOptionsContactButton(name: string) {
     switch (name) {
       case 'E-mail':
@@ -91,9 +91,23 @@ export default function Menu() {
     }
   }
 
+  function handleMoreButton(dropdown: string){
+    // expand dropdown options
+    if(dropdown === 'Projects') {
+      if (Router.pathname !== '/') {
+        setIsActiveMenu(false);
+        Router.push('/');
+        setTimeout(() => {
+          return window.scrollTo({ top: 2650, left: 0 });
+        }, 1000);
+      }
+      return window.scrollTo({ top: 2650, left: 0 });
+    }
+  }
+
   return (
     <>
-      <nav className={`menu ${scroll > 1200 && 'menu-small'}`}>
+      <nav className={`menu ${scroll > 1200 && 'menu-small'} ${isActiveMenu && 'menu-small'}`}>
         <div className="position">
           <Link href="/" id="logo">
             <Logo />
@@ -110,7 +124,7 @@ export default function Menu() {
                           ? 'active-button'
                           : pathname === item.nameUrl && 'active-button'
                       }`}
-                      onClick={() => handleButtonsMenu(id)}
+                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(false)]}
                       href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
                     >
                       {item.name}
@@ -122,7 +136,7 @@ export default function Menu() {
                           ? 'active-button'
                           : pathname === item.nameUrl && 'active-button'
                       }`}
-                      onClick={() => handleButtonsMenu(id)}
+                      onClick={() => [handleButtonsMenu(id)]}
                     >
                       {item.name}
                     </button>
@@ -130,13 +144,18 @@ export default function Menu() {
                   {item.dropdown && (
                     <ul className={`dropdown ${isActiveButtonsMenu.numberActive === id && 'active-dropdown'}`}>
                       <div className="header"></div>
-                      {item.dropdown?.map((item: any, id: number) => {
+                      {item.dropdown?.slice(0, 5).map((item: any, id: number) => {
                         return (
                           <li key={id}>
-                            <Link href={item.url}>{item.name}</Link>
+                            <Link onClick={() => setIsActiveMenu(false)} href={item.url}>{item.name}</Link>
                           </li>
                         );
                       })}
+                      {item.dropdown?.length > 5 &&
+                        <div className="more-dropdown">
+                          <span onClick={() => handleMoreButton(item.name)}>more...</span>
+                        </div>
+                      }
                     </ul>
                   )}
                 </li>
@@ -154,7 +173,7 @@ export default function Menu() {
                 Contact
               </button>
               {isActiveDropdown && (
-                <div className="dropdown dropdown-button-contact">
+                <ul className="dropdown dropdown-button-contact">
                   <div className="header"></div>
                   {contactDropdown.map((item: any, id: number) => {
                     return (
@@ -163,7 +182,7 @@ export default function Menu() {
                       </li>
                     );
                   })}
-                </div>
+                </ul>
               )}
             </li>
           </ul>
