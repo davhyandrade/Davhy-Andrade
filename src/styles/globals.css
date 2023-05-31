@@ -82,14 +82,18 @@ section {
 .menu .position #logo span {
   font-family: Cookie;
   font-size: 1.7rem;
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
   color: var(--color-headings);
 }
-.menu .position #logo svg {
+.menu .position #logo img {
   width: 60px;
   height: 60px;
-  filter: invert(1);
+  padding: 4px;
+  border-radius: 50%;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--color-border);
+  filter: saturate(0.8);
 }
 .menu .position .btns-menu {
   display: flex;
@@ -255,7 +259,7 @@ section {
 .menu-small .position #logo {
   margin: 0 !important;
 }
-.menu-small .position #logo svg {
+.menu-small .position #logo img {
   display: none;
 }
 .menu-small .position #logo span {
@@ -276,7 +280,7 @@ section {
 
 .landing-page {
   height: 110vh;
-  background-image: url(https://i.postimg.cc/nc3Jx0LZ/background-landing-page.png);
+  background-image: url(https://i.postimg.cc/rpWVVWnC/background-landing-page.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -423,19 +427,13 @@ section {
   }
 }
 
-.section-break {
-  width: 100%;
-  height: 20vh;
-  background: linear-gradient(140deg, #0f0f11, #000000);
-}
-
 .section-about {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1700px;
-  background-image: url(https://i.postimg.cc/pLrTfwmr/background-landing-page4.png);
+  min-height: 1500px;
+  background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -446,6 +444,7 @@ section {
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 100px;
 }
 .section-about > .position .introduction-field {
   width: 75%;

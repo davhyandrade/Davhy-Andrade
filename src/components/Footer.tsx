@@ -50,10 +50,10 @@ export default function Footer() {
           setIsActiveMenu(false);
           router.push('/');
           setTimeout(() => {
-            return window.scrollTo({ top: 1000, left: 0 });
+            return window.scrollTo({ top: 700, left: 0 });
           }, 1000);
         }
-        return window.scrollTo({ top: 1000, left: 0 });
+        return window.scrollTo({ top: 700, left: 0 });
       default:
         return;
     }

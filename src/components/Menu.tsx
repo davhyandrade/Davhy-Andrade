@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Router from 'next/router';
-import Logo from 'public/images/menu/logo-davhy.svg';
 import VectorPhone from 'public/images/menu/vector-phone.svg';
 import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import { useEffect, useRef, useState } from 'react';
@@ -98,10 +97,10 @@ export default function Menu() {
         setIsActiveMenu(false);
         Router.push('/');
         setTimeout(() => {
-          return window.scrollTo({ top: 2650, left: 0 });
+          return window.scrollTo({ top: 2300, left: 0 });
         }, 1000);
       }
-      return window.scrollTo({ top: 2650, left: 0 });
+      return window.scrollTo({ top: 2300, left: 0 });
     }
   }
 
@@ -110,7 +109,7 @@ export default function Menu() {
       <nav className={`menu ${scroll > 1200 && 'menu-small'} ${isActiveMenu && 'menu-small'}`}>
         <div className="position">
           <Link href="/" id="logo">
-            <Logo />
+            <img src="https://github.com/davhyandrade.png" alt="profile" />
             <span>Davhy Andrade</span>
           </Link>
           <ul className="btns-menu" ref={menu}>

@@ -23,15 +23,19 @@
       span {
         font-family: Cookie;
         font-size: 1.7rem;
-        margin-left: 10px;
+        margin-left: 20px;
         cursor: pointer;
         color: var(--color-headings);
       }
 
-      svg {
+      img {
         width: 60px;
         height: 60px;
-        filter: invert(1);
+        padding: 4px;
+        border-radius: 50%;
+        background-color: var(--bg-panel);
+        border: 1px solid var(--color-border);
+        filter: saturate(0.8) ;
       }
     }
 
@@ -228,7 +232,7 @@
     #logo {
       margin: 0 !important;
   
-      svg {
+      img {
         display: none;
       }
   
