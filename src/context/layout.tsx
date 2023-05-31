@@ -43,9 +43,13 @@ export default function Layout({ children }: ComponentProps) {
   const [isActiveLoading, setIsActiveLoading] = useState<boolean>(true);
 
   function handlePageLoaded() {
-    setTimeout(() => {
-      return setIsActiveLoading(false);
-    }, 2500);
+    if (isActiveLoading) {
+      setTimeout(() => {
+        return setIsActiveLoading(false); 
+      }, 2500);
+    } else {
+      return setIsActiveLoading(true); 
+    }
   }
 
   useEffect(() => {
