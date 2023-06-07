@@ -1,0 +1,265 @@
+.design-page {
+  > .header {
+    height: 90px;
+    background-color: black;
+  }
+  
+  .design-landing-page {
+    width: 100%;
+
+    .header {
+      width: 100%;
+      height: 40vh;
+      background-color: var(--bg-panel);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--bg-panel);
+
+      h1 {
+        color: var(--color-headings);
+        font-size: 5rem;
+        z-index: 10;
+      }
+      
+      p {
+        width: 35%;
+        text-align: center;
+        color: var(--color-text);
+        font-size: 1.5rem;
+        z-index: 10;
+        margin-bottom: 3vh;
+      }
+    
+      .image-background {
+        width: 100%;
+        
+        > div:nth-child(1) {
+          position: absolute;
+          top: 0;
+          display: flex;
+          z-index: 1;
+
+          img {
+            width: 100%;
+            filter: grayscale(1);
+            opacity: 5%;
+          }
+        }
+
+        > div:nth-last-child(1) {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          width: 100%;  
+          z-index: 1;
+          user-select: none;
+          position: absolute;
+          bottom: -80%;
+          top: auto;
+
+          div {
+            width: 30%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+      
+            &:nth-child(2) {
+              width: 43%;
+              height: 430px;
+                
+              &::after {
+                height: 450px;
+              }   
+            }
+              
+            &::after {
+              content: '';
+              display: flex;
+              width: 100%;
+              height: 430px;
+              background: linear-gradient(0deg, var(--bg-panel2), var(--bg-panel2), var(--bg-panel2), var(--bg-panel2), transparent);
+              z-index: 2;
+              position: absolute;
+              bottom: 0;
+            }   
+        
+            img {
+              width: 100%;
+              opacity: 30%;
+              filter: grayscale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .images-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-border);
+  
+    .position {
+      width: 80%;
+      padding-top: 65px;
+      padding-bottom: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .header {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+  
+        > div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          .title-timeline {
+            filter: drop-shadow(0 0px 30px #3c0a4a);
+            margin: 15px;
+          }
+    
+          .vertical-line {
+            width: 3px;
+            height: 50px;
+            z-index: 2 !important;
+            filter: drop-shadow(0 0px 15px #0077cb);  
+            background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+          }
+        }
+  
+        > div:nth-child(2) {
+          margin-left: 20px;
+          margin-top: 15px;
+  
+          > h2 {
+            color: var(--color-headings);
+            font-size: 1.6rem;
+            font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 500 !important;
+            margin-bottom: 15px;
+          }
+  
+          p {
+            color: var(--color-text);
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            line-height: 30px !important;
+          }
+        }
+      }
+  
+      > div:nth-last-child(1) {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+  
+        > div {
+          width: 32.8%;
+          margin-bottom: 10px;
+          cursor: pointer;
+          position: relative;
+          
+          &:hover {
+            > img {
+              transition: 5ms;
+              filter: brightness(0.3);
+            }
+    
+            &::after {
+              content: attr(data-description);
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 120px;
+              background: linear-gradient(0deg, var(--bg-color), transparent, transparent);
+              color: var(--color-headings);
+              z-index: 99;
+              position: absolute;
+              bottom: 0;
+            }    
+          }
+    
+          &:active {
+            transition: 1ms;
+            opacity: 30%;
+          }
+    
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.full-image {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    width: 70%;
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media only screen and (max-width: 800px) {
+      & {
+        width: 90%;
+        min-height: 75vh;
+      }
+    }     
+
+    svg {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      filter: invert(1);
+      opacity: 40%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:hover {
+        transition: 1s;
+        opacity: 90%;
+      }
+
+      &:active {
+        transition: 0.1s;
+        opacity: 10%;
+      }
+    }
+
+    img {
+      width: 60%;
+      object-fit: cover;
+      max-height: 95vh;
+                  
+      @media only screen and (max-width: 800px) {
+        & {
+          width: 100%;
+        }
+      }     
+    }
+  }
+}
