@@ -1,17 +1,9 @@
-import { Context } from "@/context/layout";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
 import { useSelector } from "react-redux"
 
 export default function NotFound() {
   const { buttonsMenu } = useSelector((rootReducer: any) => rootReducer.menuReducer);
   
-  const { setIsActiveMenu } = useContext(Context);
-  
-  useEffect(() => {
-    return setIsActiveMenu(true);
-  }, []);
-
   return (
     <div className="notfound-field">
       <div className="header"></div>

@@ -19,6 +19,7 @@ interface IContext {
   dialog?: any;
   setIsActiveMenu?: any;
   isActiveMenu?: boolean | undefined;
+  setIsFullImage?: any;
 }
 
 export const Context = createContext<IContext>({});
@@ -29,6 +30,7 @@ type ComponentProps = {
 
 interface IProps {
   isActiveLoading: boolean | undefined;
+  isFullImage: boolean | undefined;
 }
 
 const GlobalStyles = createGlobalStyle<IProps>`    
@@ -37,9 +39,16 @@ const GlobalStyles = createGlobalStyle<IProps>`
       `body {
             overflow: hidden;
         }`}
+    ${(props) =>
+      props.isFullImage &&
+      `body {
+            overflow: hidden;
+        }`}
 `;
 
 export default function Layout({ children }: ComponentProps) {
+  const [isFullImage, setIsFullImage] = useState<boolean>(false);
+
   const [isActiveLoading, setIsActiveLoading] = useState<boolean>(true);
 
   function handlePageLoaded() {
@@ -64,11 +73,11 @@ export default function Layout({ children }: ComponentProps) {
     return [setIsActiveModalEmail(false), dialog.current.close()];
   }
 
-  const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false);
+  const [isActiveMenu, setIsActiveMenu] = useState<boolean>(true);
 
   return (
     <>
-      <GlobalStyles isActiveLoading={isActiveLoading} />
+      <GlobalStyles isActiveLoading={isActiveLoading} isFullImage={isFullImage} />
       {isActiveLoading && <LoadingPage />}
       <Context.Provider
         value={{
@@ -80,6 +89,7 @@ export default function Layout({ children }: ComponentProps) {
           dialog,
           setIsActiveMenu,
           isActiveMenu,
+          setIsFullImage,
         }}
       >
         <Provider store={store}>

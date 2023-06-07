@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       margin-top: 50px;
+      margin-left: 10px;
 
       span {
         font-family: Cookie;
@@ -28,14 +29,13 @@
         color: var(--color-headings);
       }
 
-      img {
-        width: 60px;
-        height: 60px;
+      svg {
+        width: 65px;
+        height: 65px;
         padding: 4px;
         border-radius: 50%;
         background-color: var(--bg-panel);
         border: 1px solid var(--color-border);
-        filter: saturate(0.8) ;
       }
     }
 
@@ -190,13 +190,13 @@
         .more-dropdown {
           width: 100%;
           display: flex;
-          justify-content: end;
+          justify-content: flex-end;
           background-color: var(--bg-panel);
 
           span {
             color: var(--color-text);
             cursor: pointer;
-            padding: 5px;
+            padding: 1px;
             font-size: 0.9rem;
             margin-right: 5px;
 
@@ -232,7 +232,7 @@
     #logo {
       margin: 0 !important;
   
-      img {
+      svg {
         display: none;
       }
   

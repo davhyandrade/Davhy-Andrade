@@ -10,7 +10,7 @@ import { useContext } from 'react';
 import { Context } from '@/context/layout';
 
 export default function Footer() {
-  const { handleOpenModalEmail, setIsActiveMenu } = useContext(Context);
+  const { handleOpenModalEmail } = useContext(Context);
 
   const buttons = [
     {
@@ -47,7 +47,6 @@ export default function Footer() {
         return [window.scrollTo(0, 0), handleOpenModalEmail()];
       case 'About':
         if (router.pathname !== '/') {
-          setIsActiveMenu(false);
           router.push('/');
           setTimeout(() => {
             return window.scrollTo({ top: 700, left: 0 });
@@ -67,7 +66,7 @@ export default function Footer() {
             return (
               <div key={id}>
                 {item.url ? (
-                  <Link onClick={() => setIsActiveMenu()} href={item.url}>{item.name}</Link>
+                  <Link href={item.url}>{item.name}</Link>
                 ) : (
                   <button onClick={() => handleButtonsFooter(item.name)}>{item.name}</button>
                 )}

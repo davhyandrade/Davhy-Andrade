@@ -5,19 +5,26 @@ import Head from 'next/head';
 import Code from '@/components/Code';
 import { useSelector } from 'react-redux';
 import Card from '@/components/Card';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import CodeIcon from 'public/images/timeline/code.svg';
+import { Context } from '@/context/layout';
 
 export default function Home() {
   const { buttonsMenu } = useSelector((rootReducer: any) => rootReducer.menuReducer);
 
+  const { setIsActiveMenu } = useContext(Context);
+
   let [quantCards, setQuantCards] = useState<number>(8);
 
-  const [projects, setProjects] = useState(buttonsMenu[1].dropdown);
+  const [projects, setProjects] = useState(buttonsMenu.filter((item: any) => item.name === 'Projects')[0].dropdown);
 
   function handleMoreButton() {
     return setQuantCards((quantCards += 4));
   }
+
+  useEffect(() => {
+    return setIsActiveMenu(false);
+  }, [])
 
   return (
     <>

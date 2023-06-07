@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import VectorPhone from 'public/images/menu/vector-phone.svg';
+import Logo from 'public/images/menu/logo-davhy.svg';
 import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -16,6 +17,8 @@ export default function Menu() {
   const { buttonsMenu, contactDropdown } = useSelector((rootReducer: any) => rootReducer.menuReducer);
 
   const { handleOpenModalEmail, isActiveMenu, setIsActiveMenu } = useContext(Context);
+
+  const router = useRouter();
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
@@ -46,7 +49,7 @@ export default function Menu() {
   const [pathname, setPathname] = useState<any>();
 
   useEffect(() => {
-    setPathname(Router.pathname.split('/')[1]);
+    setPathname(router.pathname.split('/')[1]);
   }, []);
 
   const [scroll, setScroll] = useState<number>(0);
@@ -93,9 +96,9 @@ export default function Menu() {
   function handleMoreButton(dropdown: string){
     // expand dropdown options
     if(dropdown === 'Projects') {
-      if (Router.pathname !== '/') {
-        setIsActiveMenu(false);
-        Router.push('/');
+      if (router.pathname !== '/') {
+        setIsActiveMenu(true); // enable menu small
+        router.push('/');
         setTimeout(() => {
           return window.scrollTo({ top: 2300, left: 0 });
         }, 1000);
@@ -109,7 +112,7 @@ export default function Menu() {
       <nav className={`menu ${scroll > 1200 && 'menu-small'} ${isActiveMenu && 'menu-small'}`}>
         <div className="position">
           <Link href="/" id="logo">
-            <img src="https://github.com/davhyandrade.png" alt="profile" />
+            <Logo/>
             <span>Davhy Andrade</span>
           </Link>
           <ul className="btns-menu" ref={menu}>
@@ -123,7 +126,7 @@ export default function Menu() {
                           ? 'active-button'
                           : pathname === item.nameUrl && 'active-button'
                       }`}
-                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(false)]}
+                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(true)]}
                       href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
                     >
                       {item.name}
@@ -146,7 +149,7 @@ export default function Menu() {
                       {item.dropdown?.slice(0, 5).map((item: any, id: number) => {
                         return (
                           <li key={id}>
-                            <Link onClick={() => setIsActiveMenu(false)} href={item.url}>{item.name}</Link>
+                            <Link onClick={() => setIsActiveMenu(true)} href={item.url}>{item.name}</Link>
                           </li>
                         );
                       })}

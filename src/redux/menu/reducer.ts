@@ -1,5 +1,3 @@
-import { MenuActionTypes } from "./actions-types";
-
 const initialState = {
   buttonsMenu: [
     {
@@ -91,14 +89,9 @@ const initialState = {
       ],
     },
     {
-      name: 'Games',
-      nameUrl: 'games',
-      dropdown: [
-        {
-          name: 'Sonic',
-          url: '/games/sonic',
-        },
-      ],
+      name: 'Resume',
+      url: '/resume',
+      nameUrl: 'resume',
     },
     {
       name: 'Design',
@@ -141,11 +134,6 @@ interface IAction {
 
 export default function menuReducer(state = initialState, action: IAction) {
   switch (action.type) {
-    case MenuActionTypes.PROJECTS:
-      return { ...state, buttonsMenu: [        {
-        name: 'tes',
-        url: 'https://yourquiz.vercel.app/',
-      },] };
     default:
       return state;
   }
