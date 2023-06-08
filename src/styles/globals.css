@@ -66,7 +66,7 @@ section {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  z-index: 99;
+  z-index: 997;
   position: relative;
 }
 .menu .position {
@@ -1046,7 +1046,7 @@ footer .position {
 }
 @media only screen and (max-width: 800px) {
   footer .position {
-    width: 80%;
+    width: 90%;
   }
 }
 footer .position > div:nth-child(1) {
@@ -1575,10 +1575,20 @@ dialog::backdrop {
   position: relative;
   border: 1px solid var(--bg-panel);
 }
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header {
+    height: 30vh;
+  }
+}
 .design-page .design-landing-page .header h1 {
   color: var(--color-headings);
   font-size: 5rem;
   z-index: 10;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header h1 {
+    font-size: 2.7rem;
+  }
 }
 .design-page .design-landing-page .header p {
   width: 35%;
@@ -1587,6 +1597,12 @@ dialog::backdrop {
   font-size: 1.5rem;
   z-index: 10;
   margin-bottom: 3vh;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header p {
+    width: 85%;
+    font-size: 1rem;
+  }
 }
 .design-page .design-landing-page .header .image-background {
   width: 100%;
@@ -1601,6 +1617,11 @@ dialog::backdrop {
   width: 100%;
   filter: grayscale(1);
   opacity: 5%;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-child(1) img {
+    width: 150%;
+  }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) {
   display: flex;
@@ -1621,12 +1642,27 @@ dialog::backdrop {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div {
+    height: 300px;
+  }
+}
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div:nth-child(2) {
   width: 43%;
   height: 430px;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div:nth-child(2) {
+    height: 330px;
+  }
+}
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div:nth-child(2)::after {
   height: 450px;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div:nth-child(2)::after {
+    height: 350px;
+  }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div::after {
   content: "";
@@ -1637,6 +1673,11 @@ dialog::backdrop {
   z-index: 2;
   position: absolute;
   bottom: 0;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div::after {
+    height: 330px;
+  }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img {
   width: 100%;
@@ -1657,6 +1698,13 @@ dialog::backdrop {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position {
+    width: 95%;
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+}
 .design-page .images-field .position .header {
   width: 100%;
   display: flex;
@@ -1667,9 +1715,20 @@ dialog::backdrop {
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(1) {
+    margin-top: 15px;
+  }
+}
 .design-page .images-field .position .header > div:nth-child(1) .title-timeline {
   filter: drop-shadow(0 0px 30px #3c0a4a);
   margin: 15px;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(1) .title-timeline {
+    margin: 0;
+    margin-bottom: 15px;
+  }
 }
 .design-page .images-field .position .header > div:nth-child(1) .vertical-line {
   width: 3px;
@@ -1677,6 +1736,11 @@ dialog::backdrop {
   z-index: 2 !important;
   filter: drop-shadow(0 0px 15px #0077cb);
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(1) .vertical-line {
+    height: 65px;
+  }
 }
 .design-page .images-field .position .header > div:nth-child(2) {
   margin-left: 20px;
@@ -1695,6 +1759,12 @@ dialog::backdrop {
   letter-spacing: -0.01em;
   line-height: 30px !important;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(2) p {
+    font-size: 1rem;
+    line-height: 25px !important;
+  }
+}
 .design-page .images-field .position > div:nth-last-child(1) {
   flex-wrap: wrap;
   display: flex;
@@ -1705,6 +1775,12 @@ dialog::backdrop {
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position > div:nth-last-child(1) > div {
+    width: 49%;
+    margin-bottom: 8px;
+  }
 }
 .design-page .images-field .position > div:nth-last-child(1) > div:hover > img {
   transition: 5ms;
@@ -1729,6 +1805,95 @@ dialog::backdrop {
 }
 .design-page .images-field .position > div:nth-last-child(1) > div img {
   width: 100%;
+  height: 100%;
+}
+.design-page .images-field .position > div:nth-last-child(1) .w-66 {
+  width: 66.4% !important;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position > div:nth-last-child(1) .w-66 {
+    width: 100% !important;
+  }
+}
+.design-page .images-field .position .carousel-field {
+  width: 100% !important;
+  height: 300px !important;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-panel);
+  cursor: default !important;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .carousel-field {
+    height: 150px !important;
+  }
+}
+.design-page .images-field .position .carousel-field:hover::after {
+  display: none !important;
+}
+.design-page .images-field .position .carousel-field:active {
+  opacity: 100% !important;
+}
+.design-page .images-field .position .carousel-field .button-field {
+  z-index: 11;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--bg-color), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+}
+.design-page .images-field .position .carousel-field .button-field:hover {
+  transition: 5ms;
+  background: linear-gradient(90deg, var(--bg-panel), transparent);
+}
+.design-page .images-field .position .carousel-field .button-field:hover > svg {
+  transition: 5ms;
+  opacity: 100%;
+}
+.design-page .images-field .position .carousel-field .button-field:active {
+  transition: 1ms;
+  opacity: 50%;
+}
+.design-page .images-field .position .carousel-field .button-field .arrow_svg__octicon {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  opacity: 70%;
+}
+.design-page .images-field .position .carousel-field .button-field .arrow_svg__octicon .arrow_svg__octicon-chevrow-stem {
+  display: none;
+}
+.design-page .images-field .position .carousel-field .left-carousel-button {
+  left: 0;
+  right: auto;
+}
+.design-page .images-field .position .carousel-field .left-carousel-button > svg {
+  transform: rotate(180deg) !important;
+}
+.design-page .images-field .position .carousel-field .right-carousel-button {
+  right: 0;
+  left: auto;
+  background: linear-gradient(270deg, var(--bg-color), transparent) !important;
+}
+.design-page .images-field .position .carousel-field .right-carousel-button > svg {
+  transform: rotate(0deg) !important;
+}
+.design-page .images-field .position .carousel-field > div:nth-last-child(1) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: 1s all;
+}
+.design-page .images-field .position .carousel-field > div:nth-last-child(1) img {
+  width: 100%;
+  height: 100%;
 }
 
 .full-image {
@@ -1741,6 +1906,11 @@ dialog::backdrop {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 800px) {
+  .full-image {
+    align-items: flex-start;
+  }
+}
 .full-image > div {
   width: 70%;
   min-height: 90vh;
@@ -1752,7 +1922,8 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .full-image > div {
     width: 90%;
-    min-height: 75vh;
+    min-height: 70vh;
+    margin-top: 30px;
   }
 }
 .full-image > div svg {
@@ -1774,10 +1945,10 @@ dialog::backdrop {
   opacity: 10%;
 }
 .full-image > div img {
-  width: 60%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 95vh;
+  max-width: 100%;
+  max-height: 90vh;
 }
 @media only screen and (max-width: 800px) {
   .full-image > div img {
