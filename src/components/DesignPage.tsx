@@ -31,18 +31,24 @@ export default function DesignPage({ images, title, header_description, descript
     return router.push(`${router.pathname}/${urlWithoutSlash}`);
   }
 
+  const [widthPage, setWidthPage] = useState<number>(0);
+
+  useEffect(() => {
+    return setWidthPage(window.innerWidth);
+  }, []);
+
   const carousel = useRef<any>(null);
   const [percentageTranslate, setPercentageTranslate] = useState(0);
 
   function handleLeftCarouselButton() {
     if (percentageTranslate === 0) return;
-    return setPercentageTranslate((prevData) => prevData - 100 / 4);
+    return setPercentageTranslate((prevData) => (prevData - 100 / (widthPage > 800 ? 4 : 2)));
   }
 
   function handleRightCarouselButton() {
     const maxPercentage = (100 / 4) * carouselImages.length - 100;
     if (percentageTranslate === maxPercentage) return;
-    return setPercentageTranslate((prevData) => prevData + 100 / 4);
+    return setPercentageTranslate((prevData) => (prevData + 100 / (widthPage > 800 ? 4 : 2)));
   }
 
   useEffect(() => {
@@ -60,18 +66,22 @@ export default function DesignPage({ images, title, header_description, descript
             <div>
               {images.map((item: any, id: number) => {
                 return (
-                  item.url && <div key={id}>
-                    <img src={item.url} alt="image" />
-                  </div>
+                  item.url && (
+                    <div key={id}>
+                      <img src={item.url} alt="image" />
+                    </div>
+                  )
                 );
               })}
             </div>
             <div>
               {images.slice(initialImage, finalImage).map((item: any, id: number) => {
                 return (
-                  item.url && <div key={id}>
-                    <img src={item.url} alt="image" />
-                  </div>
+                  item.url && (
+                    <div key={id}>
+                      <img src={item.url} alt="image" />
+                    </div>
+                  )
                 );
               })}
             </div>
@@ -93,14 +103,16 @@ export default function DesignPage({ images, title, header_description, descript
           <div>
             {images.map((item: any, id: number) => {
               return (
-                item.url && <div
-                  className={`${item.class && `${item.class}`}`}
-                  key={id}
-                  onClick={() => handleImage(item.url)}
-                  data-description={item.description}
-                >
-                  <img src={item.url} alt="image" />
-                </div>
+                item.url && (
+                  <div
+                    className={`${item.class && `${item.class}`}`}
+                    key={id}
+                    onClick={() => handleImage(item.url)}
+                    data-description={item.description}
+                  >
+                    <img src={item.url} alt="image" />
+                  </div>
+                )
               );
             })}
             {carouselImages && (

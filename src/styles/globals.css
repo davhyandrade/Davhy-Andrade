@@ -1559,6 +1559,11 @@ dialog::backdrop {
   height: 90px;
   background-color: black;
 }
+@media only screen and (max-width: 800px) {
+  .design-page > .header {
+    width: 85px;
+  }
+}
 .design-page .design-landing-page {
   width: 100%;
 }
@@ -1577,7 +1582,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .design-landing-page .header {
-    height: 30vh;
+    height: 170px;
   }
 }
 .design-page .design-landing-page .header h1 {
@@ -1701,7 +1706,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position {
     width: 95%;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 100px;
   }
 }
@@ -1709,6 +1714,11 @@ dialog::backdrop {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header {
+    width: 95%;
+  }
 }
 .design-page .images-field .position .header > div:nth-child(1) {
   display: flex;
@@ -1737,11 +1747,6 @@ dialog::backdrop {
   filter: drop-shadow(0 0px 15px #0077cb);
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
 }
-@media only screen and (max-width: 800px) {
-  .design-page .images-field .position .header > div:nth-child(1) .vertical-line {
-    height: 65px;
-  }
-}
 .design-page .images-field .position .header > div:nth-child(2) {
   margin-left: 20px;
   margin-top: 15px;
@@ -1753,6 +1758,11 @@ dialog::backdrop {
   font-weight: 500 !important;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(2) > h2 {
+    margin-bottom: 10px;
+  }
+}
 .design-page .images-field .position .header > div:nth-child(2) p {
   color: var(--color-text);
   font-size: 1.3rem;
@@ -1762,7 +1772,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position .header > div:nth-child(2) p {
     font-size: 1rem;
-    line-height: 25px !important;
+    line-height: 22px !important;
   }
 }
 .design-page .images-field .position > div:nth-last-child(1) {
@@ -1792,12 +1802,18 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 120px;
   background: linear-gradient(0deg, var(--bg-color), transparent, transparent);
   color: var(--color-headings);
   z-index: 99;
   position: absolute;
   bottom: 0;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position > div:nth-last-child(1) > div:hover::after {
+    display: none;
+  }
 }
 .design-page .images-field .position > div:nth-last-child(1) > div:active {
   transition: 1ms;
@@ -1906,11 +1922,6 @@ dialog::backdrop {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 800px) {
-  .full-image {
-    align-items: flex-start;
-  }
-}
 .full-image > div {
   width: 70%;
   min-height: 90vh;
@@ -1923,7 +1934,7 @@ dialog::backdrop {
   .full-image > div {
     width: 90%;
     min-height: 70vh;
-    margin-top: 30px;
+    margin-bottom: 50px;
   }
 }
 .full-image > div svg {
