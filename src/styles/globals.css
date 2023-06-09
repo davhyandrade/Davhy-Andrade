@@ -1561,7 +1561,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page > .header {
-    width: 85px;
+    width: 80px;
   }
 }
 .design-page .design-landing-page {
@@ -1582,7 +1582,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .design-landing-page .header {
-    height: 170px;
+    height: 155px;
   }
 }
 .design-page .design-landing-page .header h1 {
@@ -1607,6 +1607,7 @@ dialog::backdrop {
   .design-page .design-landing-page .header p {
     width: 85%;
     font-size: 1rem;
+    margin-bottom: 1vh;
   }
 }
 .design-page .design-landing-page .header .image-background {
@@ -1706,7 +1707,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position {
     width: 95%;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 100px;
   }
 }
@@ -1747,6 +1748,11 @@ dialog::backdrop {
   filter: drop-shadow(0 0px 15px #0077cb);
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
 }
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .header > div:nth-child(1) .vertical-line {
+    height: 65px;
+  }
+}
 .design-page .images-field .position .header > div:nth-child(2) {
   margin-left: 20px;
   margin-top: 15px;
@@ -1760,7 +1766,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position .header > div:nth-child(2) > h2 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 .design-page .images-field .position .header > div:nth-child(2) p {
