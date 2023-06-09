@@ -47,7 +47,7 @@ export default function DesignPage({ images, title, header_description, descript
 
   function handleRightCarouselButton() {
     const maxPercentage = (100 / 4) * carouselImages.length - 100;
-    if (percentageTranslate === maxPercentage) return;
+    if (percentageTranslate >= maxPercentage) return;
     return setPercentageTranslate((prevData) => (prevData + 100 / (widthPage > 800 ? 4 : 2)));
   }
 

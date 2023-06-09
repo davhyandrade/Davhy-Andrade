@@ -171,7 +171,7 @@
       @media only screen and (max-width: 800px) {
         & {
           width: 95%;
-          padding-top: 40px;
+          padding-top: 15px;
           padding-bottom: 100px;
         }
       }
@@ -186,7 +186,7 @@
             width: 95%;
           }
         }
-        
+
         > div:nth-child(1) {
           display: flex;
           flex-direction: column;
@@ -442,7 +442,7 @@
       & {
         width: 90%;
         min-height: 70vh;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
       }
     }     
 
