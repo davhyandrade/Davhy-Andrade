@@ -5,7 +5,7 @@
 
     @media only screen and (max-width: 800px) {
       & {
-        width: 80px;
+        height: 80px;
       }
     }
   }
@@ -121,7 +121,7 @@
 
                 @media only screen and (max-width: 800px) {
                   & {
-                    height: 350px;
+                    height: 280px;
                   }
                 }
               }   
@@ -139,7 +139,7 @@
               
               @media only screen and (max-width: 800px) {
                 & {
-                  height: 330px;
+                  height: 260px;
                 }
               }
             }   
@@ -172,8 +172,8 @@
       @media only screen and (max-width: 800px) {
         & {
           width: 95%;
-          padding-top: 30px;
-          padding-bottom: 100px;
+          padding-top: 15px;
+          padding-bottom: 60px;
         }
       }
 
@@ -217,12 +217,6 @@
             z-index: 2 !important;
             filter: drop-shadow(0 0px 15px #0077cb);  
             background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
-
-            @media only screen and (max-width: 800px) {
-              & {
-                height: 65px;
-              }
-            }
           }
         }
   
@@ -449,7 +443,7 @@
       & {
         width: 90%;
         min-height: 70vh;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
       }
     }     
 

@@ -1561,7 +1561,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page > .header {
-    width: 80px;
+    height: 80px;
   }
 }
 .design-page .design-landing-page {
@@ -1667,7 +1667,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div:nth-child(2)::after {
-    height: 350px;
+    height: 280px;
   }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div::after {
@@ -1682,7 +1682,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div::after {
-    height: 330px;
+    height: 260px;
   }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img {
@@ -1707,8 +1707,8 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position {
     width: 95%;
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding-top: 15px;
+    padding-bottom: 60px;
   }
 }
 .design-page .images-field .position .header {
@@ -1747,11 +1747,6 @@ dialog::backdrop {
   z-index: 2 !important;
   filter: drop-shadow(0 0px 15px #0077cb);
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
-}
-@media only screen and (max-width: 800px) {
-  .design-page .images-field .position .header > div:nth-child(1) .vertical-line {
-    height: 65px;
-  }
 }
 .design-page .images-field .position .header > div:nth-child(2) {
   margin-left: 20px;
@@ -1940,7 +1935,7 @@ dialog::backdrop {
   .full-image > div {
     width: 90%;
     min-height: 70vh;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 }
 .full-image > div svg {
