@@ -5,7 +5,7 @@
 
     @media only screen and (max-width: 800px) {
       & {
-        width: 85px;
+        width: 80px;
       }
     }
   }
@@ -28,7 +28,7 @@
       
       @media only screen and (max-width: 800px) {
         & {
-          height: 170px;
+          height: 155px;
         }
       }
 
@@ -56,6 +56,7 @@
           & {
             width: 85%;
             font-size: 1rem;
+            margin-bottom: 1vh;
           }
         }
       }
@@ -171,7 +172,7 @@
       @media only screen and (max-width: 800px) {
         & {
           width: 95%;
-          padding-top: 15px;
+          padding-top: 30px;
           padding-bottom: 100px;
         }
       }
@@ -216,6 +217,12 @@
             z-index: 2 !important;
             filter: drop-shadow(0 0px 15px #0077cb);  
             background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+
+            @media only screen and (max-width: 800px) {
+              & {
+                height: 65px;
+              }
+            }
           }
         }
   
@@ -232,7 +239,7 @@
             
             @media only screen and (max-width: 800px) {
               & {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
               }
             }
           }
