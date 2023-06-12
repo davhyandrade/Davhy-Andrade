@@ -52,7 +52,7 @@ body {
   background-color: var(--bg-color);
 }
 
-section {
+main {
   min-height: 80vh;
 }
 
@@ -1708,7 +1708,7 @@ dialog::backdrop {
   .design-page .images-field .position {
     width: 95%;
     padding-top: 15px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
   }
 }
 .design-page .images-field .position .header {
@@ -1935,7 +1935,7 @@ dialog::backdrop {
   .full-image > div {
     width: 90%;
     min-height: 70vh;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
 }
 .full-image > div svg {
@@ -1966,4 +1966,91 @@ dialog::backdrop {
   .full-image > div img {
     width: 100%;
   }
+}
+
+.resume-field {
+  width: 100%;
+  min-height: 1670px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field {
+    min-height: 750px;
+  }
+}
+.resume-field > .position {
+  width: 65%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position {
+    width: 90%;
+    margin-bottom: 0;
+  }
+}
+.resume-field > .position .header {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bg-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 5px 0 0;
+  filter: drop-shadow(0 0 20px var(--bg-panel));
+}
+.resume-field > .position .header > .position {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resume-field > .position .header > .position > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.resume-field > .position .header > .position > div svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-headings);
+}
+.resume-field > .position .header > .position > div > span {
+  color: var(--color-headings);
+}
+.resume-field > .position .header > .position > a {
+  color: var(--color-headings);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.resume-field > .position .header > .position > a:hover {
+  transition: 1s;
+  color: var(--color-primary);
+}
+.resume-field > .position .header > .position > a:active {
+  transition: 0.1s;
+  opacity: 30%;
+}
+.resume-field > .position .header > .position > a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.resume-field > .position > img {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  filter: drop-shadow(0 0 20px var(--bg-panel));
 }/*# sourceMappingURL=globals.css.map */
