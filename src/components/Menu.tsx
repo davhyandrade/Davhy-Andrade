@@ -126,7 +126,7 @@ export default function Menu() {
                           ? 'active-button'
                           : pathname === item.nameUrl && 'active-button'
                       }`}
-                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(true)]}
+                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(true), setPathname(item.url)]}
                       href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
                     >
                       {item.name}

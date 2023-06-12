@@ -94,7 +94,7 @@ export default function Layout({ children }: ComponentProps) {
       >
         <Provider store={store}>
           {isActiveMenu && <Menu />}
-          <section>{children}</section>
+          <main>{children}</main>
           <ModalEmail />
           <Footer />
           <TopButton />
