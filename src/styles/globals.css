@@ -1981,7 +1981,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .resume-field {
-    min-height: 750px;
+    min-height: 730px;
   }
 }
 .resume-field > .position {
@@ -1995,7 +1995,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .resume-field > .position {
-    width: 90%;
+    width: 95%;
     margin-bottom: 0;
   }
 }
@@ -2025,8 +2025,19 @@ dialog::backdrop {
   height: 20px;
   color: var(--color-headings);
 }
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position > div svg {
+    width: 15px;
+    height: 15px;
+  }
+}
 .resume-field > .position .header > .position > div > span {
   color: var(--color-headings);
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position > div > span {
+    font-size: 0.7rem;
+  }
 }
 .resume-field > .position .header > .position > a {
   color: var(--color-headings);
@@ -2035,6 +2046,11 @@ dialog::backdrop {
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position > a {
+    font-size: 0.8rem;
+  }
 }
 .resume-field > .position .header > .position > a:hover {
   transition: 1s;
@@ -2048,6 +2064,12 @@ dialog::backdrop {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position > a svg {
+    width: 15px;
+    height: 15px;
+  }
 }
 .resume-field > .position > img {
   width: 100%;
