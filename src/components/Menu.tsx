@@ -49,6 +49,12 @@ export default function Menu() {
   const [pathname, setPathname] = useState<any>();
 
   useEffect(() => {
+    if (typeof pathname === 'undefined') setPathname(router.pathname.split('/')[1]);
+    console.log(router.pathname.split('/')[1]);
+    console.log(pathname);
+  }, [pathname]);
+
+  useEffect(() => {
     setPathname(router.pathname.split('/')[1]);
   }, []);
 
@@ -126,7 +132,7 @@ export default function Menu() {
                           ? 'active-button'
                           : pathname === item.nameUrl && 'active-button'
                       }`}
-                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(true), setPathname(item.url)]}
+                      onClick={() => [handleButtonsMenu(id), setIsActiveMenu(true), setPathname(item.nameUrl)]}
                       href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
                     >
                       {item.name}
@@ -149,7 +155,7 @@ export default function Menu() {
                       {item.dropdown?.slice(0, 5).map((item: any, id: number) => {
                         return (
                           <li key={id}>
-                            <Link onClick={() => setIsActiveMenu(true)} href={item.url}>{item.name}</Link>
+                            <Link onClick={() => [setIsActiveMenu(true), setPathname(item.nameUrl)]} href={item.url}>{item.name}</Link>
                           </li>
                         );
                       })}
