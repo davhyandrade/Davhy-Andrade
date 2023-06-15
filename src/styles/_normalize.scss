@@ -61,7 +61,7 @@ img {
     opacity: 100% !important;
   }
 
-  &[src=""] {
+  &[src="/"] {
     opacity: 0 !important;
   }
 }

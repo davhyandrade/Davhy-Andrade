@@ -20,7 +20,6 @@ interface IContext {
   setIsActiveMenu?: any;
   isActiveMenu?: boolean | undefined;
   setIsFullImage?: any;
-  lazyImages?: any;
 }
 
 export const Context = createContext<IContext>({});
@@ -76,7 +75,19 @@ export default function Layout({ children }: ComponentProps) {
 
   const [isActiveMenu, setIsActiveMenu] = useState<boolean>(true);
 
-  const lazyImages = useRef<any>(null);
+  const [isActiveTopButton, setIsActiveTopButton] = useState<boolean>(false);
+
+  function handleActiveTopButton() {
+    if (window.scrollY > window.innerHeight) {
+      return setIsActiveTopButton(true);
+    } else {
+      return setIsActiveTopButton(false);
+    }  
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleActiveTopButton); // active top button
+  }, []);
 
   function isElementInViewport() {
     // check if the element is visible on the screen, another option outside pure js is the react-intersection-observer library
@@ -86,7 +97,7 @@ export default function Layout({ children }: ComponentProps) {
           image.src = image.getAttribute('data-src'); 
         }, 200);
       }
-    });
+    });  
   }
 
   useEffect(() => {
@@ -108,7 +119,6 @@ export default function Layout({ children }: ComponentProps) {
           setIsActiveMenu,
           isActiveMenu,
           setIsFullImage,
-          lazyImages,
         }}
       >
         <Provider store={store}>
@@ -116,7 +126,7 @@ export default function Layout({ children }: ComponentProps) {
           <main onScroll={isElementInViewport}>{children}</main>
           <ModalEmail />
           <Footer />
-          <TopButton />
+          {isActiveTopButton && <TopButton />}
           <ToastContainer />
         </Provider>
       </Context.Provider>

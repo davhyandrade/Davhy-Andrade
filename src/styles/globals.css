@@ -59,7 +59,7 @@ main {
 img[src] {
   opacity: 100% !important;
 }
-img[src=""] {
+img[src="/"] {
   opacity: 0 !important;
 }
 
@@ -1039,7 +1039,7 @@ img[src=""] {
   position: fixed;
   bottom: 5vh;
   right: 5vw;
-  background-color: transparent;
+  background-color: var(--bg-color);
   border: 1px solid var(--color-border);
   width: 40px;
   height: 40px;
