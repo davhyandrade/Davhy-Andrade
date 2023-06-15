@@ -75,7 +75,7 @@ export default function DesignPage({ images, title, header_description, descript
                 return (
                   item.url && (
                     <div className="image-container" key={id}>
-                      <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
+                      <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
                     </div>
                   )
                 );
@@ -86,7 +86,7 @@ export default function DesignPage({ images, title, header_description, descript
                 return (
                   item.url && (
                     <div className="image-container" key={id}>
-                      <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
+                      <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
                     </div>
                   )
                 );
@@ -117,7 +117,7 @@ export default function DesignPage({ images, title, header_description, descript
                     onClick={() => handleImage(item.url)}
                     data-description={item.description}
                   >
-                    <Image src="" data-src={item.url} alt="imagefasd" loading="lazy" fill />
+                    <Image src="/" data-src={item.url} alt="imagefasd" loading="lazy" fill />
                   </div>
                 )
               );
@@ -135,7 +135,7 @@ export default function DesignPage({ images, title, header_description, descript
                     return (
                       item.url && (
                         <div className="image-container" key={id}>
-                          <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
+                          <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
                         </div>
                       )
                     );
