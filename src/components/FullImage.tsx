@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import Close from 'public/images/modal/vector-close.svg'
 import { Context } from "@/context/layout";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface IProps {
   value: any
@@ -27,7 +28,11 @@ export default function FullImage({ value }: IProps) {
     <div className="full-image">
       <div>
         <Close onClick={() => [router.back(), setIsFullImage(false)]} />
-        <img src="" data-src={url} alt="image" loading="lazy" />
+        <LazyLoadImage
+          src={url} 
+          effect="blur"
+          alt="image"
+        />
       </div>
     </div>
   )
