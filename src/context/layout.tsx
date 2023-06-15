@@ -20,6 +20,7 @@ interface IContext {
   setIsActiveMenu?: any;
   isActiveMenu?: boolean | undefined;
   setIsFullImage?: any;
+  lazyImages?: any;
 }
 
 export const Context = createContext<IContext>({});
@@ -53,7 +54,7 @@ export default function Layout({ children }: ComponentProps) {
 
   function handlePageLoaded() {
     setTimeout(() => {
-      return setIsActiveLoading(false); 
+      return setIsActiveLoading(false);
     }, 2500);
   }
 
@@ -75,6 +76,23 @@ export default function Layout({ children }: ComponentProps) {
 
   const [isActiveMenu, setIsActiveMenu] = useState<boolean>(true);
 
+  const lazyImages = useRef<any>(null);
+
+  function isElementInViewport() {
+    // check if the element is visible on the screen, another option outside pure js is the react-intersection-observer library
+    document.querySelectorAll('img').forEach((image: any) => {
+      if (image.getBoundingClientRect().top < window.innerHeight) {
+        setTimeout(() => {
+          image.src = image.getAttribute('data-src'); 
+        }, 200);
+      }
+    });
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', isElementInViewport);
+  }, []);
+
   return (
     <>
       <GlobalStyles isActiveLoading={isActiveLoading} isFullImage={isFullImage} />
@@ -90,11 +108,12 @@ export default function Layout({ children }: ComponentProps) {
           setIsActiveMenu,
           isActiveMenu,
           setIsFullImage,
+          lazyImages,
         }}
       >
         <Provider store={store}>
           {isActiveMenu && <Menu />}
-          <main>{children}</main>
+          <main onScroll={isElementInViewport}>{children}</main>
           <ModalEmail />
           <Footer />
           <TopButton />

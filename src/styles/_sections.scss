@@ -226,8 +226,15 @@
     padding-bottom: 150px;
     
     .header {
+      width: 100%;
       display: flex;
       margin-bottom: 20px;
+
+      @media only screen and (max-width: 800px) {
+        & {
+          width: 95%;
+        }
+      }
 
       > div:nth-child(1) {
         display: flex;
@@ -237,6 +244,13 @@
         .title-timeline {
           filter: drop-shadow(0 0px 30px #3c0a4a);
           margin: 15px;
+
+          @media only screen and (max-width: 800px) {
+            & {
+              margin: 0;
+              margin-bottom: 15px;
+            }
+          }
         }
   
         .vertical-line {
@@ -259,6 +273,12 @@
           font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           font-weight: 500 !important;
           margin-bottom: 15px;
+                      
+          @media only screen and (max-width: 800px) {
+            & {
+              margin-bottom: 8px;
+            }
+          }
         }
 
         p {
@@ -267,6 +287,13 @@
           font-size: 1.3rem;
           letter-spacing: -0.01em;
           line-height: 30px !important;
+
+          @media only screen and (max-width: 800px) {
+            & {
+              font-size: 1rem;
+              line-height: 22px !important;
+            }
+          }
         }
       }
     }
@@ -274,6 +301,13 @@
     .cards-field {
       display: flex;
       flex-wrap: wrap;
+      gap: 1rem;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          gap: 0.6rem;
+        }
+      }
     }
 
     #more-button {

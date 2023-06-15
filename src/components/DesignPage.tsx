@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import CodeIcon from 'public/images/timeline/code.svg';
 import Arrow from 'public/images/timeline/arrow.svg';
 
@@ -38,22 +39,28 @@ export default function DesignPage({ images, title, header_description, descript
   }, []);
 
   const carousel = useRef<any>(null);
-  const [percentageTranslate, setPercentageTranslate] = useState(0);
+  const [widthTranslate, setWidthTranslate] = useState(0);
+  const [widthImage, setWidthImage] = useState<number>(0);
+  
+  useEffect(() => {
+    return setWidthImage(window.innerWidth > 800 ? 300 : 150); // defines the width of the image according to whether the user is on mobile or pc 
+  })
 
   function handleLeftCarouselButton() {
-    if (percentageTranslate === 0) return;
-    return setPercentageTranslate((prevData) => (prevData - 100 / (widthPage > 800 ? 4 : 2)));
+    if (widthTranslate === 0) return;
+    return setWidthTranslate((prevData) => prevData - widthImage);
   }
 
   function handleRightCarouselButton() {
-    const maxPercentage = (100 / 4) * carouselImages.length - 100;
-    if (percentageTranslate >= maxPercentage) return;
-    return setPercentageTranslate((prevData) => (prevData + 100 / (widthPage > 800 ? 4 : 2)));
+    const isVisibleImageNumberOnScreen = window.innerWidth > 800 ? 4 : 3;
+    const maxWidth = widthImage * carouselImages.length - (widthImage * isVisibleImageNumberOnScreen); // (widthImage * isVisibleImageNumberOnScreen) referring to the total number of images visible on the screen
+    if (widthTranslate >= maxWidth) return;
+    return setWidthTranslate((prevData) => prevData + widthImage);
   }
 
   useEffect(() => {
-    if (carouselImages) carousel.current.style.transform = `translateX(-${percentageTranslate}%)`;
-  }, [percentageTranslate]);
+    if (carouselImages) carousel.current.style.transform = `translateX(-${widthTranslate}px)`;
+  }, [widthTranslate]);
 
   return (
     <div className="design-page">
@@ -67,8 +74,8 @@ export default function DesignPage({ images, title, header_description, descript
               {images.map((item: any, id: number) => {
                 return (
                   item.url && (
-                    <div key={id}>
-                      <img src={item.url} alt="image" />
+                    <div className="image-container" key={id}>
+                      <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
                     </div>
                   )
                 );
@@ -78,8 +85,8 @@ export default function DesignPage({ images, title, header_description, descript
               {images.slice(initialImage, finalImage).map((item: any, id: number) => {
                 return (
                   item.url && (
-                    <div key={id}>
-                      <img src={item.url} alt="image" />
+                    <div className="image-container" key={id}>
+                      <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
                     </div>
                   )
                 );
@@ -105,12 +112,12 @@ export default function DesignPage({ images, title, header_description, descript
               return (
                 item.url && (
                   <div
-                    className={`${item.class && `${item.class}`}`}
+                    className={`${item.class && `${item.class}`} image-container`}
                     key={id}
                     onClick={() => handleImage(item.url)}
                     data-description={item.description}
                   >
-                    <img src={item.url} alt="image" />
+                    <Image src="" data-src={item.url} alt="imagefasd" loading="lazy" fill />
                   </div>
                 )
               );
@@ -125,7 +132,13 @@ export default function DesignPage({ images, title, header_description, descript
                 </div>
                 <div ref={carousel}>
                   {carouselImages.map((item: any, id: number) => {
-                    return item.url && <img key={id} src={item.url} alt="image" />;
+                    return (
+                      item.url && (
+                        <div className="image-container" key={id}>
+                          <Image src="" data-src={item.url} alt="image" loading="lazy" fill />
+                        </div>
+                      )
+                    );
                   })}
                 </div>
               </div>

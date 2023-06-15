@@ -24,7 +24,7 @@ export default function Menu() {
     isActive: false,
   });
 
-  function handleButtonsMenu(id: number) {
+  function handleButtonsMenu(id: number) {    
     setIsActiveDropdown(false);
     if (isActiveButtonsMenu.numberActive !== id) return setIsActiveButtonsMenu({ isActive: true, numberActive: id });
     if (isActiveButtonsMenu.isActive) {
@@ -49,9 +49,9 @@ export default function Menu() {
   const [pathname, setPathname] = useState<any>();
 
   useEffect(() => {
-    if (typeof pathname === 'undefined') setPathname(router.pathname.split('/')[1]);
-    console.log(router.pathname.split('/')[1]);
-    console.log(pathname);
+    if (typeof pathname === 'undefined') {
+      setTimeout(() => setPathname(window.location.href.split('/')[3]), 100); 
+    }
   }, [pathname]);
 
   useEffect(() => {

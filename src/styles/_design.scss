@@ -65,19 +65,34 @@
         width: 100%;
         
         > div:nth-child(1) {
+          width: 100%;
           position: absolute;
           top: 0;
           display: flex;
           z-index: 1;
 
-          img {
-            width: 100%;
-            filter: grayscale(1);
-            opacity: 5%;
+          > div {
+            width: 10vw;
+            min-height: 115px; 
 
-            @media only screen and (max-width: 800px) {
-              & {
-                width: 150%;
+            img {
+              width: 100%;
+              height: 100%;
+              filter: grayscale(1);
+              
+              &[src] {
+                opacity: 5% !important;
+              }
+
+              &[src=""] {
+                opacity: 0 !important;
+              }
+  
+              @media only screen and (max-width: 800px) {
+                & {
+                  width: 150%;
+                  object-fit: cover;
+                }
               }
             }
           }
@@ -146,8 +161,23 @@
         
             img {
               width: 100%;
-              opacity: 30%;
+              height: 100%;
               filter: grayscale(1);
+              
+              @media only screen and (max-width: 800px) {
+                & {
+                  width: 150%;
+                  object-fit: cover;
+                }
+              }
+
+              &[src] {
+                opacity: 30% !important;
+              }
+                            
+              &[src=""] {
+                opacity: 0 !important;
+              }
             }
           }
         }
@@ -255,20 +285,27 @@
       }
   
       > div:nth-last-child(1) {
+        width: 100%;
         flex-wrap: wrap;
         display: flex;
-        justify-content: space-between;
-  
+        gap: 0.6rem;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            gap: 0.4rem;
+          }
+        }
+        
         > div {
           width: 32.8%;
-          margin-bottom: 10px;
+          min-height: 400px;
           cursor: pointer;
           position: relative;
           
           @media only screen and (max-width: 800px) {
             & {
               width: 49%;
-              margin-bottom: 8px;
+              min-height: 160px;
             }
           }
 
@@ -324,7 +361,7 @@
 
       .carousel-field {
         width: 100% !important;
-        height: 300px !important;
+        min-height: 300px !important;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -334,7 +371,7 @@
 
         @media only screen and (max-width: 800px) {
           & {
-            height: 150px !important;
+            min-height: 150px !important;
           }
         }
 
@@ -406,14 +443,25 @@
         > div:nth-last-child(1) {
           display: flex;
           align-items: center;
-          width: 100%;
           height: 100%;
           z-index: 10;
           transition: 1s all;
 
-          img {
-            width: 100%;
-            height: 100%;
+          > div {
+            width: 300px;
+            height: 300px;
+            
+            @media only screen and (max-width: 800px) {
+              & {
+                width: 150px;
+                height: 150px;
+              }
+            }
+            
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
