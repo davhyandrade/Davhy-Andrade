@@ -56,6 +56,18 @@ main {
   min-height: 80vh;
 }
 
+img[src] {
+  opacity: 100% !important;
+}
+img[src=""] {
+  opacity: 0 !important;
+}
+
+.image-container {
+  background-color: var(--bg-panel);
+  position: relative;
+}
+
 .menu {
   width: 100%;
   height: 150px;
@@ -624,8 +636,14 @@ main {
   padding-bottom: 150px;
 }
 .section-projects .position .header {
+  width: 100%;
   display: flex;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .section-projects .position .header {
+    width: 95%;
+  }
 }
 .section-projects .position .header > div:nth-child(1) {
   display: flex;
@@ -635,6 +653,12 @@ main {
 .section-projects .position .header > div:nth-child(1) .title-timeline {
   filter: drop-shadow(0 0px 30px #3c0a4a);
   margin: 15px;
+}
+@media only screen and (max-width: 800px) {
+  .section-projects .position .header > div:nth-child(1) .title-timeline {
+    margin: 0;
+    margin-bottom: 15px;
+  }
 }
 .section-projects .position .header > div:nth-child(1) .vertical-line {
   width: 3px;
@@ -655,6 +679,11 @@ main {
   font-weight: 500 !important;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 800px) {
+  .section-projects .position .header > div:nth-child(2) > h2 {
+    margin-bottom: 8px;
+  }
+}
 .section-projects .position .header > div:nth-child(2) p {
   width: 67%;
   color: var(--color-text);
@@ -662,9 +691,21 @@ main {
   letter-spacing: -0.01em;
   line-height: 30px !important;
 }
+@media only screen and (max-width: 800px) {
+  .section-projects .position .header > div:nth-child(2) p {
+    font-size: 1rem;
+    line-height: 22px !important;
+  }
+}
 .section-projects .position .cards-field {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  .section-projects .position .cards-field {
+    gap: 0.6rem;
+  }
 }
 .section-projects .position #more-button {
   width: 100%;
@@ -1458,9 +1499,13 @@ dialog::backdrop {
   border: 1px solid var(--color-border);
   border-radius: 5px;
   overflow: hidden;
-  margin: 0.5%;
   position: relative;
   cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+  .project-card {
+    width: 49%;
+  }
 }
 .project-card p, .project-card span, .project-card h1 {
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -1468,7 +1513,7 @@ dialog::backdrop {
 .project-card:hover a .image-field #drop-shadow {
   display: flex;
 }
-.project-card:hover a .image-field > img {
+.project-card:hover a .image-field > .image-container > img {
   filter: none !important;
 }
 .project-card:hover a > div:nth-last-child(1) {
@@ -1524,9 +1569,13 @@ dialog::backdrop {
   position: absolute;
   bottom: 0;
 }
-.project-card > a .image-field > img {
+.project-card > a .image-field .image-container {
   width: 100%;
   height: 170px;
+}
+.project-card > a .image-field .image-container > img {
+  width: 100%;
+  height: 100%;
   filter: brightness(0.8);
   z-index: 10;
   border-radius: 3px;
@@ -1614,19 +1663,32 @@ dialog::backdrop {
   width: 100%;
 }
 .design-page .design-landing-page .header .image-background > div:nth-child(1) {
+  width: 100%;
   position: absolute;
   top: 0;
   display: flex;
   z-index: 1;
 }
-.design-page .design-landing-page .header .image-background > div:nth-child(1) img {
+.design-page .design-landing-page .header .image-background > div:nth-child(1) > div {
+  width: 10vw;
+  min-height: 115px;
+}
+.design-page .design-landing-page .header .image-background > div:nth-child(1) > div img {
   width: 100%;
+  height: 100%;
   filter: grayscale(1);
-  opacity: 5%;
+}
+.design-page .design-landing-page .header .image-background > div:nth-child(1) > div img[src] {
+  opacity: 5% !important;
+}
+.design-page .design-landing-page .header .image-background > div:nth-child(1) > div img[src=""] {
+  opacity: 0 !important;
 }
 @media only screen and (max-width: 800px) {
-  .design-page .design-landing-page .header .image-background > div:nth-child(1) img {
+  .design-page .design-landing-page .header .image-background > div:nth-child(1) > div img {
     width: 150%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) {
@@ -1687,8 +1749,21 @@ dialog::backdrop {
 }
 .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img {
   width: 100%;
-  opacity: 30%;
+  height: 100%;
   filter: grayscale(1);
+}
+@media only screen and (max-width: 800px) {
+  .design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img {
+    width: 150%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img[src] {
+  opacity: 30% !important;
+}
+.design-page .design-landing-page .header .image-background > div:nth-last-child(1) div img[src=""] {
+  opacity: 0 !important;
 }
 .design-page .images-field {
   width: 100%;
@@ -1777,20 +1852,26 @@ dialog::backdrop {
   }
 }
 .design-page .images-field .position > div:nth-last-child(1) {
+  width: 100%;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  gap: 0.6rem;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position > div:nth-last-child(1) {
+    gap: 0.4rem;
+  }
 }
 .design-page .images-field .position > div:nth-last-child(1) > div {
   width: 32.8%;
-  margin-bottom: 10px;
+  min-height: 400px;
   cursor: pointer;
   position: relative;
 }
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position > div:nth-last-child(1) > div {
     width: 49%;
-    margin-bottom: 8px;
+    min-height: 160px;
   }
 }
 .design-page .images-field .position > div:nth-last-child(1) > div:hover > img {
@@ -1834,7 +1915,7 @@ dialog::backdrop {
 }
 .design-page .images-field .position .carousel-field {
   width: 100% !important;
-  height: 300px !important;
+  min-height: 300px !important;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -1844,7 +1925,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .design-page .images-field .position .carousel-field {
-    height: 150px !important;
+    min-height: 150px !important;
   }
 }
 .design-page .images-field .position .carousel-field:hover::after {
@@ -1903,12 +1984,21 @@ dialog::backdrop {
 .design-page .images-field .position .carousel-field > div:nth-last-child(1) {
   display: flex;
   align-items: center;
-  width: 100%;
   height: 100%;
   z-index: 10;
   transition: 1s all;
 }
-.design-page .images-field .position .carousel-field > div:nth-last-child(1) img {
+.design-page .images-field .position .carousel-field > div:nth-last-child(1) > div {
+  width: 300px;
+  height: 300px;
+}
+@media only screen and (max-width: 800px) {
+  .design-page .images-field .position .carousel-field > div:nth-last-child(1) > div {
+    width: 150px;
+    height: 150px;
+  }
+}
+.design-page .images-field .position .carousel-field > div:nth-last-child(1) > div img {
   width: 100%;
   height: 100%;
 }
@@ -2065,8 +2155,18 @@ dialog::backdrop {
     height: 15px;
   }
 }
-.resume-field > .position > img {
+.resume-field > .position .image-container {
   width: 100%;
+  height: 1400px;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .image-container {
+    height: 500px;
+  }
+}
+.resume-field > .position .image-container > img {
+  width: 100%;
+  height: 100%;
   border-radius: 0 0 5px 5px;
   filter: drop-shadow(0 0 20px var(--bg-panel));
 }/*# sourceMappingURL=globals.css.map */

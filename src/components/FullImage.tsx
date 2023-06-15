@@ -27,7 +27,7 @@ export default function FullImage({ value }: IProps) {
     <div className="full-image">
       <div>
         <Close onClick={() => [router.back(), setIsFullImage(false)]} />
-        <img src={url} alt="image" />
+        <img src="" data-src={url} alt="image" loading="lazy" />
       </div>
     </div>
   )

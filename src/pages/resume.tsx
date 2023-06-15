@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Resume() {
   return (
@@ -20,7 +21,9 @@ export default function Resume() {
             </Link>
           </div>
         </div>
-        <img src="/images/cv.png" alt="cv" />
+        <div className="image-container">
+          <Image src="" data-src="/images/cv.png" alt="cv" loading="lazy" fill />
+        </div>
       </div>
     </div>
   )

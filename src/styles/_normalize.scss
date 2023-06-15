@@ -55,3 +55,18 @@ body {
 main {
   min-height: 80vh;
 }
+
+img {
+  &[src] {
+    opacity: 100% !important;
+  }
+
+  &[src=""] {
+    opacity: 0 !important;
+  }
+}
+
+.image-container {
+  background-color: var(--bg-panel);
+  position: relative;
+}

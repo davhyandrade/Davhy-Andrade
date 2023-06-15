@@ -109,10 +109,22 @@
       }
     }
     
-    > img {
+    .image-container {
       width: 100%;
-      border-radius: 0 0 5px 5px;
-      filter: drop-shadow(0 0 20px var(--bg-panel));
+      height: 1400px;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          height: 500px;
+        }
+      }
+      
+      > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 5px 5px;
+        filter: drop-shadow(0 0 20px var(--bg-panel));
+      }
     }
   }
 }
