@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Resume() {
   return (
@@ -22,7 +22,7 @@ export default function Resume() {
           </div>
         </div>
         <div className="image-container">
-          <Image src="" data-src="/images/cv.png" alt="cv" loading="lazy" fill />
+          <LazyLoadImage src="/images/cv.png" alt="cv" effect="blur" />
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import CodeIcon from 'public/images/timeline/code.svg';
 import Arrow from 'public/images/timeline/arrow.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function DesignPage({ images, title, header_description, description, carouselImages }: any) {
   var [initialImage, setInitialImage] = useState<number>(0);
@@ -75,7 +75,7 @@ export default function DesignPage({ images, title, header_description, descript
                 return (
                   item.url && (
                     <div className="image-container" key={id}>
-                      <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
+                      <LazyLoadImage src={item.url} alt="image" effect='blur' />
                     </div>
                   )
                 );
@@ -86,7 +86,7 @@ export default function DesignPage({ images, title, header_description, descript
                 return (
                   item.url && (
                     <div className="image-container" key={id}>
-                      <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
+                      <LazyLoadImage src={item.url} alt="image" effect='blur' />
                     </div>
                   )
                 );
@@ -117,7 +117,7 @@ export default function DesignPage({ images, title, header_description, descript
                     onClick={() => handleImage(item.url)}
                     data-description={item.description}
                   >
-                    <Image src="/" data-src={item.url} alt="imagefasd" loading="lazy" fill />
+                    <LazyLoadImage src={item.url} alt="image" effect='blur' />
                   </div>
                 )
               );
@@ -135,7 +135,7 @@ export default function DesignPage({ images, title, header_description, descript
                     return (
                       item.url && (
                         <div className="image-container" key={id}>
-                          <Image src="/" data-src={item.url} alt="image" loading="lazy" fill />
+                          <LazyLoadImage src={item.url} alt="image" effect='blur' />
                         </div>
                       )
                     );

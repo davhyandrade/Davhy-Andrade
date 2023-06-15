@@ -1,13 +1,14 @@
-import ModalEmail from '@/components/ModalEmail';
-import Footer from '@/components/Footer';
-import LoadingPage from '@/components/LoadingPage';
-import TopButton from '@/components/TopButton';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { ReactNode, createContext, useEffect, useRef, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import store from '@/redux/store';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import ModalEmail from '@/components/ModalEmail';
+import Footer from '@/components/Footer';
+import LoadingPage from '@/components/LoadingPage';
+import TopButton from '@/components/TopButton';
 import Menu from '@/components/Menu';
 
 interface IContext {
@@ -91,13 +92,7 @@ export default function Layout({ children }: ComponentProps) {
 
   function isElementInViewport() {
     // check if the element is visible on the screen, another option outside pure js is the react-intersection-observer library
-    document.querySelectorAll('img').forEach((image: any) => {
-      if (image.getBoundingClientRect().top < window.innerHeight) {
-        setTimeout(() => {
-          image.src = image.getAttribute('data-src'); 
-        }, 200);
-      }
-    });  
+
   }
 
   useEffect(() => {

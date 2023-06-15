@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface IProps {
   url: string;
@@ -28,7 +28,7 @@ export default function Card({ url, image, title, description, date }: IProps) {
         {dateForDay > 365 ? <span className='yellow-tag' id="card-tag">Antigo</span> : dateForDay < 30 && <span className='blue-tag' id="card-tag">Recente</span>}
         <div className="image-field">
           <div className='image-container' >
-            <Image src="/" data-src={image} alt="project image" loading="lazy" fill />
+            <LazyLoadImage src={image} alt="image" effect='blur' />
           </div>
           <div id="drop-shadow"></div>
         </div>

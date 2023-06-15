@@ -1573,7 +1573,7 @@ dialog::backdrop {
   width: 100%;
   height: 170px;
 }
-.project-card > a .image-field .image-container > img {
+.project-card > a .image-field .image-container img {
   width: 100%;
   height: 100%;
   filter: brightness(0.8);
@@ -2164,7 +2164,7 @@ dialog::backdrop {
     height: 500px;
   }
 }
-.resume-field > .position .image-container > img {
+.resume-field > .position .image-container img {
   width: 100%;
   height: 100%;
   border-radius: 0 0 5px 5px;

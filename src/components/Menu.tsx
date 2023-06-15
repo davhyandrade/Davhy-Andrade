@@ -68,7 +68,7 @@ export default function Menu() {
   }
 
   useEffect(() => {
-    if (scroll > 850) handlePageProgressBar();
+    if (isActiveMenu) handlePageProgressBar();
   }, [scroll]);
 
   useEffect(() => {
@@ -195,11 +195,11 @@ export default function Menu() {
             </li>
           </ul>
         </div>
-        {scroll > 850 && (
+        {isActiveMenu &&
           <div className="page-progress-bar">
             <div ref={refProgressBar}></div>
           </div>
-        )}
+        }
       </nav>
     </>
   );
