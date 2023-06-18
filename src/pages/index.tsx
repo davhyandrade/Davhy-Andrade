@@ -36,7 +36,7 @@ export default function Home() {
         <div className="position">
           <Timeline />
           <div className="introduction-field">
-            <h1 translate="no">Programming World</h1>
+            <h1 data-animation="appear-right-animation" translate="no">Programming World</h1>
             <p>
               <span>Os primeiros 90%</span> do código representam os <span>primeiros 10%</span> do tempo de
               desenvolvimento. Os <span>10% restantes</span> do código é para mostrar aos outros os <span>90%</span> do
@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
           <div className="about-field">
-            <h2>About me</h2>
+            <h2 data-animation="appear-right-animation">About me</h2>
             <p>
               <span>
                 <span>Entusiasta da tecnologia</span>, fissurado pela sensação de desenvolver e resolver problemas.
@@ -79,11 +79,13 @@ export default function Home() {
         <div className="position">
           <div className="header">
             <div>
-              <CodeIcon className="title-timeline" />
-              <div className="vertical-line"></div>
+              <CodeIcon data-animation="appear-animation" className="title-timeline" />
+              <div data-animation="vertical-line-animation" className="vertical-line">
+                <div></div>
+              </div>
             </div>
             <div>
-              <h2>Projects</h2>
+              <h2 data-animation="appear-right-animation">Projects</h2>
               <p>Explore minha coleção de projetos, em constante desenvolvimento e aprimoramento com intuito de atender às necessidades dos futuros clientes.</p>
             </div>
           </div>

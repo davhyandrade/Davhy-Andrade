@@ -37,7 +37,7 @@ export default function LandingPage() {
       <div className="position">
         <div>
           <p>Olá, meu nome é</p>
-          <h1>Davhy Andrade</h1>
+          <h1 >Davhy Andrade</h1>
           <p>
             e sou <span ref={typedRef}></span>
           </p>
