@@ -92,7 +92,14 @@ export default function Layout({ children }: ComponentProps) {
 
   function isElementInViewport() {
     // check if the element is visible on the screen, another option outside pure js is the react-intersection-observer library
-
+    document.querySelectorAll('[data-animation]').forEach((item: any) => {
+      // add animation once the element is visible, with pure js, because I didn't want to add another library just for this function
+      if (item.getBoundingClientRect().top < window.innerHeight) {
+        return item.classList.add(item.getAttribute('data-animation'));
+      } else {
+        return item.classList.remove(item.getAttribute('data-animation'));
+      } 
+    })
   }
 
   useEffect(() => {

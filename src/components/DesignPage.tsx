@@ -32,12 +32,6 @@ export default function DesignPage({ images, title, header_description, descript
     return router.push(`${router.pathname}/${urlWithoutSlash}`);
   }
 
-  const [widthPage, setWidthPage] = useState<number>(0);
-
-  useEffect(() => {
-    return setWidthPage(window.innerWidth);
-  }, []);
-
   const carousel = useRef<any>(null);
   const [widthTranslate, setWidthTranslate] = useState(0);
   const [widthImage, setWidthImage] = useState<number>(0);
@@ -99,11 +93,13 @@ export default function DesignPage({ images, title, header_description, descript
         <div className="position">
           <div className="header">
             <div>
-              <CodeIcon className="title-timeline" />
-              <div className="vertical-line"></div>
+              <CodeIcon data-animation="appear-title-animation" className="title-timeline" />
+              <div data-animation="vertical-line-animation" className="vertical-line">
+                <div></div>
+              </div>
             </div>
             <div>
-              <h2 translate="no">Images</h2>
+              <h2 data-animation="appear-right-animation" translate="no">Images</h2>
               <p>{description}</p>
             </div>
           </div>

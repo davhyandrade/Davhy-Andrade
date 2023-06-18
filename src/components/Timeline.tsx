@@ -20,7 +20,9 @@ export default function Timeline() {
               <Gear2 />
             </div>
           </div>
-          <div id="horizontal-line"></div>
+          <div data-animation="horizontal-line-animation" id="horizontal-line">
+            <div></div>
+          </div>
           <Link href="https://github.com/davhyandrade/Davhy-Andrade" translate='no' id="button-source-code">
             <Github/>
             <div>
@@ -31,11 +33,17 @@ export default function Timeline() {
           </Link>
         </div>
         <div className="line-field">
-          <div className="vertical-line"></div>
-          <Code className="title-timeline"/>
-          <div className="vertical-line"></div>
-          <Globe className="title-timeline"/>
-          <div className="vertical-line"></div>
+          <div data-animation="vertical-line-animation" className="vertical-line">
+            <div></div>
+          </div>
+          <Code data-animation="appear-animation" className="title-timeline"/>
+          <div data-animation="vertical-line-animation" className="vertical-line">
+            <div></div>
+          </div>
+          <Globe data-animation="appear-animation" className="title-timeline"/>
+          <div data-animation="vertical-line-animation" className="vertical-line">
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
