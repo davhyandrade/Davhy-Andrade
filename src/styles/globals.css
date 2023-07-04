@@ -1527,6 +1527,11 @@ dialog::backdrop {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 800px) {
+  .notfound-field .notfound {
+    height: 250px;
+  }
+}
 .notfound-field .notfound > div {
   display: flex;
   align-items: center;
