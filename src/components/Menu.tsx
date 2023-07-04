@@ -90,12 +90,13 @@ export default function Menu() {
 
   function handlePageProgressBar() {
     const porcentagem =
-      scroll / (document.documentElement.scrollHeight / 100) + document.documentElement.scrollHeight / 100;
+      (100 * document.documentElement.scrollTop) /
+      (document.documentElement.scrollHeight - document.documentElement.clientHeight);
     return (refProgressBar.current.style.width = `${porcentagem}%`);
   }
 
   useEffect(() => {
-    if (isActiveMenu) handlePageProgressBar();
+    if (isActiveMenu || scroll > 1200) handlePageProgressBar();
   }, [scroll]);
 
   useEffect(() => {
@@ -272,10 +273,16 @@ export default function Menu() {
             )}
           </nav>
         </div>
-        {isActiveMenu && (
+        {scroll > 1200 ? (
           <div className="page-progress-bar">
             <div ref={refProgressBar}></div>
           </div>
+        ) : (
+          isActiveMenu && (
+            <div className="page-progress-bar">
+              <div ref={refProgressBar}></div>
+            </div>
+          )
         )}
         {isActiveToggleMenu && (
           <div className="menu-mobile">
@@ -293,7 +300,7 @@ export default function Menu() {
                         .map((item: any, id: number) => {
                           return (
                             <li key={id}>
-                              <Link onClick={() => setIsActiveMenu(true)} href={item.url}>
+                              <Link onClick={() => [setIsActiveMenu(true), toggleMenu()]} href={item.url}>
                                 {item.name}
                               </Link>
                             </li>
