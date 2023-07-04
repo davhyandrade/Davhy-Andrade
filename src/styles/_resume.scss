@@ -43,7 +43,13 @@
         > div {
           display: flex;
           flex-direction: column;
-
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              margin-left: 10px;
+            }
+          }  
+          
           > span {
             color: var(--color-text2);
             font-size: 0.7rem;
