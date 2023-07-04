@@ -1,4 +1,4 @@
-import Arrow from 'public/images/timeline/arrow.svg';
+import Arrow from 'public/images/arrow.svg';
 
 export default function TopButton() {
   function handleTopButton() {

@@ -1,12 +1,9 @@
 import DesignPage from "@/components/DesignPage";
-import { useEffect, useState } from "react";
+import { Context } from "@/context/layout";
+import { useContext } from "react";
 
 export default function SocialMedia() {
-  const [widthPage, setWidthPage] = useState<number>(0);
-
-  useEffect(() => {
-    return setWidthPage(window.innerWidth)
-  }, [])
+  const { widthPage }: any = useContext(Context);
 
   const images = [
     {

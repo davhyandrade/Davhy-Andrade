@@ -3,7 +3,7 @@ import Gear1 from 'public/images/timeline/gear1.svg';
 import Gear2 from 'public/images/timeline/gear2.svg';
 import Code from 'public/images/timeline/code.svg';
 import Globe from 'public/images/timeline/globe.svg';
-import Arrow from 'public/images/timeline/arrow.svg';
+import Arrow from 'public/images/arrow.svg';
 import Github from 'public/images/social-media/vetor-github.svg';
 import Link from 'next/link';
 

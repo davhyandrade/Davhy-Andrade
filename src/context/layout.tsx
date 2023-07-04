@@ -21,6 +21,9 @@ interface IContext {
   setIsActiveMenu?: any;
   isActiveMenu?: boolean | undefined;
   setIsFullImage?: any;
+  widthPage?: number;
+  setIsActiveToggleMenu?: any;
+  isActiveToggleMenu?: boolean | undefined;
 }
 
 export const Context = createContext<IContext>({});
@@ -32,19 +35,25 @@ type ComponentProps = {
 interface IProps {
   isActiveLoading: boolean | undefined;
   isFullImage: boolean | undefined;
+  isActiveToggleMenu: boolean | undefined;
 }
 
 const GlobalStyles = createGlobalStyle<IProps>`    
-    ${(props) =>
-      props.isActiveLoading &&
+  ${(props) =>
+    props.isActiveLoading &&
       `body {
-            overflow: hidden;
-        }`}
-    ${(props) =>
-      props.isFullImage &&
+        overflow: hidden;
+      }`}
+  ${(props) =>
+    props.isFullImage &&
       `body {
-            overflow: hidden;
-        }`}
+        overflow: hidden;
+      }`}
+  ${(props) =>
+    props.isActiveToggleMenu &&
+      `body {
+        overflow: hidden;
+      }`}
 `;
 
 export default function Layout({ children }: ComponentProps) {
@@ -83,7 +92,7 @@ export default function Layout({ children }: ComponentProps) {
       return setIsActiveTopButton(true);
     } else {
       return setIsActiveTopButton(false);
-    }  
+    }
   }
 
   useEffect(() => {
@@ -98,17 +107,29 @@ export default function Layout({ children }: ComponentProps) {
         return item.classList.add(item.getAttribute('data-animation'));
       } else {
         return item.classList.remove(item.getAttribute('data-animation'));
-      } 
-    })
+      }
+    });
   }
 
   useEffect(() => {
     window.addEventListener('scroll', isElementInViewport);
   }, []);
 
+  const [widthPage, setWidthPage] = useState<number>(0);
+
+  useEffect(() => {
+    return setWidthPage(window.innerWidth);
+  }, []);
+
+  const [isActiveToggleMenu, setIsActiveToggleMenu] = useState<boolean>(false); // enable menu mobile
+
   return (
     <>
-      <GlobalStyles isActiveLoading={isActiveLoading} isFullImage={isFullImage} />
+      <GlobalStyles
+        isActiveLoading={isActiveLoading}
+        isFullImage={isFullImage}
+        isActiveToggleMenu={isActiveToggleMenu}
+      />
       {isActiveLoading && <LoadingPage />}
       <Context.Provider
         value={{
@@ -121,11 +142,14 @@ export default function Layout({ children }: ComponentProps) {
           setIsActiveMenu,
           isActiveMenu,
           setIsFullImage,
+          widthPage,
+          setIsActiveToggleMenu,
+          isActiveToggleMenu,
         }}
       >
         <Provider store={store}>
           {isActiveMenu && <Menu />}
-          <main onScroll={isElementInViewport}>{children}</main>
+          <main>{children}</main>
           <ModalEmail />
           <Footer />
           {isActiveTopButton && <TopButton />}

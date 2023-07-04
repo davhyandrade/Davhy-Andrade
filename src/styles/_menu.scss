@@ -20,6 +20,13 @@
       align-items: center;
       margin-top: 50px;
       margin-left: 10px;
+      z-index: 997;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          margin: 0 !important;
+        }
+      }
 
       span {
         font-family: Cookie;
@@ -27,6 +34,12 @@
         margin-left: 20px;
         cursor: pointer;
         color: var(--color-headings);
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            margin-left: 10px;
+          }
+        }
       }
 
       svg {
@@ -36,6 +49,13 @@
         border-radius: 50%;
         background-color: var(--bg-panel);
         border: 1px solid var(--color-border);
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 55px;
+            height: 55px;
+          }
+        }
       }
     }
 
@@ -229,6 +249,12 @@
   .position {
     width: 80%;
 
+    @media only screen and (max-width: 800px) {
+      & {
+        width: 90%;
+      }
+    }
+    
     #logo {
       margin: 0 !important;
   
@@ -238,6 +264,12 @@
   
       span {
         font-size: 1.3rem !important;
+
+        @media only screen and (max-width: 800px) {
+          & {
+            margin-left: 0;
+          }
+        }
       }
     }
   }
@@ -253,5 +285,130 @@
   > div {
     height: 100%;
     background-color: var(--bg-panel); 
+  }
+}
+
+.menu-mobile {
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .position {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+
+    .dropdwon-menu-mobile-field {
+      width: 100%;
+
+      .dropdown-menu-mobile {
+        > .header {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          border: 1px solid var(--color-border);
+          padding: 20px; 
+          gap: 5px;
+          margin-bottom: 20px;
+          
+          &:active {
+            transition: 1ms;
+            opacity: 30%;
+          }
+          
+          h1 {
+            color: var(--color-headings);
+            font-weight: normal;
+            font-size: 1.3rem;
+          }
+  
+          .arrow_svg__octicon {
+            width: 25px;
+            height: 25px;
+            opacity: 70%;
+            color: var(--color-headings);
+            transform: rotate(180deg);
+            
+            .arrow_svg__octicon-chevrow-stem {
+              display: none;
+            }
+          }
+        }
+  
+        a {
+          color: var(--color-text);
+        }
+  
+        > .more-dropdown {
+          width: 80%;
+          display: flex;
+          justify-content: flex-end;
+  
+          span {
+            color: var(--color-headings);
+  
+            &:active {
+              transition: 1ms;
+              opacity: 30%;
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 40px;
+
+      li {
+        width: 85%;
+
+        button, a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          font-size: 1rem;
+          color: var(--color-headings);
+          background-color: transparent;
+          border: 0;
+          padding: 20px; 
+
+          &:active {
+            transition: 1ms;
+            opacity: 30%;
+          }
+
+          .arrow_svg__octicon {
+            width: 20px;
+            height: 20px;
+            opacity: 50%;
+
+            .arrow_svg__octicon-chevrow-stem {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-small .menu-mobile > .position {
+  @media only screen and (max-width: 800px) {
+    & {
+      height: 85vh;
+    }
   }
 }

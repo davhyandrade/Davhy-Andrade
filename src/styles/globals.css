@@ -95,6 +95,12 @@ main {
   align-items: center;
   margin-top: 50px;
   margin-left: 10px;
+  z-index: 997;
+}
+@media only screen and (max-width: 800px) {
+  .menu .position #logo {
+    margin: 0 !important;
+  }
 }
 .menu .position #logo span {
   font-family: Cookie;
@@ -103,6 +109,11 @@ main {
   cursor: pointer;
   color: var(--color-headings);
 }
+@media only screen and (max-width: 800px) {
+  .menu .position #logo span {
+    margin-left: 10px;
+  }
+}
 .menu .position #logo svg {
   width: 65px;
   height: 65px;
@@ -110,6 +121,12 @@ main {
   border-radius: 50%;
   background-color: var(--bg-panel);
   border: 1px solid var(--color-border);
+}
+@media only screen and (max-width: 800px) {
+  .menu .position #logo svg {
+    width: 55px;
+    height: 55px;
+  }
 }
 .menu .position .btns-menu {
   display: flex;
@@ -272,6 +289,11 @@ main {
 .menu-small .position {
   width: 80%;
 }
+@media only screen and (max-width: 800px) {
+  .menu-small .position {
+    width: 90%;
+  }
+}
 .menu-small .position #logo {
   margin: 0 !important;
 }
@@ -280,6 +302,11 @@ main {
 }
 .menu-small .position #logo span {
   font-size: 1.3rem !important;
+}
+@media only screen and (max-width: 800px) {
+  .menu-small .position #logo span {
+    margin-left: 0;
+  }
 }
 
 .page-progress-bar {
@@ -292,6 +319,161 @@ main {
 .page-progress-bar > div {
   height: 100%;
   background-color: var(--bg-panel);
+}
+
+.menu-mobile {
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 996;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-mobile .position {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field {
+  width: 100%;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header:active {
+  transition: 1ms;
+  opacity: 30%;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header h1 {
+  color: var(--color-headings);
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header .arrow_svg__octicon {
+  width: 25px;
+  height: 25px;
+  opacity: 70%;
+  color: var(--color-headings);
+  transform: rotate(180deg);
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header .arrow_svg__octicon .arrow_svg__octicon-chevrow-stem {
+  display: none;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile a {
+  color: var(--color-text);
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .more-dropdown {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .more-dropdown span {
+  color: var(--color-headings);
+}
+.menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .more-dropdown span:active {
+  transition: 1ms;
+  opacity: 30%;
+}
+.menu-mobile .position ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+.menu-mobile .position ul li {
+  width: 85%;
+}
+.menu-mobile .position ul li button, .menu-mobile .position ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--color-headings);
+  background-color: transparent;
+  border: 0;
+  padding: 20px;
+}
+.menu-mobile .position ul li button:active, .menu-mobile .position ul li a:active {
+  transition: 1ms;
+  opacity: 30%;
+}
+.menu-mobile .position ul li button .arrow_svg__octicon, .menu-mobile .position ul li a .arrow_svg__octicon {
+  width: 20px;
+  height: 20px;
+  opacity: 50%;
+}
+.menu-mobile .position ul li button .arrow_svg__octicon .arrow_svg__octicon-chevrow-stem, .menu-mobile .position ul li a .arrow_svg__octicon .arrow_svg__octicon-chevrow-stem {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu-small .menu-mobile > .position {
+    height: 85vh;
+  }
+}
+
+.toggle-menu {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 998;
+  margin-left: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .toggle-menu {
+    display: flex;
+  }
+}
+.toggle-menu .toggle-menu-item {
+  width: 30px;
+  height: 3.7px;
+  background: var(--color-text);
+  transition: all 0.5s ease-in-out;
+}
+.toggle-menu .toggle-menu-item::before, .toggle-menu .toggle-menu-item::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3.7px;
+  background: var(--color-text);
+  transition: all 0.5s ease-in-out;
+}
+.toggle-menu .toggle-menu-item::before {
+  transform: translateY(-8px);
+}
+.toggle-menu .toggle-menu-item::after {
+  transform: translateY(8px);
+}
+
+.active .toggle-menu-item {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.active .toggle-menu-item::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.active .toggle-menu-item::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .landing-page {
@@ -610,22 +792,37 @@ main {
 .section-about > .position .specialties-field .graphic-field .column .bar .progress > div {
   width: 100%;
   height: 100%;
-  background-color: var(--color-primary);
+}
+.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.1"] {
+  transition-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.2"] {
+  transition-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.3"] {
+  transition-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.5"] {
+  transition-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="1"] {
-  width: 20%;
+  width: calc(10% * 2);
 }
 .section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="2"] {
-  width: 40%;
+  width: calc(20% * 2);
 }
 .section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="3"] {
-  width: 60%;
+  width: calc(30% * 2);
 }
 .section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="4"] {
-  width: 80%;
+  width: calc(40% * 2);
 }
 .section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="5"] {
-  width: 100%;
+  width: calc(50% * 2);
 }
 
 .section-projects {
@@ -2243,6 +2440,7 @@ dialog::backdrop {
 
 .progress-bar-animation > div {
   animation: progress-bar-animation 1s ease-out;
+  background-color: var(--color-primary);
 }
 @keyframes progress-bar-animation {
   from {

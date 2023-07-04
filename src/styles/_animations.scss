@@ -55,7 +55,8 @@
 
 .progress-bar-animation > div {
   animation: progress-bar-animation 1s ease-out;
-
+  background-color: var(--color-primary);
+  
   @keyframes progress-bar-animation {
     from {
       width: 0%;

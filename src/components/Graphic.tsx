@@ -7,14 +7,17 @@ export default function Graphic() {
     {
       name: 'Typescript',
       domain: 4,
+      dataAnimationDelay: 0.3
     },
     {
       name: 'Sass',
       domain: 4,
+      dataAnimationDelay: 0.2
     },
     {
       name: 'MongoDB',
       domain: 4,
+      dataAnimationDelay: 0.1
     },
     {
       name: 'MySQL',
@@ -23,6 +26,7 @@ export default function Graphic() {
     {
       name: 'Photoshop',
       domain: 5,
+      dataAnimationDelay: 0.5
     },
     {
       name: 'Illustrator',
@@ -31,10 +35,12 @@ export default function Graphic() {
     {
       name: 'Redux',
       domain: 4,
+      dataAnimationDelay: 0.3
     },
     {
       name: 'Git',
       domain: 4,
+      dataAnimationDelay: 0.5
     },
   ];
 
@@ -51,7 +57,7 @@ export default function Graphic() {
             </div>
             <div className="bar">
               <div data-animation="progress-bar-animation" className="progress" data-progress={item.domain}>
-                <div></div>
+                <div data-animation-delay={item.dataAnimationDelay ? item.dataAnimationDelay : 0 }></div>
               </div>
             </div>
           </div>
