@@ -1529,7 +1529,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .notfound-field .notfound {
-    height: 250px;
+    height: 300px;
   }
 }
 .notfound-field .notfound > div {
