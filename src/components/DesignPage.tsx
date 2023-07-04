@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import CodeIcon from 'public/images/timeline/code.svg';
-import Arrow from 'public/images/timeline/arrow.svg';
+import Arrow from 'public/images/arrow.svg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function DesignPage({ images, title, header_description, description, carouselImages }: any) {
