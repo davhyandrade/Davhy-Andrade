@@ -112,6 +112,7 @@ main {
 @media only screen and (max-width: 800px) {
   .menu .position #logo span {
     margin-left: 10px;
+    font-size: 1.3rem;
   }
 }
 .menu .position #logo svg {
@@ -124,8 +125,8 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .menu .position #logo svg {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
   }
 }
 .menu .position .btns-menu {
@@ -346,10 +347,11 @@ main {
   width: 100%;
   display: flex;
   align-items: center;
-  border: 1px solid var(--color-border);
-  padding: 20px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 17px;
   gap: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header:active {
   transition: 1ms;
@@ -358,11 +360,11 @@ main {
 .menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header h1 {
   color: var(--color-headings);
   font-weight: normal;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .header .arrow_svg__octicon {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   opacity: 70%;
   color: var(--color-headings);
   transform: rotate(180deg);
@@ -371,7 +373,7 @@ main {
   display: none;
 }
 .menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile a {
-  color: var(--color-text);
+  color: var(--color-text2);
 }
 .menu-mobile .position .dropdwon-menu-mobile-field .dropdown-menu-mobile > .more-dropdown {
   width: 80%;
@@ -390,10 +392,10 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .menu-mobile .position ul li {
-  width: 85%;
+  width: 90%;
 }
 .menu-mobile .position ul li button, .menu-mobile .position ul li a {
   display: flex;
@@ -404,7 +406,7 @@ main {
   color: var(--color-headings);
   background-color: transparent;
   border: 0;
-  padding: 20px;
+  padding: 15px;
 }
 .menu-mobile .position ul li button:active, .menu-mobile .position ul li a:active {
   transition: 1ms;
@@ -2313,6 +2315,11 @@ dialog::backdrop {
 .resume-field > .position .header > .position > div {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position > div {
+    margin-left: 10px;
+  }
 }
 .resume-field > .position .header > .position > div > span {
   color: var(--color-text2);
