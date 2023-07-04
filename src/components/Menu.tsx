@@ -153,7 +153,7 @@ export default function Menu() {
   function handleCloseDropdownMenuMobile() {
     return [
       setIsActiveDropdownMenuMobile({ isActive: false, activeNumber: 0 }), // close dropdown menu mobile
-      setNumberDropdownMenuMobile(5), // defaul dropdown menu mobille
+      setNumberDropdownMenuMobile(7), // defaul dropdown menu mobille
     ];
   }
 
@@ -162,10 +162,10 @@ export default function Menu() {
     activeNumber: 0,
   });
 
-  const [numberDropdownMenuMobile, setNumberDropdownMenuMobile] = useState<number>(6); // number of elements listed
+  const [numberDropdownMenuMobile, setNumberDropdownMenuMobile] = useState<number>(7); // number of elements listed
 
   function handleMoreButtonMenuMobile() {
-    return setNumberDropdownMenuMobile(numberDropdownMenuMobile + 5);
+    return setNumberDropdownMenuMobile(numberDropdownMenuMobile + 7);
   }
 
   return (
@@ -299,7 +299,7 @@ export default function Menu() {
                             </li>
                           );
                         })}
-                      {buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown.length > 5 &&
+                      {buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown.length > 7 &&
                         numberDropdownMenuMobile <
                           buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown.length && (
                           <div className="more-dropdown">
