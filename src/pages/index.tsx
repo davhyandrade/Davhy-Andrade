@@ -32,7 +32,7 @@ export default function Home() {
         <meta name="description" content="Entusiasta de tecnologia, Desenvolvedor Web e Designer Digital." />
       </Head>
       <LandingPage />
-      <section className="section-about">
+      <section className="about-section">
         <div className="position">
           <Timeline />
           <div className="introduction-field">
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section-projects">
+      <section className="projects-section">
         <div className="position">
           <div className="header">
             <div>
