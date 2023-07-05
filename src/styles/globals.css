@@ -627,7 +627,7 @@ main {
   }
 }
 
-.section-about {
+.about-section {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -637,7 +637,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.section-about > .position {
+.about-section > .position {
   width: 80% !important;
   max-width: 1200px !important;
   display: flex;
@@ -647,23 +647,23 @@ main {
   margin-bottom: 100px;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position {
+  .about-section > .position {
     width: 95% !important;
     align-items: flex-end;
     margin-bottom: 75px;
   }
 }
-.section-about > .position .introduction-field {
+.about-section > .position .introduction-field {
   width: 75%;
   margin-top: 110px;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field {
+  .about-section > .position .introduction-field {
     width: 83%;
     margin-top: 95px;
   }
 }
-.section-about > .position .introduction-field h1 {
+.about-section > .position .introduction-field h1 {
   color: var(--color-headings);
   font-size: 5rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -671,11 +671,11 @@ main {
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field h1 {
+  .about-section > .position .introduction-field h1 {
     font-size: 2.5rem;
   }
 }
-.section-about > .position .introduction-field p {
+.about-section > .position .introduction-field p {
   width: 90%;
   color: var(--color-text);
   font-size: 2rem;
@@ -684,33 +684,31 @@ main {
   line-height: 44px !important;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field p {
-    width: 95%;
-    font-size: 1.4rem;
-    line-height: 30px !important;
+  .about-section > .position .introduction-field p {
+    display: none;
   }
 }
-.section-about > .position .introduction-field p:nth-child(4) {
+.about-section > .position .introduction-field p:nth-child(4) {
   font-size: 1rem;
 }
-.section-about > .position .introduction-field p span {
+.about-section > .position .introduction-field p span {
   color: var(--color-headings);
 }
-.section-about > .position .introduction-field > div {
+.about-section > .position .introduction-field > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 110%;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field > div {
+  .about-section > .position .introduction-field > div {
     width: 100%;
     flex-direction: column;
     align-items: initial;
     margin-top: 15px;
   }
 }
-.section-about > .position .introduction-field > div > span {
+.about-section > .position .introduction-field > div > span {
   width: 55%;
   color: var(--color-text);
   font-size: 1.5rem;
@@ -719,38 +717,38 @@ main {
   line-height: 34px !important;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field > div > span {
+  .about-section > .position .introduction-field > div > span {
     width: 95%;
     font-size: 1.3rem;
   }
 }
-.section-about > .position .introduction-field > div > span span {
+.about-section > .position .introduction-field > div > span span {
   font-size: 1.7rem;
   color: var(--color-headings);
   font-weight: 500;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .introduction-field > div > span span {
+  .about-section > .position .introduction-field > div > span span {
     font-size: 1.5rem;
   }
 }
-.section-about > .position .about-field {
+.about-section > .position .about-field {
   width: 75%;
   margin-top: 70px;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .about-field {
+  .about-section > .position .about-field {
     width: 83%;
   }
 }
-.section-about > .position .about-field h2 {
+.about-section > .position .about-field h2 {
   color: var(--color-headings);
   font-size: 1.6rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500 !important;
   margin-bottom: 20px;
 }
-.section-about > .position .about-field p {
+.about-section > .position .about-field p {
   color: var(--color-text);
   font-size: 1.5rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -758,34 +756,34 @@ main {
   line-height: 34px !important;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .about-field p {
+  .about-section > .position .about-field p {
     width: 95%;
     font-size: 1.3rem;
   }
 }
-.section-about > .position .about-field p span {
+.about-section > .position .about-field p span {
   line-height: 44px !important;
   font-weight: 500;
   font-size: 2.5rem;
   color: var(--color-headings);
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .about-field p span {
+  .about-section > .position .about-field p span {
     font-size: 1.6rem;
     line-height: 34px !important;
   }
 }
-.section-about > .position .about-field p span span {
+.about-section > .position .about-field p span span {
   color: var(--color-primary);
   font-weight: bold !important;
   font-size: 2.7rem;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .about-field p span span {
+  .about-section > .position .about-field p span span {
     font-size: 1.8rem;
   }
 }
-.section-about > .position .specialties-field {
+.about-section > .position .specialties-field {
   width: 100%;
   background-color: var(--bg-panel);
   display: flex;
@@ -797,36 +795,36 @@ main {
   margin-top: 50px;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .specialties-field {
+  .about-section > .position .specialties-field {
     padding: 35px 30px 35px 30px;
     flex-direction: column;
   }
 }
-.section-about > .position .specialties-field > div:nth-child(1) {
+.about-section > .position .specialties-field > div:nth-child(1) {
   width: 35%;
   height: 80%;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .specialties-field > div:nth-child(1) {
+  .about-section > .position .specialties-field > div:nth-child(1) {
     width: 100%;
     height: auto;
   }
 }
-.section-about > .position .specialties-field > div:nth-child(1) h2 {
+.about-section > .position .specialties-field > div:nth-child(1) h2 {
   color: var(--color-headings);
   font-size: 1.6rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500 !important;
   margin-bottom: 20px;
 }
-.section-about > .position .specialties-field > div:nth-child(1) p {
+.about-section > .position .specialties-field > div:nth-child(1) p {
   color: var(--color-text);
   font-size: 1.3rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.01em;
   line-height: 30px !important;
 }
-.section-about > .position .specialties-field .graphic-field {
+.about-section > .position .specialties-field .graphic-field {
   width: 65%;
   height: 260px;
   display: flex;
@@ -835,90 +833,90 @@ main {
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 800px) {
-  .section-about > .position .specialties-field .graphic-field {
+  .about-section > .position .specialties-field .graphic-field {
     width: 100%;
     margin-top: 30px;
   }
 }
-.section-about > .position .specialties-field .graphic-field .column {
+.about-section > .position .specialties-field .graphic-field .column {
   width: 47%;
   margin-bottom: 20px;
 }
-.section-about > .position .specialties-field .graphic-field .column:nth-child(5) {
+.about-section > .position .specialties-field .graphic-field .column:nth-child(5) {
   margin-bottom: 0;
 }
-.section-about > .position .specialties-field .graphic-field .column > div:nth-child(1) {
+.about-section > .position .specialties-field .graphic-field .column > div:nth-child(1) {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
-.section-about > .position .specialties-field .graphic-field .column > div:nth-child(1) > span {
+.about-section > .position .specialties-field .graphic-field .column > div:nth-child(1) > span {
   color: var(--color-headings);
   font-size: 1.2rem;
 }
-.section-about > .position .specialties-field .graphic-field .column > div:nth-child(1) > span span:nth-child(1) {
+.about-section > .position .specialties-field .graphic-field .column > div:nth-child(1) > span span:nth-child(1) {
   color: var(--color-primary);
   font-weight: bold;
 }
-.section-about > .position .specialties-field .graphic-field .column > div:nth-child(1) > span span:nth-child(2) {
+.about-section > .position .specialties-field .graphic-field .column > div:nth-child(1) > span span:nth-child(2) {
   font-size: 0.9rem;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar {
+.about-section > .position .specialties-field .graphic-field .column .bar {
   width: 100%;
   height: 5px;
   border-radius: 10px;
   background-color: var(--color-headings);
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress > div {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress > div {
   width: 100%;
   height: 100%;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.1"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.1"] {
   transition-delay: 0.1s;
   animation-delay: 0.1s;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.2"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.2"] {
   transition-delay: 0.2s;
   animation-delay: 0.2s;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.3"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.3"] {
   transition-delay: 0.3s;
   animation-delay: 0.3s;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.5"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress > div[data-animation-delay="0.5"] {
   transition-delay: 0.5s;
   animation-delay: 0.5s;
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="1"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="1"] {
   width: calc(10% * 2);
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="2"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="2"] {
   width: calc(20% * 2);
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="3"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="3"] {
   width: calc(30% * 2);
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="4"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="4"] {
   width: calc(40% * 2);
 }
-.section-about > .position .specialties-field .graphic-field .column .bar .progress[data-progress="5"] {
+.about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="5"] {
   width: calc(50% * 2);
 }
 
-.section-projects {
+.projects-section {
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
-.section-projects .position {
+.projects-section .position {
   width: 85%;
   max-width: 1253px !important;
   display: flex;
@@ -926,48 +924,60 @@ main {
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.section-projects .position .header {
+@media only screen and (max-width: 800px) {
+  .projects-section .position {
+    width: 95%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+}
+.projects-section .position .header {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 800px) {
-  .section-projects .position .header {
-    width: 95%;
-  }
-}
-.section-projects .position .header > div:nth-child(1) {
+.projects-section .position .header > div:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section-projects .position .header > div:nth-child(1) .title-timeline {
+.projects-section .position .header > div:nth-child(1) .title-timeline {
   filter: drop-shadow(0 0px 30px #3c0a4a);
   margin: 15px;
 }
 @media only screen and (max-width: 800px) {
-  .section-projects .position .header > div:nth-child(1) .title-timeline {
+  .projects-section .position .header > div:nth-child(1) .title-timeline {
     margin: 0;
     margin-bottom: 15px;
   }
 }
-.section-projects .position .header > div:nth-child(1) .vertical-line {
+.projects-section .position .header > div:nth-child(1) .vertical-line {
   width: 3px;
   height: 80px;
   z-index: 2 !important;
 }
-.section-projects .position .header > div:nth-child(1) .vertical-line > div {
+@media only screen and (max-width: 800px) {
+  .projects-section .position .header > div:nth-child(1) .vertical-line {
+    height: 100px;
+  }
+}
+.projects-section .position .header > div:nth-child(1) .vertical-line > div {
   width: 100%;
   height: 100%;
   background-size: 400% 400%;
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
   filter: drop-shadow(0 0px 15px #0077cb);
 }
-.section-projects .position .header > div:nth-child(2) {
+.projects-section .position .header > div:nth-child(2) {
   margin-left: 20px;
   margin-top: 15px;
 }
-.section-projects .position .header > div:nth-child(2) > h2 {
+@media only screen and (max-width: 800px) {
+  .projects-section .position .header > div:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.projects-section .position .header > div:nth-child(2) > h2 {
   color: var(--color-headings);
   font-size: 1.6rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -975,11 +985,11 @@ main {
   margin-bottom: 15px;
 }
 @media only screen and (max-width: 800px) {
-  .section-projects .position .header > div:nth-child(2) > h2 {
+  .projects-section .position .header > div:nth-child(2) > h2 {
     margin-bottom: 8px;
   }
 }
-.section-projects .position .header > div:nth-child(2) p {
+.projects-section .position .header > div:nth-child(2) p {
   width: 67%;
   color: var(--color-text);
   font-size: 1.3rem;
@@ -987,36 +997,37 @@ main {
   line-height: 30px !important;
 }
 @media only screen and (max-width: 800px) {
-  .section-projects .position .header > div:nth-child(2) p {
+  .projects-section .position .header > div:nth-child(2) p {
+    width: 100%;
     font-size: 1rem;
     line-height: 22px !important;
   }
 }
-.section-projects .position .cards-field {
+.projects-section .position .cards-field {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 @media only screen and (max-width: 800px) {
-  .section-projects .position .cards-field {
-    gap: 0.6rem;
+  .projects-section .position .cards-field {
+    gap: 0.4rem;
   }
 }
-.section-projects .position #more-button {
+.projects-section .position #more-button {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
 }
-.section-projects .position #more-button span {
+.projects-section .position #more-button span {
   color: var(--color-text);
   cursor: pointer;
 }
-.section-projects .position #more-button span:hover {
+.projects-section .position #more-button span:hover {
   transition: 1;
   color: var(--color-primary);
 }
-.section-projects .position #more-button span:active {
+.projects-section .position #more-button span:active {
   transition: 1ms;
   opacity: 30%;
 }
@@ -1248,7 +1259,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 955px;
+    height: 697px;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
@@ -1453,7 +1464,7 @@ main {
   height: 40px;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 998;
+  z-index: 995;
   color: var(--color-text2);
 }
 .top-button:hover svg {
@@ -1918,6 +1929,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .project-card {
     width: 49%;
+    min-height: 210px;
   }
 }
 .project-card p, .project-card span, .project-card h1 {
@@ -1985,6 +1997,11 @@ dialog::backdrop {
 .project-card > a .image-field .image-container {
   width: 100%;
   height: 170px;
+}
+@media only screen and (max-width: 800px) {
+  .project-card > a .image-field .image-container {
+    height: 90px;
+  }
 }
 .project-card > a .image-field .image-container img {
   width: 100%;
