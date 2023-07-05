@@ -3,6 +3,12 @@
   top: 0;
   left: 0;
   width: 35%;
+  
+  @media only screen and (max-width: 800px) {
+    & {
+      width: 80%;
+    }
+  }
 
   > div {
     position: relative;
@@ -13,10 +19,24 @@
       > div:nth-child(1) {
         position: relative;
         margin-top: 25px;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            margin-top: 19px;
+            margin-left: -25px;            
+          }
+        }
 
         svg {
           z-index: 10;
           position: inherit;
+
+          @media only screen and (max-width: 800px) {
+            & {
+              width: 65px;
+              height: 65px;
+            }
+          }
         }
     
         .gear-field svg {
@@ -30,6 +50,15 @@
             width: 30px;
             height: 30px;
             animation: counterclockwiseRotation 3s infinite linear;
+
+            @media only screen and (max-width: 800px) {
+              & {
+                top: 20px;
+                left: 17px;
+                width: 15px;
+                height: 15px;
+              }
+            }
           }
           
           &:nth-child(2) {
@@ -39,6 +68,15 @@
             width: 37px;
             height: 37px;
             animation: counterclockwiseRotation 10s infinite linear;
+
+            @media only screen and (max-width: 800px) {
+              & {
+                top: 32px;
+                left: 11px;
+                width: 20px;
+                height: 20px;
+              }
+            }
           }
           
           &:nth-child(3) {
@@ -48,6 +86,15 @@
             width: 34px;
             height: 34px;
             animation: hourlyRotation 1.3s infinite ease-in-out;
+
+            @media only screen and (max-width: 800px) {
+              & {
+                top: 40px;
+                left: 30px;
+                width: 17px;
+                height: 17px;
+              }
+            }
           }
         }
     
@@ -77,6 +124,12 @@
         margin-left: -45px;
         z-index: 2;
         
+        @media only screen and (max-width: 800px) {
+          & {
+            margin-top: 30px;
+          }
+        }
+
         > div {
           width: 100%;
           height: 100%;
@@ -95,8 +148,15 @@
         align-items: center;
         justify-content: space-between;
         background-color: var(--bg-panel);
-        border: 1px solid var(--color-border);
-        
+        border: 1px solid var(--color-border);  
+          
+        @media only screen and (max-width: 800px) {
+          & {
+            height: 40px;
+            padding: 25px 5px;
+          }
+        }
+
         &:hover {
           transition: 1s;
           background-color: transparent;
@@ -116,6 +176,13 @@
           &:nth-child(1) {
             width: 30%;
             height: 50px;
+
+            @media only screen and (max-width: 800px) {
+              & {
+                width: 20%;
+                height: 35px;   
+              }
+            }
           }
 
           &:nth-child(3) {
@@ -135,11 +202,23 @@
             color: var(--color-headings);
             font-weight: normal;
             font-size: 1.2rem;
+            
+            @media only screen and (max-width: 800px) {
+              & {
+                font-size: 0.9rem;
+              }
+            }
           }
-
+          
           span {
             color: var(--color-text);
             font-size: 0.9rem;
+            
+            @media only screen and (max-width: 800px) {
+              & {
+                font-size: 0.7rem;
+              }
+            }
           }
         }
 
@@ -155,6 +234,12 @@
       flex-direction: column;
       align-items: center;
       margin-top: -15px;
+
+      @media only screen and (max-width: 800px) {
+        & {
+          width: 50px;
+        }
+      }
 
       .vertical-line {
         width: 3px;
@@ -174,11 +259,23 @@
         
         &:nth-child(3) {
           height: 515px;
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              height: 955px;
+            }
+          }
         }
         
         &:nth-child(5) {
           animation: none !important;
           height: 220px;
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              height: 500px;
+            }
+          }
 
           > div {
             background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);

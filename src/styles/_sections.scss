@@ -16,10 +16,25 @@
     align-items: center;
     position: relative;
     margin-bottom: 100px;
+    
+    @media only screen and (max-width: 800px) {
+      & {
+        width: 95% !important;
+        align-items: flex-end;
+        margin-bottom: 75px;
+      }
+    }
 
     .introduction-field {
       width: 75%;
       margin-top: 110px;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          width: 83%;
+          margin-top: 95px;
+        }
+      }
 
       h1 {
         color: var(--color-headings);
@@ -27,6 +42,12 @@
         font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
         font-weight: 600 !important;
         margin-bottom: 20px;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            font-size: 2.5rem;
+          }
+        }
       }
       
       p {
@@ -36,6 +57,14 @@
         font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
         letter-spacing: -0.01em;
         line-height: 44px !important;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 95%;
+            font-size: 1.4rem;
+            line-height: 30px !important;
+          }
+        }
 
         &:nth-child(4) {
           font-size: 1rem;
@@ -52,6 +81,15 @@
         align-items: center;
         width: 110%;
         
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 100%;
+            flex-direction: column;    
+            align-items: initial;
+            margin-top: 15px
+          }
+        }
+
         > span {
           width: 55%;
           color: var(--color-text);
@@ -59,11 +97,24 @@
           font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
           letter-spacing: -0.01em;
           line-height: 34px !important;
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              width: 95%;
+              font-size: 1.3rem;
+            }
+          }
 
           span {
             font-size: 1.7rem;
             color: var(--color-headings);
             font-weight: 500;
+            
+            @media only screen and (max-width: 800px) {
+              & {
+                font-size: 1.5rem;
+              }
+            }
           }
         }
       }
@@ -72,6 +123,12 @@
     .about-field {
       width: 75%;
       margin-top: 70px;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          width: 83%;
+        }
+      }
 
       h2 {
         color: var(--color-headings);
@@ -88,16 +145,36 @@
         letter-spacing: -0.01em;
         line-height: 34px !important;
         
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 95%;
+            font-size: 1.3rem;
+          }
+        }
+
         span {
           line-height: 44px !important;
           font-weight: 500;
           font-size: 2.5rem;
           color: var(--color-headings);
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              font-size: 1.6rem;
+              line-height: 34px !important;
+            }
+          }
 
           span {
             color: var(--color-primary);
             font-weight: bold !important; 
             font-size: 2.7rem;
+            
+            @media only screen and (max-width: 800px) {
+              & {
+                font-size: 1.8rem;
+              }
+            }
           }
         }
       }
@@ -113,10 +190,24 @@
       border: 1px solid var(--color-border);
       padding: 35px 50px 35px 50px;
       margin-top: 50px;
+      
+      @media only screen and (max-width: 800px) {
+        & {
+          padding: 35px 30px 35px 30px;
+          flex-direction: column;    
+        }
+      }
 
       > div:nth-child(1)  {
         width: 35%;
         height: 80%;
+
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 100%;    
+            height: auto;
+          }
+        }
 
         h2 {
           color: var(--color-headings);
@@ -142,6 +233,13 @@
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            width: 100%;
+            margin-top: 30px;
+          }
+        }
 
         .column {
           width: 47%;
