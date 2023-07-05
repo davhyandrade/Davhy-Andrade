@@ -8,7 +8,15 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   
+  @media only screen and (max-width: 800px) {
+    & {
+      width: 95%;
+      margin-top: 20px;
+    }
+  }
+
   .code-header {
     position: absolute;
     top: 0;
@@ -40,6 +48,12 @@
           font-size: 0.7rem;
           color: var(--color-headings);
           opacity: 30%;
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              font-size: 0.5rem;
+            }
+          }
         }
       }
     }
@@ -49,9 +63,21 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    overflow-x: auto;
+    
+    @media only screen and (max-width: 800px) {
+      & {
+        width: 85%;
+        margin-top: 10px;
+      }
+    }
     
     pre, span {
       font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+    }
+
+    pre:nth-last-child(1) {
+      margin-bottom: 10px;
     }
 
     .code-color-white {

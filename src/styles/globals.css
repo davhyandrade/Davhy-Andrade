@@ -646,9 +646,22 @@ main {
   position: relative;
   margin-bottom: 100px;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position {
+    width: 95% !important;
+    align-items: flex-end;
+    margin-bottom: 75px;
+  }
+}
 .section-about > .position .introduction-field {
   width: 75%;
   margin-top: 110px;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field {
+    width: 83%;
+    margin-top: 95px;
+  }
 }
 .section-about > .position .introduction-field h1 {
   color: var(--color-headings);
@@ -657,6 +670,11 @@ main {
   font-weight: 600 !important;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field h1 {
+    font-size: 2.5rem;
+  }
+}
 .section-about > .position .introduction-field p {
   width: 90%;
   color: var(--color-text);
@@ -664,6 +682,13 @@ main {
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.01em;
   line-height: 44px !important;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field p {
+    width: 95%;
+    font-size: 1.4rem;
+    line-height: 30px !important;
+  }
 }
 .section-about > .position .introduction-field p:nth-child(4) {
   font-size: 1rem;
@@ -677,6 +702,14 @@ main {
   align-items: center;
   width: 110%;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field > div {
+    width: 100%;
+    flex-direction: column;
+    align-items: initial;
+    margin-top: 15px;
+  }
+}
 .section-about > .position .introduction-field > div > span {
   width: 55%;
   color: var(--color-text);
@@ -685,14 +718,30 @@ main {
   letter-spacing: -0.01em;
   line-height: 34px !important;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field > div > span {
+    width: 95%;
+    font-size: 1.3rem;
+  }
+}
 .section-about > .position .introduction-field > div > span span {
   font-size: 1.7rem;
   color: var(--color-headings);
   font-weight: 500;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .introduction-field > div > span span {
+    font-size: 1.5rem;
+  }
+}
 .section-about > .position .about-field {
   width: 75%;
   margin-top: 70px;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .about-field {
+    width: 83%;
+  }
 }
 .section-about > .position .about-field h2 {
   color: var(--color-headings);
@@ -708,16 +757,33 @@ main {
   letter-spacing: -0.01em;
   line-height: 34px !important;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .about-field p {
+    width: 95%;
+    font-size: 1.3rem;
+  }
+}
 .section-about > .position .about-field p span {
   line-height: 44px !important;
   font-weight: 500;
   font-size: 2.5rem;
   color: var(--color-headings);
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .about-field p span {
+    font-size: 1.6rem;
+    line-height: 34px !important;
+  }
+}
 .section-about > .position .about-field p span span {
   color: var(--color-primary);
   font-weight: bold !important;
   font-size: 2.7rem;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .about-field p span span {
+    font-size: 1.8rem;
+  }
 }
 .section-about > .position .specialties-field {
   width: 100%;
@@ -730,9 +796,21 @@ main {
   padding: 35px 50px 35px 50px;
   margin-top: 50px;
 }
+@media only screen and (max-width: 800px) {
+  .section-about > .position .specialties-field {
+    padding: 35px 30px 35px 30px;
+    flex-direction: column;
+  }
+}
 .section-about > .position .specialties-field > div:nth-child(1) {
   width: 35%;
   height: 80%;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .specialties-field > div:nth-child(1) {
+    width: 100%;
+    height: auto;
+  }
 }
 .section-about > .position .specialties-field > div:nth-child(1) h2 {
   color: var(--color-headings);
@@ -755,6 +833,12 @@ main {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 800px) {
+  .section-about > .position .specialties-field .graphic-field {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 .section-about > .position .specialties-field .graphic-field .column {
   width: 47%;
@@ -943,6 +1027,11 @@ main {
   left: 0;
   width: 35%;
 }
+@media only screen and (max-width: 800px) {
+  .timeline {
+    width: 80%;
+  }
+}
 .timeline > div {
   position: relative;
 }
@@ -953,9 +1042,21 @@ main {
   position: relative;
   margin-top: 25px;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) > div:nth-child(1) {
+    margin-top: 19px;
+    margin-left: -25px;
+  }
+}
 .timeline > div > div:nth-child(1) > div:nth-child(1) svg {
   z-index: 10;
   position: inherit;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) > div:nth-child(1) svg {
+    width: 65px;
+    height: 65px;
+  }
 }
 .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg {
   filter: invert(1);
@@ -969,6 +1070,14 @@ main {
   height: 30px;
   animation: counterclockwiseRotation 3s infinite linear;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg:nth-child(1) {
+    top: 20px;
+    left: 17px;
+    width: 15px;
+    height: 15px;
+  }
+}
 .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg:nth-child(2) {
   position: absolute;
   top: 42px;
@@ -977,6 +1086,14 @@ main {
   height: 37px;
   animation: counterclockwiseRotation 10s infinite linear;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg:nth-child(2) {
+    top: 32px;
+    left: 11px;
+    width: 20px;
+    height: 20px;
+  }
+}
 .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg:nth-child(3) {
   position: absolute;
   top: 56px;
@@ -984,6 +1101,14 @@ main {
   width: 34px;
   height: 34px;
   animation: hourlyRotation 1.3s infinite ease-in-out;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) > div:nth-child(1) .gear-field svg:nth-child(3) {
+    top: 40px;
+    left: 30px;
+    width: 17px;
+    height: 17px;
+  }
 }
 @keyframes counterclockwiseRotation {
   from {
@@ -1008,6 +1133,11 @@ main {
   margin-left: -45px;
   z-index: 2;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #horizontal-line {
+    margin-top: 30px;
+  }
+}
 .timeline > div > div:nth-child(1) #horizontal-line > div {
   width: 100%;
   height: 100%;
@@ -1026,6 +1156,12 @@ main {
   background-color: var(--bg-panel);
   border: 1px solid var(--color-border);
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #button-source-code {
+    height: 40px;
+    padding: 25px 5px;
+  }
+}
 .timeline > div > div:nth-child(1) #button-source-code:hover {
   transition: 1s;
   background-color: transparent;
@@ -1041,6 +1177,12 @@ main {
 .timeline > div > div:nth-child(1) #button-source-code svg:nth-child(1) {
   width: 30%;
   height: 50px;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #button-source-code svg:nth-child(1) {
+    width: 20%;
+    height: 35px;
+  }
 }
 .timeline > div > div:nth-child(1) #button-source-code svg:nth-child(3) {
   width: 16px;
@@ -1058,9 +1200,19 @@ main {
   font-weight: normal;
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #button-source-code > div h2 {
+    font-size: 0.9rem;
+  }
+}
 .timeline > div > div:nth-child(1) #button-source-code > div span {
   color: var(--color-text);
   font-size: 0.9rem;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #button-source-code > div span {
+    font-size: 0.7rem;
+  }
 }
 .timeline > div > div:nth-child(1) #button-source-code .arrow_svg__octicon-chevrow-stem {
   display: none;
@@ -1071,6 +1223,11 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: -15px;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div .line-field {
+    width: 50px;
+  }
 }
 .timeline > div .line-field .vertical-line {
   width: 3px;
@@ -1089,9 +1246,19 @@ main {
 .timeline > div .line-field .vertical-line:nth-child(3) {
   height: 515px;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div .line-field .vertical-line:nth-child(3) {
+    height: 955px;
+  }
+}
 .timeline > div .line-field .vertical-line:nth-child(5) {
   animation: none !important;
   height: 220px;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div .line-field .vertical-line:nth-child(5) {
+    height: 500px;
+  }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {
   background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
@@ -1122,6 +1289,13 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .code-field {
+    width: 95%;
+    margin-top: 20px;
+  }
 }
 .code-field .code-header {
   position: absolute;
@@ -1155,13 +1329,28 @@ main {
   color: var(--color-headings);
   opacity: 30%;
 }
+@media only screen and (max-width: 800px) {
+  .code-field .code-header > .position > div span {
+    font-size: 0.5rem;
+  }
+}
 .code-field > .position {
   width: 80%;
   display: flex;
   flex-direction: column;
+  overflow-x: auto;
+}
+@media only screen and (max-width: 800px) {
+  .code-field > .position {
+    width: 85%;
+    margin-top: 10px;
+  }
 }
 .code-field > .position pre, .code-field > .position span {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+.code-field > .position pre:nth-last-child(1) {
+  margin-bottom: 10px;
 }
 .code-field > .position .code-color-white {
   color: white;

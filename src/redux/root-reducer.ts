@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import menuReducer from './menu/reducer';
-import modalEmailReducer from './modal-email/reducer';
 
-const rootReducer = combineReducers({ menuReducer, modalEmailReducer });
+const rootReducer = combineReducers({ menuReducer });
 
 export default rootReducer;
