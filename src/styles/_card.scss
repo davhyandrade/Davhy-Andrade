@@ -10,7 +10,7 @@
   @media only screen and (max-width: 800px) {
     & {
       width: 49%;
-      min-height: 210px;
+      min-height: 220px;
     }
   }
 
@@ -123,6 +123,12 @@
         white-space: nowrap; 
         overflow: hidden;
         text-overflow: ellipsis; 
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            font-size: 1.2rem;   
+          }
+        }
       }
   
       span {

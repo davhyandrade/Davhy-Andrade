@@ -648,7 +648,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position {
-    width: 95% !important;
+    width: 100% !important;
     align-items: flex-end;
     margin-bottom: 75px;
   }
@@ -659,8 +659,8 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field {
-    width: 83%;
-    margin-top: 95px;
+    width: 85%;
+    margin-top: 100px;
   }
 }
 .about-section > .position .introduction-field h1 {
@@ -719,7 +719,8 @@ main {
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field > div > span {
     width: 95%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 30px !important;
   }
 }
 .about-section > .position .introduction-field > div > span span {
@@ -729,7 +730,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field > div > span span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 .about-section > .position .about-field {
@@ -758,7 +759,9 @@ main {
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field p {
     width: 95%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 30px !important;
+    margin-bottom: 50px;
   }
 }
 .about-section > .position .about-field p span {
@@ -769,8 +772,8 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field p span {
-    font-size: 1.6rem;
-    line-height: 34px !important;
+    font-size: 1.4rem;
+    line-height: 30px !important;
   }
 }
 .about-section > .position .about-field p span span {
@@ -780,7 +783,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field p span span {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 .about-section > .position .specialties-field {
@@ -796,7 +799,9 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .specialties-field {
-    padding: 35px 30px 35px 30px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 35px 20px 35px 20px;
     flex-direction: column;
   }
 }
@@ -817,12 +822,23 @@ main {
   font-weight: 500 !important;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .about-section > .position .specialties-field > div:nth-child(1) h2 {
+    margin-bottom: 10px;
+  }
+}
 .about-section > .position .specialties-field > div:nth-child(1) p {
   color: var(--color-text);
   font-size: 1.3rem;
   font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.01em;
   line-height: 30px !important;
+}
+@media only screen and (max-width: 800px) {
+  .about-section > .position .specialties-field > div:nth-child(1) p {
+    font-size: 1.1rem;
+    line-height: 24px !important;
+  }
 }
 .about-section > .position .specialties-field .graphic-field {
   width: 65%;
@@ -1259,7 +1275,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 697px;
+    height: 605px;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
@@ -1268,7 +1284,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(5) {
-    height: 500px;
+    height: 400px;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {
@@ -1304,7 +1320,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .code-field {
-    width: 95%;
+    width: 97%;
     margin-top: 20px;
   }
 }
@@ -1929,7 +1945,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .project-card {
     width: 49%;
-    min-height: 210px;
+    min-height: 220px;
   }
 }
 .project-card p, .project-card span, .project-card h1 {
@@ -2021,6 +2037,11 @@ dialog::backdrop {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 800px) {
+  .project-card > a > div:nth-last-child(1) h1 {
+    font-size: 1.2rem;
+  }
 }
 .project-card > a > div:nth-last-child(1) span {
   font-size: 0.7rem;
