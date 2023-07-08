@@ -26,13 +26,13 @@
     }
 
     .introduction-field {
-      width: 75%;
+      width: 77%;
       margin-top: 110px;
       
       @media only screen and (max-width: 800px) {
         & {
-          width: 85%;
-          margin-top: 100px;
+          width: 86%;
+          margin-top: 95px;
         }
       }
 
@@ -46,6 +46,7 @@
         @media only screen and (max-width: 800px) {
           & {
             font-size: 2.5rem;
+            margin-bottom: 0;
           }
         }
       }
@@ -84,7 +85,7 @@
             width: 100%;
             flex-direction: column;    
             align-items: initial;
-            margin-top: 15px
+            margin-top: 10px
           }
         }
 
@@ -120,12 +121,12 @@
     }
 
     .about-field {
-      width: 75%;
+      width: 77%;
       margin-top: 70px;
       
       @media only screen and (max-width: 800px) {
         & {
-          width: 83%;
+          width: 86%;
         }
       }
 

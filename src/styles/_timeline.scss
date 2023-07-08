@@ -6,7 +6,7 @@
   
   @media only screen and (max-width: 800px) {
     & {
-      width: 80%;
+      width: 75%;
     }
   }
 
@@ -23,7 +23,7 @@
         @media only screen and (max-width: 800px) {
           & {
             margin-top: 19px;
-            margin-left: -25px;            
+            margin-left: -29px;            
           }
         }
 
@@ -127,14 +127,21 @@
         @media only screen and (max-width: 800px) {
           & {
             margin-top: 30px;
+            width: 23%;
           }
         }
-
+        
         > div {
           width: 100%;
           height: 100%;
           background: linear-gradient(-45deg, transparent, transparent, #3c0a4a, #23a6d5, #23d5ab);
           filter: drop-shadow(0 0px 15px #0077cb);
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+            }
+          }
         }
       }
 
@@ -237,7 +244,7 @@
 
       @media only screen and (max-width: 800px) {
         & {
-          width: 50px;
+          width: 40px;
         }
       }
 
@@ -262,7 +269,7 @@
           
           @media only screen and (max-width: 800px) {
             & {
-              height: 605px;
+              height: 590px;
             }
           }
         }
@@ -273,7 +280,7 @@
           
           @media only screen and (max-width: 800px) {
             & {
-              height: 400px;
+              height: 350px;
             }
           }
 
