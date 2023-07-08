@@ -85,6 +85,12 @@ dialog {
       .field-input {
         margin-top: 15px;
         width: 85%;
+
+        @media only screen and (max-width: 800px) {
+          & {
+            gap: 10px;   
+          }
+        }
       }
 
       textarea {
@@ -161,7 +167,7 @@ dialog {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #181b1e;
-    filter: saturate(0) brightness(0.1);  
+    filter: saturate(0.2) brightness(0.07) hue-rotate(45deg);  
   }
 }
   
