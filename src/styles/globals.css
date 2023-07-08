@@ -507,7 +507,9 @@ main {
 @media only screen and (max-width: 800px) {
   .landing-page > .position {
     flex-direction: column;
+    align-items: flex-start;
     position: initial;
+    width: 85%;
   }
 }
 .landing-page > .position > div:nth-child(1) {
@@ -516,7 +518,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div:nth-child(1) {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 .landing-page > .position > div p {
@@ -608,7 +610,7 @@ main {
     bottom: 0;
     width: 550px;
     min-height: 72vh;
-    right: -58%;
+    right: -53%;
   }
 }
 .computer-imaging-field svg {
@@ -792,7 +794,7 @@ main {
   .about-section > .position .introduction-field > div > span {
     width: 95%;
     font-size: 1.1rem;
-    line-height: 30px !important;
+    line-height: 26px !important;
   }
 }
 .about-section > .position .introduction-field > div > span span {
@@ -832,7 +834,7 @@ main {
   .about-section > .position .about-field p {
     width: 95%;
     font-size: 1.2rem;
-    line-height: 30px !important;
+    line-height: 26px !important;
     margin-bottom: 50px;
   }
 }
@@ -845,7 +847,7 @@ main {
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field p span {
     font-size: 1.4rem;
-    line-height: 30px !important;
+    line-height: 26px !important;
   }
 }
 .about-section > .position .about-field p span span {
