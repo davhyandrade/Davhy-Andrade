@@ -519,7 +519,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div:nth-child(1) {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 .landing-page > .position > div p {
@@ -567,7 +567,7 @@ main {
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div #btn-contato-landing-page {
     margin-top: 15px;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 .landing-page > .position > div #btn-contato-landing-page:hover {
@@ -621,7 +621,7 @@ main {
     top: auto;
     bottom: 0;
     width: 550px;
-    min-height: 60vh;
+    min-height: 65vh;
     right: -50%;
   }
 }
