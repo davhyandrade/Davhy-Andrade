@@ -566,6 +566,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div #btn-contato-landing-page {
+    display: none;
     margin-top: 15px;
     font-size: 0.9rem;
   }
@@ -651,7 +652,7 @@ main {
   .computer-imaging-field #image-orange-gear {
     width: 15%;
     height: 15%;
-    top: 16%;
+    top: 11%;
     right: 27%;
   }
 }
@@ -664,7 +665,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .computer-imaging-field #image-blue-gear {
-    top: 60%;
+    top: 55%;
     right: 65%;
     z-index: 1;
   }
