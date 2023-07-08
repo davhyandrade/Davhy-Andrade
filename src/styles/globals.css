@@ -632,7 +632,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1500px;
+  height: 1750px;
   background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1063,7 +1063,7 @@ main {
 @media only screen and (max-width: 800px) {
   .timeline {
     width: 75%;
-    height: 1100px;
+    height: 100%;
   }
 }
 .timeline > div {
@@ -1291,7 +1291,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(1) {
-    height: 2%;
+    height: 1%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(3) {
@@ -1299,7 +1299,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 76.5%;
+    height: 34.5%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
@@ -1308,7 +1308,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(5) {
-    height: 49%;
+    height: 23%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {
