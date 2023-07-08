@@ -654,13 +654,13 @@ main {
   }
 }
 .about-section > .position .introduction-field {
-  width: 75%;
+  width: 77%;
   margin-top: 110px;
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field {
-    width: 85%;
-    margin-top: 100px;
+    width: 86%;
+    margin-top: 95px;
   }
 }
 .about-section > .position .introduction-field h1 {
@@ -673,6 +673,7 @@ main {
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field h1 {
     font-size: 2.5rem;
+    margin-bottom: 0;
   }
 }
 .about-section > .position .introduction-field p {
@@ -705,7 +706,7 @@ main {
     width: 100%;
     flex-direction: column;
     align-items: initial;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 .about-section > .position .introduction-field > div > span {
@@ -734,12 +735,12 @@ main {
   }
 }
 .about-section > .position .about-field {
-  width: 75%;
+  width: 77%;
   margin-top: 70px;
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field {
-    width: 83%;
+    width: 86%;
   }
 }
 .about-section > .position .about-field h2 {
@@ -1056,7 +1057,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline {
-    width: 80%;
+    width: 75%;
   }
 }
 .timeline > div {
@@ -1072,7 +1073,7 @@ main {
 @media only screen and (max-width: 800px) {
   .timeline > div > div:nth-child(1) > div:nth-child(1) {
     margin-top: 19px;
-    margin-left: -25px;
+    margin-left: -29px;
   }
 }
 .timeline > div > div:nth-child(1) > div:nth-child(1) svg {
@@ -1163,6 +1164,7 @@ main {
 @media only screen and (max-width: 800px) {
   .timeline > div > div:nth-child(1) #horizontal-line {
     margin-top: 30px;
+    width: 23%;
   }
 }
 .timeline > div > div:nth-child(1) #horizontal-line > div {
@@ -1170,6 +1172,11 @@ main {
   height: 100%;
   background: linear-gradient(-45deg, transparent, transparent, #3c0a4a, #23a6d5, #23d5ab);
   filter: drop-shadow(0 0px 15px #0077cb);
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div > div:nth-child(1) #horizontal-line > div {
+    background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
+  }
 }
 .timeline > div > div:nth-child(1) #button-source-code {
   width: 70%;
@@ -1253,7 +1260,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field {
-    width: 50px;
+    width: 40px;
   }
 }
 .timeline > div .line-field .vertical-line {
@@ -1275,7 +1282,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 605px;
+    height: 590px;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
@@ -1284,7 +1291,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(5) {
-    height: 400px;
+    height: 350px;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {
