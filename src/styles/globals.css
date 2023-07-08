@@ -659,7 +659,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .introduction-field {
-    width: 86%;
+    width: 87%;
     margin-top: 95px;
   }
 }
@@ -706,7 +706,7 @@ main {
     width: 100%;
     flex-direction: column;
     align-items: initial;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 }
 .about-section > .position .introduction-field > div > span {
@@ -740,7 +740,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .about-section > .position .about-field {
-    width: 86%;
+    width: 87%;
   }
 }
 .about-section > .position .about-field h2 {
@@ -953,6 +953,11 @@ main {
   display: flex;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .projects-section .position .header {
+    margin-bottom: 15px;
+  }
+}
 .projects-section .position .header > div:nth-child(1) {
   display: flex;
   flex-direction: column;
@@ -1017,7 +1022,7 @@ main {
   .projects-section .position .header > div:nth-child(2) p {
     width: 100%;
     font-size: 1rem;
-    line-height: 22px !important;
+    line-height: 20px !important;
   }
 }
 .projects-section .position .cards-field {
@@ -1058,10 +1063,16 @@ main {
 @media only screen and (max-width: 800px) {
   .timeline {
     width: 75%;
+    height: 1100px;
   }
 }
 .timeline > div {
   position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .timeline > div {
+    height: 100%;
+  }
 }
 .timeline > div > div:nth-child(1) {
   display: flex;
@@ -1261,6 +1272,7 @@ main {
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field {
     width: 40px;
+    height: 100%;
   }
 }
 .timeline > div .line-field .vertical-line {
@@ -1277,12 +1289,17 @@ main {
 .timeline > div .line-field .vertical-line:nth-child(1) {
   height: 15px;
 }
+@media only screen and (max-width: 800px) {
+  .timeline > div .line-field .vertical-line:nth-child(1) {
+    height: 2%;
+  }
+}
 .timeline > div .line-field .vertical-line:nth-child(3) {
   height: 515px;
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 590px;
+    height: 76.5%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
@@ -1291,7 +1308,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(5) {
-    height: 350px;
+    height: 49%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {
