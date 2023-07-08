@@ -5,6 +5,16 @@
   right: -7%;
   top: 0;
   z-index: 1;
+  
+  @media only screen and (max-width: 800px) {
+    & {
+      top: auto;
+      bottom: 0;   
+      width: 550px;
+      min-height: 72vh;
+      right: -58%;   
+    }
+  }
 
   svg {
     position: absolute;
@@ -13,6 +23,16 @@
   #image-computer {
     width: 100%;
     min-height: 100%;
+
+    @media only screen and (max-width: 800px) {
+      & {
+        z-index: 2;   
+
+        image[data-name="lupa"], image[data-name="lupa camada 2"] {
+          display: none;
+        }
+      }
+    }
   }
 
   #image-orange-gear {
@@ -21,6 +41,15 @@
     top: 7.5%;
     right: 55%;
     animation: counterclockwiseRotation 3s infinite linear;
+
+    @media only screen and (max-width: 800px) {
+      & {
+        width: 13%;
+        height: 13%;
+        top: 11%;
+        right: 33%;   
+      }
+    }
   }
 
   #image-blue-gear {
@@ -29,6 +58,14 @@
     top: 28%;
     right: 5%;
     animation: hourlyRotation 1.3s infinite ease-in-out;
+
+    @media only screen and (max-width: 800px) {
+      & {
+        top: 57%;
+        right: 65%;   
+        z-index: 1;
+      }
+    }
   }
 
   #image-screwdriver {
@@ -38,6 +75,14 @@
     top: 30%;
     right: 2%;
     animation: screwdriver 5s infinite linear;
+
+    @media only screen and (max-width: 800px) {
+      & {
+        top: 55%;
+        right: 27%;   
+        z-index: 3;
+      }
+    }
   }
 
   @keyframes counterclockwiseRotation {

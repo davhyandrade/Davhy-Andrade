@@ -8,6 +8,13 @@
   flex-direction: column;
   user-select: none;
 
+  @media only screen and (max-width: 800px) {
+    & {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
   > .position {
     position: relative;
     width: 77%;
@@ -15,17 +22,36 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
+    @media only screen and (max-width: 800px) {
+      & {
+        flex-direction: column;
+        position: initial;
+      }
+    }
 
     > div {
       &:nth-child(1) {
         margin-top: 80px;
         z-index: 10;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            margin-top: 20px;
+          }
+        }
       }
 
       p {
         font-size: 2.9vw;
         margin-top: 5px;
         color: var(--color-headings);
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            font-size: 1.2rem;
+          }
+        }
 
         span {
           color: var(--color-primary);
@@ -34,12 +60,24 @@
         &:nth-child(1) {
           font-size: 2.3vw;
           margin: 0px;
+          
+          @media only screen and (max-width: 800px) {
+            & {
+              font-size: 1.35rem;              
+            }
+          }
         }
       }
 
       h1 {
         color: var(--color-headings);
         font-size: 5vw;
+        
+        @media only screen and (max-width: 800px) {
+          & {
+            font-size: 10.5vw;
+          }
+        }
       }
 
       #btn-contato-landing-page {

@@ -490,6 +490,12 @@ main {
      -moz-user-select: none;
           user-select: none;
 }
+@media only screen and (max-width: 800px) {
+  .landing-page {
+    position: relative;
+    overflow: hidden;
+  }
+}
 .landing-page > .position {
   position: relative;
   width: 77%;
@@ -498,14 +504,30 @@ main {
   justify-content: flex-start;
   align-items: center;
 }
+@media only screen and (max-width: 800px) {
+  .landing-page > .position {
+    flex-direction: column;
+    position: initial;
+  }
+}
 .landing-page > .position > div:nth-child(1) {
   margin-top: 80px;
   z-index: 10;
+}
+@media only screen and (max-width: 800px) {
+  .landing-page > .position > div:nth-child(1) {
+    margin-top: 20px;
+  }
 }
 .landing-page > .position > div p {
   font-size: 2.9vw;
   margin-top: 5px;
   color: var(--color-headings);
+}
+@media only screen and (max-width: 800px) {
+  .landing-page > .position > div p {
+    font-size: 1.2rem;
+  }
 }
 .landing-page > .position > div p span {
   color: var(--color-primary);
@@ -514,9 +536,19 @@ main {
   font-size: 2.3vw;
   margin: 0px;
 }
+@media only screen and (max-width: 800px) {
+  .landing-page > .position > div p:nth-child(1) {
+    font-size: 1.35rem;
+  }
+}
 .landing-page > .position > div h1 {
   color: var(--color-headings);
   font-size: 5vw;
+}
+@media only screen and (max-width: 800px) {
+  .landing-page > .position > div h1 {
+    font-size: 10.5vw;
+  }
 }
 .landing-page > .position > div #btn-contato-landing-page {
   color: var(--color-headings);
@@ -570,12 +602,29 @@ main {
   top: 0;
   z-index: 1;
 }
+@media only screen and (max-width: 800px) {
+  .computer-imaging-field {
+    top: auto;
+    bottom: 0;
+    width: 550px;
+    min-height: 72vh;
+    right: -58%;
+  }
+}
 .computer-imaging-field svg {
   position: absolute;
 }
 .computer-imaging-field #image-computer {
   width: 100%;
   min-height: 100%;
+}
+@media only screen and (max-width: 800px) {
+  .computer-imaging-field #image-computer {
+    z-index: 2;
+  }
+  .computer-imaging-field #image-computer image[data-name=lupa], .computer-imaging-field #image-computer image[data-name="lupa camada 2"] {
+    display: none;
+  }
 }
 .computer-imaging-field #image-orange-gear {
   width: 17%;
@@ -584,12 +633,27 @@ main {
   right: 55%;
   animation: counterclockwiseRotation 3s infinite linear;
 }
+@media only screen and (max-width: 800px) {
+  .computer-imaging-field #image-orange-gear {
+    width: 13%;
+    height: 13%;
+    top: 11%;
+    right: 33%;
+  }
+}
 .computer-imaging-field #image-blue-gear {
   width: 12%;
   height: 12%;
   top: 28%;
   right: 5%;
   animation: hourlyRotation 1.3s infinite ease-in-out;
+}
+@media only screen and (max-width: 800px) {
+  .computer-imaging-field #image-blue-gear {
+    top: 57%;
+    right: 65%;
+    z-index: 1;
+  }
 }
 .computer-imaging-field #image-screwdriver {
   transform: rotate(340deg);
@@ -598,6 +662,13 @@ main {
   top: 30%;
   right: 2%;
   animation: screwdriver 5s infinite linear;
+}
+@media only screen and (max-width: 800px) {
+  .computer-imaging-field #image-screwdriver {
+    top: 55%;
+    right: 27%;
+    z-index: 3;
+  }
 }
 @keyframes counterclockwiseRotation {
   from {
@@ -1299,7 +1370,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(3) {
-    height: 34.5%;
+    height: 34%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) {
