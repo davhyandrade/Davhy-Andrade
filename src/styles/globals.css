@@ -492,6 +492,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .landing-page {
+    height: 100vh;
     position: relative;
     overflow: hidden;
   }
@@ -518,7 +519,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div:nth-child(1) {
-    margin-top: 0;
+    margin-top: 20px;
   }
 }
 .landing-page > .position > div p {
@@ -579,6 +580,11 @@ main {
   border-radius: 10px;
   margin-top: 20px;
 }
+@media only screen and (max-width: 800px) {
+  .landing-page > .position > div .social-media-field {
+    display: none;
+  }
+}
 .landing-page > .position > div .social-media-field svg {
   width: 25px;
   height: 25px;
@@ -609,7 +615,7 @@ main {
     top: auto;
     bottom: 0;
     width: 550px;
-    min-height: 72vh;
+    min-height: 60vh;
     right: -53%;
   }
 }
@@ -637,10 +643,10 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .computer-imaging-field #image-orange-gear {
-    width: 13%;
-    height: 13%;
-    top: 11%;
-    right: 33%;
+    width: 15%;
+    height: 15%;
+    top: 16%;
+    right: 27%;
   }
 }
 .computer-imaging-field #image-blue-gear {
@@ -652,7 +658,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .computer-imaging-field #image-blue-gear {
-    top: 57%;
+    top: 69%;
     right: 65%;
     z-index: 1;
   }
@@ -1381,7 +1387,7 @@ main {
 }
 @media only screen and (max-width: 800px) {
   .timeline > div .line-field .vertical-line:nth-child(5) {
-    height: 23%;
+    height: 20%;
   }
 }
 .timeline > div .line-field .vertical-line:nth-child(5) > div {

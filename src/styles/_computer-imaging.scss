@@ -11,7 +11,7 @@
       top: auto;
       bottom: 0;   
       width: 550px;
-      min-height: 72vh;
+      min-height: 60vh;
       right: -53%;   
     }
   }
@@ -44,10 +44,10 @@
 
     @media only screen and (max-width: 800px) {
       & {
-        width: 13%;
-        height: 13%;
-        top: 11%;
-        right: 33%;   
+        width: 15%;
+        height: 15%;
+        top: 16%;
+        right: 27%;
       }
     }
   }
@@ -61,7 +61,7 @@
 
     @media only screen and (max-width: 800px) {
       & {
-        top: 57%;
+        top: 69%;
         right: 65%;   
         z-index: 1;
       }
