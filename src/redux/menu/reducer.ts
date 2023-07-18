@@ -32,7 +32,7 @@ const initialState = {
         },
         {
           name: 'HostMain',
-          url: 'https://hostmain.vercel.app/cadastrar',
+          url: 'https://hostmain.vercel.app/get',
           imageUrl: 'https://i.postimg.cc/R08Pv18J/hostmain.png',
           description: 'CRUD desenvolvido pelo Next JS, com o Backend feito com o Node JS e Banco de Dados MySQL.',
           date: '10/10/2022'
@@ -123,7 +123,7 @@ const initialState = {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/_davhy/',
+      url: 'https://instagram.com/_davhy/',
     },
   ],
 };

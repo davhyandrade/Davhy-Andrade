@@ -326,7 +326,7 @@ export default function Menu() {
                       {contactDropdown.map((item: any, id: number) => {
                         return (
                           <li key={id} onClick={() => handleOptionsContactButton(item.name)}>
-                            <Link onClick={() => setIsActiveMenu(true)} href={item.url}>
+                            <Link href={item.url}>
                               {item.name}
                             </Link>
                           </li>
