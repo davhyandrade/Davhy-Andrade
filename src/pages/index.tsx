@@ -1,7 +1,6 @@
 import LandingPage from '@/components/LandingPage';
 import Timeline from '@/components/Timeline';
 import Graphic from '@/components/Graphic';
-import Head from 'next/head';
 import Code from '@/components/Code';
 import { useSelector } from 'react-redux';
 import Card from '@/components/Card';
@@ -19,7 +18,7 @@ export default function Home() {
   const [projects, setProjects] = useState(buttonsMenu.filter((item: any) => item.name === 'Projects')[0].dropdown);
 
   function handleMoreButton() {
-    return setQuantCards((quantCards += 4));
+    return setQuantCards(quantCards += 4);
   }
 
   useEffect(() => {
@@ -28,9 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta name="description" content="Entusiasta de tecnologia, Desenvolvedor Web e Designer Digital." />
-      </Head>
       <LandingPage />
       <section className="about-section">
         <div className="position">
