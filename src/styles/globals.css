@@ -1132,7 +1132,7 @@ main {
   cursor: pointer;
 }
 .projects-section .position #more-button span:hover {
-  transition: 1;
+  transition: 1s;
   color: var(--color-primary);
 }
 .projects-section .position #more-button span:active {
@@ -2727,7 +2727,6 @@ dialog::backdrop {
 }
 .resume-field > .position .image-container {
   width: 100%;
-  height: 1400px;
 }
 @media only screen and (max-width: 800px) {
   .resume-field > .position .image-container {
