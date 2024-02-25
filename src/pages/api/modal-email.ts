@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
 import nodemailer from 'nodemailer';
 
@@ -39,7 +39,9 @@ export default async function handler(request: NextApiRequest, response: NextApi
           "
         >
           <div> 
-            <p style="color: #333">${content}</p>
+            <b>E-mail: ${email}</b>
+            <p style="color: #333; padding-bottom: 15px;">${content}</p>
+            <span style="font-size: .65rem; padding: 7px 15px; background-color: #dddddd; border-radius: 5px">Entrou em contato via portfólio</span>
           </div>
         </section>
         `,

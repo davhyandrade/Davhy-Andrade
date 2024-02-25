@@ -10,13 +10,9 @@ import { useContext } from 'react';
 import { Context } from '@/context/layout';
 
 export default function Footer() {
-  const { handleOpenModalEmail } = useContext(Context);
+  const { handleOpenEmailModal }: any = useContext(Context);
 
   const buttons = [
-    {
-      name: 'Home',
-      url: '/',
-    },
     {
       name: 'Contact',
       url: '',
@@ -44,7 +40,7 @@ export default function Footer() {
       case 'Reload':
         return window.location.reload();
       case 'Contact':
-        return [window.scrollTo(0, 0), handleOpenModalEmail()];
+        return [window.scrollTo(0, 0), handleOpenEmailModal()];
       case 'About':
         if (router.pathname !== '/') {
           router.push('/');
@@ -73,7 +69,7 @@ export default function Footer() {
               </div>
             );
           })}
-        </div>  
+        </div>
         <span>My Portfólio ©2022</span>
         <div className="social-media-field">
           <a href="mailto:davhydesign@gmail.com">

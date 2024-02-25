@@ -1,21 +1,21 @@
 .project-card {
-  width: 24%;
-  min-height: 290px;
+  width: 300px;
   border: 1px solid var(--color-border);
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  
+
   @media only screen and (max-width: 800px) {
-    & {
-      width: 49%;
-      min-height: 220px;
-    }
+    width: 49%;
+    min-height: 190px;
   }
 
-  p, span, h1 {
-    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  p,
+  span,
+  h1 {
+    font-family: 'Mona Sans', 'Mona Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   }
 
   &:hover {
@@ -24,17 +24,18 @@
         #drop-shadow {
           display: flex;
         }
-  
+
         > .image-container > img {
           filter: none !important;
         }
       }
-  
+
       > div:nth-last-child(1) {
         position: absolute;
         bottom: 0;
-  
-        p, h1 {
+
+        p,
+        h1 {
           white-space: initial !important;
         }
       }
@@ -51,8 +52,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    #card-tag {
+
+    #tag-card {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,7 +66,11 @@
       top: 10px;
       z-index: 20;
       color: var(--color-headings);
-      font-size: 0.9rem;
+      font-size: 0.75rem;
+
+      @media only screen and (max-width: 800px) {
+        width: 65px;
+      }
     }
 
     .yellow-tag {
@@ -81,25 +86,34 @@
       padding: 5px;
       overflow: hidden;
       position: relative;
-      
+
       #drop-shadow {
         display: none;
         width: 100%;
         height: 100px;
-        background: linear-gradient(0deg, var(--bg-color), #0a0a0b, #0a0a0bed, #0a0a0bd1, #0a0a0bab, #0a0a0b57, transparent);
+        background: linear-gradient(
+          0deg,
+          var(--bg-color),
+          #0a0a0b,
+          #0a0a0bed,
+          #0a0a0bd1,
+          #0a0a0bab,
+          #0a0a0b57,
+          transparent
+        );
         z-index: 11;
         position: absolute;
         bottom: 0;
       }
-      
+
       .image-container {
         width: 100%;
-        height: 170px;
-        
+        height: 160px;
+        overflow: hidden;
+        border-radius: 3px;
+
         @media only screen and (max-width: 800px) {
-          & {
-            height: 90px;            
-          }
+          height: 90px;
         }
 
         img {
@@ -111,37 +125,44 @@
         }
       }
     }
-  
+
     > div:nth-last-child(1) {
       width: 90%;
       margin: 10px 0 30px 0;
       z-index: 12;
-  
+
+      @media only screen and (max-width: 800px) {
+        margin: 10px 0 20px 0;
+      }
+
       h1 {
         color: var(--color-headings);
         font-weight: normal;
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
-        
+        text-overflow: ellipsis;
+        font-size: 1.2rem;
+
         @media only screen and (max-width: 800px) {
-          & {
-            font-size: 1.2rem;   
-          }
+          font-size: 1rem;
         }
       }
-  
+
       span {
         font-size: 0.7rem;
         color: var(--color-text2);
       }
-  
+
       p {
         color: var(--color-text);
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
         margin-top: 5px;
+        font-size: 0.95rem;
       }
     }
   }

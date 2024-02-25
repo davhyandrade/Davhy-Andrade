@@ -3,7 +3,7 @@
     height: 80px;
     background-color: black;
   }
-  
+
   .design-landing-page {
     width: 100%;
 
@@ -15,29 +15,26 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family: 'Mona Sans', 'Mona Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
       overflow: hidden;
       position: relative;
       border: 1px solid var(--bg-panel);
-      
+
       @media only screen and (max-width: 800px) {
-        & {
-          height: 155px;
-        }
+        height: 155px;
       }
 
       h1 {
         color: var(--color-headings);
         font-size: 5rem;
         z-index: 10;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            font-size: 2.7rem;
-          }
+          font-size: 2.7rem;
         }
       }
-      
+
       p {
         width: 35%;
         text-align: center;
@@ -45,19 +42,17 @@
         font-size: 1.5rem;
         z-index: 10;
         margin-bottom: 3vh;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            width: 85%;
-            font-size: 1rem;
-            margin-bottom: 1vh;
-          }
+          width: 85%;
+          font-size: 1rem;
+          margin-bottom: 1vh;
         }
       }
-    
+
       .image-background {
         width: 100%;
-        
+
         > div:nth-child(1) {
           width: 100%;
           position: absolute;
@@ -67,14 +62,14 @@
 
           > div {
             width: 10vw;
-            min-height: 115px; 
+            min-height: 115px;
 
             img {
               width: 100%;
               height: 100%;
               filter: grayscale(1);
               opacity: 5%;
-  
+
               @media only screen and (max-width: 800px) {
                 & {
                   width: 150%;
@@ -89,7 +84,7 @@
           display: flex;
           justify-content: space-between;
           align-items: end;
-          width: 100%;  
+          width: 100%;
           z-index: 1;
           user-select: none;
           position: absolute;
@@ -101,17 +96,15 @@
             height: 400px;
             position: relative;
             overflow: hidden;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                height: 300px;
-              }
+              height: 300px;
             }
 
             &:nth-child(2) {
               width: 43%;
               height: 430px;
-              
+
               @media only screen and (max-width: 800px) {
                 & {
                   height: 330px;
@@ -126,32 +119,39 @@
                     height: 280px;
                   }
                 }
-              }   
+              }
             }
-              
+
             &::after {
               content: '';
               display: flex;
               width: 100%;
               height: 430px;
-              background: linear-gradient(0deg, var(--bg-panel2), var(--bg-panel2), var(--bg-panel2), var(--bg-panel2), transparent);
+              background: linear-gradient(
+                0deg,
+                var(--bg-panel2),
+                var(--bg-panel2),
+                var(--bg-panel2),
+                var(--bg-panel2),
+                transparent
+              );
               z-index: 2;
               position: absolute;
               bottom: 0;
-              
+
               @media only screen and (max-width: 800px) {
                 & {
                   height: 260px;
                 }
               }
-            }   
-        
+            }
+
             img {
               width: 100%;
               height: 100%;
               filter: grayscale(1);
               opacity: 30%;
-              
+
               @media only screen and (max-width: 800px) {
                 & {
                   width: 150%;
@@ -164,13 +164,13 @@
       }
     }
   }
-  
+
   .images-field {
     width: 100%;
     display: flex;
     justify-content: center;
     border-bottom: 1px solid var(--color-border);
-    
+
     .position {
       width: 80%;
       padding-top: 65px;
@@ -178,13 +178,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
       @media only screen and (max-width: 800px) {
-        & {
-          width: 95%;
-          padding-top: 15px;
-          padding-bottom: 70px;
-        }
+        width: 95%;
+        padding-top: 15px;
+        padding-bottom: 70px;
       }
 
       > .header {
@@ -193,66 +191,59 @@
         margin-bottom: 20px;
 
         @media only screen and (max-width: 800px) {
-          & {
-            width: 95%;
-          }
+          width: 95%;
         }
 
         > div:nth-child(1) {
           display: flex;
           flex-direction: column;
           align-items: center;
-  
+
           @media only screen and (max-width: 800px) {
-            & {
-              margin-top: 15px;
-            }
+            margin-top: 15px;
           }
-          
+
           .title-timeline {
             filter: drop-shadow(0 0px 30px #3c0a4a);
             margin: 15px;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                margin: 0;
-                margin-bottom: 15px;
-              }
+              margin: 0;
+              margin-bottom: 15px;
             }
           }
-    
+
           .vertical-line {
             width: 3px;
             height: 50px;
             z-index: 2 !important;
-            
+
             > div {
               width: 100%;
               height: 100%;
-              filter: drop-shadow(0 0px 15px #0077cb);  
+              filter: drop-shadow(0 0px 15px #0077cb);
               background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
             }
           }
         }
-  
+
         > div:nth-child(2) {
           margin-left: 20px;
           margin-top: 15px;
-  
+
           > h2 {
             color: var(--color-headings);
             font-size: 1.6rem;
-            font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: 'Mona Sans', 'Mona Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+              Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             font-weight: 500 !important;
             margin-bottom: 15px;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                margin-bottom: 8px;
-              }
+              margin-bottom: 8px;
             }
           }
-  
+
           p {
             color: var(--color-text);
             font-size: 1.3rem;
@@ -260,38 +251,32 @@
             line-height: 30px !important;
 
             @media only screen and (max-width: 800px) {
-              & {
-                font-size: 1rem;
-                line-height: 22px !important;
-              }
+              font-size: 1rem;
+              line-height: 22px !important;
             }
           }
         }
       }
-  
+
       > div:nth-last-child(1) {
         width: 100%;
         flex-wrap: wrap;
         display: flex;
         gap: 0.6rem;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            gap: 0.4rem;
-          }
+          gap: 0.4rem;
         }
-        
+
         > div {
           width: 32.8%;
           min-height: 400px;
           cursor: pointer;
           position: relative;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              width: 49%;
-              min-height: 160px;
-            }
+            width: 49%;
+            min-height: 160px;
           }
 
           &:hover {
@@ -299,7 +284,7 @@
               transition: 5ms;
               filter: brightness(0.3);
             }
-    
+
             &::after {
               content: attr(data-description);
               width: 100%;
@@ -319,14 +304,14 @@
                   display: none;
                 }
               }
-            }    
+            }
           }
-    
+
           &:active {
             transition: 1ms;
             opacity: 30%;
           }
-    
+
           img {
             width: 100%;
             height: 100%;
@@ -337,9 +322,7 @@
           width: 66.4% !important;
 
           @media only screen and (max-width: 800px) {
-            & {
-              width: 100% !important;
-            }
+            width: 100% !important;
           }
         }
       }
@@ -355,9 +338,7 @@
         cursor: default !important;
 
         @media only screen and (max-width: 800px) {
-          & {
-            min-height: 150px !important;
-          }
+          min-height: 150px !important;
         }
 
         &:hover::after {
@@ -378,7 +359,7 @@
           justify-content: center;
           position: absolute;
           cursor: pointer;
-          
+
           &:hover {
             transition: 5ms;
             background: linear-gradient(90deg, var(--bg-panel), transparent);
@@ -393,7 +374,7 @@
             transition: 1ms;
             opacity: 50%;
           }
-          
+
           .arrow_svg__octicon {
             width: 50px;
             height: 50px;
@@ -416,7 +397,7 @@
         }
 
         .right-carousel-button {
-          right: 0; 
+          right: 0;
           left: auto;
           background: linear-gradient(270deg, var(--bg-color), transparent) !important;
 
@@ -435,14 +416,12 @@
           > div {
             width: 300px;
             height: 300px;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                width: 150px;
-                height: 150px;
-              }
+              width: 150px;
+              height: 150px;
             }
-            
+
             img {
               width: 100%;
               height: 100%;
@@ -463,7 +442,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   > div {
     width: 70%;
     min-height: 90vh;
@@ -471,14 +450,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     @media only screen and (max-width: 800px) {
-      & {
-        width: 90%;
-        min-height: 70vh;
-        margin-bottom: 90px;
-      }
-    }     
+      width: 90%;
+      min-height: 70vh;
+      margin-bottom: 90px;
+    }
 
     svg {
       width: 16px;
@@ -505,12 +482,10 @@
       object-fit: cover;
       max-width: 100%;
       max-height: 90vh;
-                  
+
       @media only screen and (max-width: 800px) {
-        & {
-          width: 100%;
-        }
-      }     
+        width: 100%;
+      }
     }
   }
 }

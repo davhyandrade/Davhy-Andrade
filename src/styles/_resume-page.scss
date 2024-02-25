@@ -17,11 +17,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     @media only screen and (max-width: 800px) {
-      & {
-        width: 95%;
-      }
+      width: 95%;
     }
 
     .header {
@@ -43,13 +41,11 @@
         > div {
           display: flex;
           flex-direction: column;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              margin-left: 10px;
-            }
-          }  
-          
+            margin-left: 10px;
+          }
+
           > span {
             color: var(--color-text2);
             font-size: 0.7rem;
@@ -60,12 +56,12 @@
             display: flex;
             align-items: center;
             gap: 7px;
-  
+
             svg {
               width: 20px;
               height: 20px;
               color: var(--color-headings);
-              
+
               @media only screen and (max-width: 800px) {
                 & {
                   width: 15px;
@@ -73,10 +69,10 @@
                 }
               }
             }
-    
+
             span {
               color: var(--color-headings);
-  
+
               @media only screen and (max-width: 800px) {
                 & {
                   font-size: 0.7rem;
@@ -85,7 +81,7 @@
             }
           }
         }
-  
+
         > a {
           color: var(--color-headings);
           font-size: 1rem;
@@ -94,46 +90,40 @@
           display: flex;
           align-items: center;
           margin-right: 10px;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              font-size: 0.8rem;
-            }
+            font-size: 0.8rem;
           }
 
           &:hover {
             transition: 1s;
             color: var(--color-primary);
           }
-    
+
           &:active {
             transition: 0.1s;
             opacity: 30%;
           }
-    
+
           svg {
             width: 20px;
             height: 20px;
             margin-right: 10px;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                width: 15px;
-                height: 15px;
-              }
+              width: 15px;
+              height: 15px;
             }
           }
         }
       }
     }
-    
+
     .image-container {
       width: 100%;
-      
+
       @media only screen and (max-width: 800px) {
-        & {
-          height: 500px;
-        }
+        height: 500px;
       }
 
       img {

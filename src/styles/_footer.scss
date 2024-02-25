@@ -7,9 +7,7 @@ footer {
   justify-content: center;
 
   @media only screen and (max-width: 800px) {
-    & {
-      height: 225px;
-    }
+    height: 225px;
   }
 
   .position {
@@ -20,22 +18,25 @@ footer {
     align-items: center;
 
     @media only screen and (max-width: 800px) {
-      & {
-        width: 90%;
-      }
+      width: 90%;
     }
 
     > div:nth-child(1) {
-      width: 100%;
+      width: 80%;
       display: flex;
       justify-content: space-between;
+
+      @media only screen and (max-width: 800px) {
+        width: 90%;
+      }
 
       > div {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        a, button {
+        a,
+        button {
           font-size: 0.9rem;
           text-decoration: none;
           background-color: transparent;
@@ -48,13 +49,13 @@ footer {
             color: var(--color-headings);
           }
         }
-  
+
         button {
           font-size: 0.92rem !important;
         }
       }
     }
-    
+
     span {
       margin: 20px 0px;
       font-size: 13px;
@@ -69,9 +70,7 @@ footer {
       border-radius: 10px;
 
       @media only screen and (max-width: 800px) {
-        & {
-          width: 60%;
-        }
+        width: 60%;
       }
 
       svg {

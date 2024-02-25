@@ -38,7 +38,7 @@ export default function DesignPage({ images, title, header_description, descript
   
   useEffect(() => {
     return setWidthImage(window.innerWidth > 800 ? 300 : 150); // defines the width of the image according to whether the user is on mobile or pc 
-  })
+  }, [])
 
   function handleLeftCarouselButton() {
     if (widthTranslate === 0) return;

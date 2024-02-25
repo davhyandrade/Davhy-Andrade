@@ -10,9 +10,9 @@ interface IProps {
   date: string;
 }
 
-export default function Card({ url, image, title, description, date }: IProps) {
+export default function ProjectCard({ url, image, title, description, date }: IProps) {
   const [dateForDay, setDateForDay] = useState<number>(0);
-  
+
   useEffect(() => {
     // Calculate day difference
     const currentDate: any = new Date();
@@ -25,10 +25,20 @@ export default function Card({ url, image, title, description, date }: IProps) {
   return (
     <div className="project-card">
       <Link href={url}>
-        {dateForDay > 365 ? <span className='yellow-tag' id="card-tag">Antigo</span> : dateForDay < 30 && <span className='blue-tag' id="card-tag">Recente</span>}
+        {dateForDay > 365 ? (
+          <span className="yellow-tag" id="tag-card">
+            Antigo
+          </span>
+        ) : (
+          dateForDay < 30 && (
+            <span className="blue-tag" id="tag-card">
+              Recente
+            </span>
+          )
+        )}
         <div className="image-field">
-          <div className='image-container' >
-            <LazyLoadImage src={image} alt="image" effect='blur' />
+          <div className="image-container">
+            <LazyLoadImage src={image} alt="image" effect="blur" />
           </div>
           <div id="drop-shadow"></div>
         </div>
