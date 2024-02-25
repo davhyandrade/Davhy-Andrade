@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Context } from '@/context/layout';
@@ -9,15 +8,16 @@ import Logo from 'public/images/menu/logo-davhy.svg';
 import VectorPhoneBlue from 'public/images/menu/vector-phone-blue.svg';
 import Arrow from 'public/images/arrow.svg';
 import { createGlobalStyle } from 'styled-components';
+import Router from 'next/router';
 
 interface IActiveButtonMenu {
   isActive: boolean;
-  numberActive?: number;
+  activeName?: string | undefined;
 }
 
 interface IDropdownMenuMobile {
   isActive: boolean;
-  activeNumber: number;
+  activeName?: string | undefined;
 }
 
 interface IProps {
@@ -36,27 +36,30 @@ export default function Menu() {
   const { buttonsMenu, contactDropdown } = useSelector((rootReducer: any) => rootReducer.menuReducer);
 
   const {
-    handleOpenModalEmail,
+    handleOpenEmailModal,
     isActiveMenu,
     setIsActiveMenu,
-    widthPage,
+    pageWidth,
     setIsActiveToggleMenu,
     isActiveToggleMenu,
   }: any = useContext(Context);
-
-  const router = useRouter();
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
   });
 
-  function handleButtonsMenu(id: number) {
-    setIsActiveDropdown(false);
-    if (isActiveButtonsMenu.numberActive !== id) return setIsActiveButtonsMenu({ isActive: true, numberActive: id });
+  useEffect(() => {
+    // if (isActiveButtonsMenu);
+  }, [isActiveButtonsMenu]);
+
+  function handleButtonsMenu(urlName: string) {
+    setIsactiveName(false);
+    if (isActiveButtonsMenu.activeName !== urlName)
+      return setIsActiveButtonsMenu({ isActive: true, activeName: urlName });
     if (isActiveButtonsMenu.isActive) {
-      return setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
+      return setIsActiveButtonsMenu({ isActive: false, activeName: undefined });
     } else {
-      return setIsActiveButtonsMenu({ isActive: true, numberActive: id });
+      return setIsActiveButtonsMenu({ isActive: true, activeName: urlName });
     }
   }
 
@@ -64,7 +67,7 @@ export default function Menu() {
 
   function handleClickOutside(event: any) {
     if (menu.current && !menu.current.contains(event.target)) {
-      return [setIsActiveButtonsMenu({ isActive: false, numberActive: undefined }), setIsActiveDropdown(false)];
+      return [setIsActiveButtonsMenu({ isActive: false, activeName: Router.pathname.split('/')[1] }), setIsactiveName(false)];
     }
   }
 
@@ -81,7 +84,22 @@ export default function Menu() {
   }, [pathname]);
 
   useEffect(() => {
-    setPathname(router.pathname.split('/')[1]);
+    setPathname(Router.pathname.split('/')[1]);
+    setIsActiveButtonsMenu({ isActive: true, activeName: Router.pathname.split('/')[1] });
+  }, []);
+
+  const handleRouteChange = () => {
+    if (isActiveButtonsMenu.activeName !== Router.pathname.split('/')[1]) {
+      return setIsActiveButtonsMenu({ isActive: true, activeName: Router.pathname.split('/')[1] }); // set current page url name
+    }
+  };
+
+  useEffect(() => {
+    Router.events.on('routeChangeComplete', () => handleRouteChange());
+
+    return () => {
+      Router.events.off('routeChangeComplete', () => handleRouteChange());
+    };
   }, []);
 
   const [scroll, setScroll] = useState<number>(0);
@@ -107,21 +125,21 @@ export default function Menu() {
 
   const [isMouseOver, setIsMouseOver] = useState<boolean>(false);
 
-  const [isActiveDropdown, setIsActiveDropdown] = useState<boolean>(false);
+  const [isactiveName, setIsactiveName] = useState<boolean>(false);
 
   function handleDropdown() {
-    setIsActiveButtonsMenu({ isActive: false, numberActive: undefined });
-    if (isActiveDropdown) {
-      return setIsActiveDropdown(false);
+    setIsActiveButtonsMenu({ isActive: false, activeName: undefined });
+    if (isactiveName) {
+      return setIsactiveName(false);
     } else {
-      return setIsActiveDropdown(true);
+      return setIsactiveName(true);
     }
   }
 
   function handleOptionsContactButton(name: string) {
     switch (name) {
       case 'E-mail':
-        return handleOpenModalEmail();
+        return handleOpenEmailModal();
       default:
         return;
     }
@@ -130,14 +148,14 @@ export default function Menu() {
   function handleMoreButton(dropdown: string) {
     // expand dropdown options
     if (dropdown === 'Projects') {
-      if (router.pathname !== '/') {
+      if (Router.pathname !== '/') {
         setIsActiveMenu(true); // enable menu small
-        router.push('/');
+        Router.push('/');
         setTimeout(() => {
-          return window.scrollTo({ top: 2300, left: 0 });
+          return window.scrollTo({ top: 2700, left: 0 });
         }, 1000);
       }
-      return window.scrollTo({ top: 2300, left: 0 });
+      return window.scrollTo({ top: 2700, left: 0 });
     }
   }
 
@@ -153,14 +171,14 @@ export default function Menu() {
 
   function handleCloseDropdownMenuMobile() {
     return [
-      setIsActiveDropdownMenuMobile({ isActive: false, activeNumber: 0 }), // close dropdown menu mobile
+      setIsactiveNameMenuMobile({ isActive: false, activeName: undefined }), // close dropdown menu mobile
       setNumberDropdownMenuMobile(7), // defaul dropdown menu mobille
     ];
   }
 
-  const [isActiveDropdownMenuMobile, setIsActiveDropdownMenuMobile] = useState<IDropdownMenuMobile>({
+  const [isactiveNameMenuMobile, setIsactiveNameMenuMobile] = useState<IDropdownMenuMobile>({
     isActive: false,
-    activeNumber: 0,
+    activeName: undefined,
   });
 
   const [numberDropdownMenuMobile, setNumberDropdownMenuMobile] = useState<number>(7); // number of elements listed
@@ -179,7 +197,7 @@ export default function Menu() {
             <span>Davhy Andrade</span>
           </Link>
           <nav>
-            {widthPage < 800 ? (
+            {pageWidth < 800 ? (
               <>
                 <div onClick={toggleMenu} className={`toggle-menu ${isActiveToggleMenu && 'active'}`}>
                   <div className="toggle-menu-item"></div>
@@ -193,15 +211,11 @@ export default function Menu() {
                       <li key={id}>
                         {typeof item.url !== 'undefined' ? (
                           <Link
-                            className={`${
-                              isActiveButtonsMenu.numberActive === id
-                                ? 'active-button'
-                                : pathname === item.nameUrl && 'active-button'
-                            }`}
+                            className={`${isActiveButtonsMenu.activeName === item.urlName && 'active-button'}`}
                             onClick={() => [
-                              handleButtonsMenu(id),
+                              handleButtonsMenu(item.urlName),
                               item.url !== '/' && setIsActiveMenu(true),
-                              setPathname(item.nameUrl),
+                              setPathname(item.urlName),
                             ]}
                             href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
                           >
@@ -209,24 +223,24 @@ export default function Menu() {
                           </Link>
                         ) : (
                           <button
-                            className={`${
-                              isActiveButtonsMenu.numberActive === id
-                                ? 'active-button'
-                                : pathname === item.nameUrl && 'active-button'
-                            }`}
-                            onClick={() => [handleButtonsMenu(id)]}
+                            className={`${isActiveButtonsMenu.activeName === item.urlName && 'active-button'}`}
+                            onClick={() => [handleButtonsMenu(item.urlName)]}
                           >
                             {item.name}
                           </button>
                         )}
                         {item.dropdown && (
-                          <ul className={`dropdown ${isActiveButtonsMenu.numberActive === id && 'active-dropdown'}`}>
+                          <ul
+                            className={`dropdown ${
+                              isActiveButtonsMenu.activeName === item.urlName && 'active-dropdown'
+                            }`}
+                          >
                             <div className="header"></div>
                             {item.dropdown?.slice(0, 5).map((item: any, id: number) => {
                               return (
                                 <li key={id}>
                                   <Link
-                                    onClick={() => [setIsActiveMenu(true), setPathname(item.nameUrl)]}
+                                    onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
                                     href={item.url}
                                   >
                                     {item.name}
@@ -246,7 +260,7 @@ export default function Menu() {
                   })}
                   <li>
                     <button
-                      className={`btn-contact ${isActiveDropdown && 'active-contact'}`}
+                      className={`btn-contact ${isactiveName && 'active-contact'}`}
                       onClick={handleDropdown}
                       onMouseEnter={() => setIsMouseOver(true)}
                       onMouseLeave={() => setIsMouseOver(false)}
@@ -255,7 +269,7 @@ export default function Menu() {
                       <hr />
                       Contact
                     </button>
-                    {isActiveDropdown && (
+                    {isactiveName && (
                       <ul className="dropdown dropdown-button-contact">
                         <div className="header"></div>
                         {contactDropdown.map((item: any, id: number) => {
@@ -287,15 +301,15 @@ export default function Menu() {
         {isActiveToggleMenu && (
           <div className="menu-mobile">
             <nav className="position">
-              {isActiveDropdownMenuMobile.isActive ? (
-                isActiveDropdownMenuMobile.activeNumber !== -1 ? (
+              {isactiveNameMenuMobile.isActive ? (
+                typeof isactiveNameMenuMobile.activeName !== 'undefined' ? (
                   <div className="dropdwon-menu-mobile-field">
                     <ul className="dropdown-menu-mobile">
                       <div className="header" onClick={handleCloseDropdownMenuMobile}>
                         <Arrow />
-                        <h1>{buttonsMenu[isActiveDropdownMenuMobile.activeNumber].name}</h1>
+                        <h1>{buttonsMenu[isactiveNameMenuMobile.activeName].name}</h1>
                       </div>
-                      {buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown
+                      {buttonsMenu[isactiveNameMenuMobile.activeName].dropdown
                         .slice(0, numberDropdownMenuMobile)
                         .map((item: any, id: number) => {
                           return (
@@ -306,9 +320,9 @@ export default function Menu() {
                             </li>
                           );
                         })}
-                      {buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown.length > 7 &&
+                      {buttonsMenu[isactiveNameMenuMobile.activeName].dropdown.length > 7 &&
                         numberDropdownMenuMobile <
-                          buttonsMenu[isActiveDropdownMenuMobile.activeNumber].dropdown.length && (
+                          buttonsMenu[isactiveNameMenuMobile.activeName].dropdown.length && (
                           <div className="more-dropdown">
                             <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
                           </div>
@@ -326,9 +340,7 @@ export default function Menu() {
                       {contactDropdown.map((item: any, id: number) => {
                         return (
                           <li key={id} onClick={() => handleOptionsContactButton(item.name)}>
-                            <Link href={item.url}>
-                              {item.name}
-                            </Link>
+                            <Link href={item.url}>{item.name}</Link>
                           </li>
                         );
                       })}
@@ -348,7 +360,9 @@ export default function Menu() {
                             {item.name}
                           </Link>
                         ) : (
-                          <button onClick={() => setIsActiveDropdownMenuMobile({ isActive: true, activeNumber: id })}>
+                          <button
+                            onClick={() => setIsactiveNameMenuMobile({ isActive: true, activeName: item.url })}
+                          >
                             {item.name}
                             <Arrow />
                           </button>
@@ -357,7 +371,9 @@ export default function Menu() {
                     );
                   })}
                   <li>
-                    <button onClick={() => setIsActiveDropdownMenuMobile({ isActive: true, activeNumber: -1 })}>
+                    <button
+                      onClick={() => setIsactiveNameMenuMobile({ isActive: true, activeName: undefined })}
+                    >
                       Contact
                       <Arrow />
                     </button>

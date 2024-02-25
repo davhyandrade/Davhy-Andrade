@@ -12,11 +12,9 @@ dialog {
   overflow: hidden;
 
   @media only screen and (max-width: 800px) {
-    & {
-      margin: -175px -47.5%;
-      min-width: 95%;
-      top: 29%;
-    }
+    margin: -175px -47.5%;
+    min-width: 95%;
+    top: 29%;
   }
 
   > .position {
@@ -87,9 +85,7 @@ dialog {
         width: 85%;
 
         @media only screen and (max-width: 800px) {
-          & {
-            gap: 10px;   
-          }
+          gap: 10px;   
         }
       }
 
@@ -164,7 +160,7 @@ dialog {
   }
 
   &::backdrop {
-    background-image: url(https://i.postimg.cc/RCDZ2Wdd/peakpx-1.jpg);
+    background-image: url(../../public/images/email-modal/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #181b1e;

@@ -1,28 +1,29 @@
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { ReactNode, createContext, useEffect, useRef, useState } from 'react';
+import { Dispatch, ReactNode, SetStateAction, createContext, useEffect, useRef, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import store from '@/redux/store';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
-import ModalEmail from '@/components/ModalEmail';
+import EmailModal from '@/components/EmailModal';
 import Footer from '@/components/Footer';
 import LoadingPage from '@/components/LoadingPage';
 import TopButton from '@/components/TopButton';
 import Menu from '@/components/Menu';
+import Router from 'next/router';
 
 interface IContext {
-  handleOpenModalEmail?: any;
-  handleCloseModalEmail?: any;
-  isActiveModalEmail?: boolean | undefined;
-  handlePageLoaded?: any;
-  setIsActiveLoading?: any;
+  handleOpenEmailModal?: () => void;
+  handleCloseEmailModal?: () => void;
+  isActiveEmailModal?: boolean | undefined;
+  handlePageLoaded?: () => void;
+  setIsActiveLoading?: Dispatch<SetStateAction<boolean>>;
   dialog?: any;
-  setIsActiveMenu?: any;
+  setIsActiveMenu?: Dispatch<SetStateAction<boolean>>;
   isActiveMenu?: boolean | undefined;
-  setIsFullImage?: any;
-  widthPage?: number;
-  setIsActiveToggleMenu?: any;
+  setIsFullImage?: Dispatch<SetStateAction<boolean>>;
+  pageWidth?: number | undefined;
+  setIsActiveToggleMenu?: Dispatch<SetStateAction<boolean>>;
   isActiveToggleMenu?: boolean | undefined;
 }
 
@@ -41,17 +42,17 @@ interface IProps {
 const GlobalStyles = createGlobalStyle<IProps>`    
   ${(props) =>
     props.isActiveLoading &&
-      `body {
+    `body {
         overflow: hidden;
       }`}
   ${(props) =>
     props.isFullImage &&
-      `body {
+    `body {
         overflow: hidden;
       }`}
   ${(props) =>
     props.isActiveToggleMenu &&
-      `body {
+    `body {
         overflow: hidden;
       }`}
 `;
@@ -73,17 +74,23 @@ export default function Layout({ children }: ComponentProps) {
 
   const dialog = useRef<any>(null);
 
-  const [isActiveModalEmail, setIsActiveModalEmail] = useState<boolean>(false);
+  const [isActiveEmailModal, setIsActiveEmailModal] = useState<boolean>(false);
 
-  function handleOpenModalEmail() {
-    return [setIsActiveModalEmail(true), dialog.current.showModal()];
+  function handleOpenEmailModal() {
+    return [setIsActiveEmailModal(true), dialog.current.showModal()];
   }
 
-  function handleCloseModalEmail() {
-    return [setIsActiveModalEmail(false), dialog.current.close()];
+  function handleCloseEmailModal() {
+    return [setIsActiveEmailModal(false), dialog.current.close()];
   }
 
   const [isActiveMenu, setIsActiveMenu] = useState<boolean>(true);
+
+  useEffect(() => {
+    Router.events.on('routeChangeStart', () => setIsActiveMenu(true));
+    
+    return () => Router.events.off('routeChangeStart', () => setIsActiveMenu(true));
+  }, []);
 
   const [isActiveTopButton, setIsActiveTopButton] = useState<boolean>(false);
 
@@ -115,10 +122,10 @@ export default function Layout({ children }: ComponentProps) {
     window.addEventListener('scroll', isElementInViewport);
   }, []);
 
-  const [widthPage, setWidthPage] = useState<number>(0);
+  const [pageWidth, setpageWidth] = useState<number>(0);
 
   useEffect(() => {
-    return setWidthPage(window.innerWidth);
+    return setpageWidth(window.innerWidth);
   }, []);
 
   const [isActiveToggleMenu, setIsActiveToggleMenu] = useState<boolean>(false); // enable menu mobile
@@ -133,16 +140,16 @@ export default function Layout({ children }: ComponentProps) {
       {isActiveLoading && <LoadingPage />}
       <Context.Provider
         value={{
-          handleOpenModalEmail,
-          handleCloseModalEmail,
-          isActiveModalEmail,
+          handleOpenEmailModal,
+          handleCloseEmailModal,
+          isActiveEmailModal,
           handlePageLoaded,
           setIsActiveLoading,
           dialog,
           setIsActiveMenu,
           isActiveMenu,
           setIsFullImage,
-          widthPage,
+          pageWidth,
           setIsActiveToggleMenu,
           isActiveToggleMenu,
         }}
@@ -150,7 +157,7 @@ export default function Layout({ children }: ComponentProps) {
         <Provider store={store}>
           {isActiveMenu && <Menu />}
           <main>{children}</main>
-          <ModalEmail />
+          <EmailModal />
           <Footer />
           {isActiveTopButton && <TopButton />}
           <ToastContainer />

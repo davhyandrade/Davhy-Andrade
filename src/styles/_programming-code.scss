@@ -1,4 +1,4 @@
-.code-field {
+.programming-code-field {
   width: 44%;
   height: 250px;
   background-color: var(--bg-panel);
@@ -9,15 +9,13 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  
+
   @media only screen and (max-width: 800px) {
-    & {
-      width: 97%;
-      margin-top: 20px;
-    }
+    width: 97%;
+    margin-top: 20px;
   }
 
-  .code-header {
+  .programming-code-header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -44,59 +42,56 @@
         align-items: center;
         border-radius: 7px 7px 0 0;
 
-        span {    
+        span {
           font-size: 0.7rem;
           color: var(--color-headings);
           opacity: 30%;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              font-size: 0.5rem;
-            }
+            font-size: 0.5rem;
           }
         }
       }
     }
-  } 
+  }
 
   > .position {
     width: 80%;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
-    
+
     @media only screen and (max-width: 800px) {
-      & {
-        width: 85%;
-        margin-top: 10px;
-      }
+      width: 85%;
+      margin-top: 10px;
     }
-    
-    pre, span {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+
+    pre,
+    span {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace !important;
     }
 
     pre:nth-last-child(1) {
       margin-bottom: 10px;
     }
 
-    .code-color-white {
+    .programming-code-color-white {
       color: white;
     }
 
-    .code-color-pink {
+    .programming-code-color-pink {
       color: #f977c2;
     }
 
-    .code-color-attribute {
+    .programming-code-color-attribute {
       color: #50f77a;
     }
 
-    .code-color-purple {
+    .programming-code-color-purple {
       color: #bd93f9;
     }
 
-    .code-color-text {
+    .programming-code-color-text {
       color: #f1fa8c;
     }
   }

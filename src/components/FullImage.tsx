@@ -5,13 +5,13 @@ import { Context } from "@/context/layout";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface IProps {
-  value: any
+  value: any;
 }
 
 export default function FullImage({ value }: IProps) {
   const router = useRouter();
 
-  const { setIsFullImage } = useContext(Context);
+  const { setIsFullImage }: any = useContext(Context);
 
   const [url, setUrl] = useState<any>();
 

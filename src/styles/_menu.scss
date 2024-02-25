@@ -9,6 +9,10 @@
   z-index: 997;
   position: relative;
 
+  @media only screen and (max-width: 800px) {
+    height: 100px;
+  }
+
   .position {
     width: 90%;
     display: flex;
@@ -21,11 +25,9 @@
       margin-top: 50px;
       margin-left: 10px;
       z-index: 997;
-      
+
       @media only screen and (max-width: 800px) {
-        & {
-          margin: 0 !important;
-        }
+        margin: 0 !important;
       }
 
       span {
@@ -34,12 +36,10 @@
         margin-left: 20px;
         cursor: pointer;
         color: var(--color-headings);
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            margin-left: 10px;
-            font-size: 1.3rem;
-          }
+          margin-left: 10px;
+          font-size: 1.5rem;
         }
       }
 
@@ -50,12 +50,10 @@
         border-radius: 50%;
         background-color: var(--bg-panel);
         border: 1px solid var(--color-border);
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            width: 50px;
-            height: 50px;
-          }
+          width: 50px;
+          height: 50px;
         }
       }
     }
@@ -65,8 +63,9 @@
       align-items: center;
       z-index: 99;
       position: relative;
-      
-      a, button {
+
+      a,
+      button {
         margin: 0px 10px;
         padding: 7px 20px;
         border: 2px solid rgba(255, 255, 255, 0);
@@ -120,13 +119,13 @@
       }
 
       .active-contact {
-        border: 2px solid var(--bg-panel) !important; 
+        border: 2px solid var(--bg-panel) !important;
         color: var(--color-text2);
-        
+
         &:hover {
           transition: 0.5s;
           border: 2px solid var(--color-primary) !important;
-          
+
           svg {
             transition: 0.5s;
             opacity: 100%;
@@ -150,7 +149,7 @@
       }
 
       .active-button {
-        border: 2px solid var(--bg-panel);  
+        border: 2px solid var(--bg-panel);
         color: var(--color-text2);
       }
 
@@ -192,7 +191,7 @@
             color: var(--color-headings) !important;
           }
 
-          &:active a{
+          &:active a {
             transition: 0.1s;
             opacity: 10%;
           }
@@ -200,7 +199,7 @@
           &:nth-last-child(1) {
             border-bottom: none;
           }
-            
+
           a {
             color: var(--color-text2) !important;
             border: none;
@@ -243,33 +242,29 @@
 
 .menu-small {
   position: fixed;
-  height: 68px;
+  height: 55px;
   background-color: var(--bg-color);
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.356));
-  
+
   .position {
     width: 80%;
 
     @media only screen and (max-width: 800px) {
-      & {
-        width: 90%;
-      }
+      width: 90%;
     }
-    
+
     #logo {
       margin: 0 !important;
-  
+
       svg {
         display: none;
       }
-  
+
       span {
-        font-size: 1.3rem !important;
+        font-size: 1.5rem !important;
 
         @media only screen and (max-width: 800px) {
-          & {
-            margin-left: 0;
-          }
+          margin-left: 0;
         }
       }
     }
@@ -285,7 +280,7 @@
 
   > div {
     height: 100%;
-    background-color: var(--bg-panel); 
+    background-color: var(--bg-panel);
   }
 }
 
@@ -305,7 +300,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 75vh;
 
     .dropdwon-menu-mobile-field {
       width: 100%;
@@ -317,46 +312,46 @@
           align-items: center;
           border-top: 1px solid var(--color-border);
           border-bottom: 1px solid var(--color-border);
-          padding: 17px; 
+          padding: 17px;
           gap: 5px;
           margin-bottom: 15px;
-          
+
           &:active {
             transition: 1ms;
             opacity: 30%;
           }
-          
+
           h1 {
             color: var(--color-headings);
             font-weight: normal;
             font-size: 1.2rem;
           }
-  
+
           .arrow_svg__octicon {
             width: 20px;
             height: 20px;
             opacity: 70%;
             color: var(--color-headings);
             transform: rotate(180deg);
-            
+
             .arrow_svg__octicon-chevrow-stem {
               display: none;
             }
           }
         }
-  
+
         a {
           color: var(--color-text2);
         }
-  
+
         > .more-dropdown {
           width: 80%;
           display: flex;
           justify-content: flex-end;
-  
+
           span {
             color: var(--color-headings);
-  
+
             &:active {
               transition: 1ms;
               opacity: 30%;
@@ -376,7 +371,8 @@
       li {
         width: 90%;
 
-        button, a {
+        button,
+        a {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -385,7 +381,7 @@
           color: var(--color-headings);
           background-color: transparent;
           border: 0;
-          padding: 15px; 
+          padding: 15px;
 
           &:active {
             transition: 1ms;
@@ -409,8 +405,6 @@
 
 .menu-small .menu-mobile > .position {
   @media only screen and (max-width: 800px) {
-    & {
-      height: 85vh;
-    }
+    height: 85vh;
   }
 }

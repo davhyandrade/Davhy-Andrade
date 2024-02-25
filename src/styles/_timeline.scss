@@ -3,35 +3,31 @@
   top: 0;
   left: 0;
   width: 35%;
-  
+  height: 75%;
+
   @media only screen and (max-width: 800px) {
-    & {
-      width: 75%;
-      height: 100%;
-    }
+    width: 75%;
+    height: 100%;
   }
 
   > div {
     position: relative;
+    height: 100%;
 
     @media only screen and (max-width: 800px) {
-      & {
-        height: 100%;
-      }
+      height: 100%;
     }
 
     > div:nth-child(1) {
       display: flex;
-      
+
       > div:nth-child(1) {
         position: relative;
         margin-top: 25px;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            margin-top: 19px;
-            margin-left: -29px;            
-          }
+          margin-top: 19px;
+          margin-left: -29px;
         }
 
         svg {
@@ -39,17 +35,15 @@
           position: inherit;
 
           @media only screen and (max-width: 800px) {
-            & {
-              width: 65px;
-              height: 65px;
-            }
+            width: 65px;
+            height: 65px;
           }
         }
-    
+
         .gear-field svg {
           filter: invert(1);
           z-index: 1 !important;
-    
+
           &:nth-child(1) {
             position: absolute;
             top: 30px;
@@ -59,15 +53,13 @@
             animation: counterclockwiseRotation 3s infinite linear;
 
             @media only screen and (max-width: 800px) {
-              & {
-                top: 20px;
-                left: 17px;
-                width: 15px;
-                height: 15px;
-              }
+              top: 20px;
+              left: 17px;
+              width: 15px;
+              height: 15px;
             }
           }
-          
+
           &:nth-child(2) {
             position: absolute;
             top: 42px;
@@ -77,34 +69,30 @@
             animation: counterclockwiseRotation 10s infinite linear;
 
             @media only screen and (max-width: 800px) {
-              & {
-                top: 32px;
-                left: 11px;
-                width: 20px;
-                height: 20px;
-              }
+              top: 32px;
+              left: 11px;
+              width: 20px;
+              height: 20px;
             }
           }
-          
+
           &:nth-child(3) {
             position: absolute;
             top: 56px;
-            left: 37px;        
+            left: 37px;
             width: 34px;
             height: 34px;
             animation: hourlyRotation 1.3s infinite ease-in-out;
 
             @media only screen and (max-width: 800px) {
-              & {
-                top: 40px;
-                left: 30px;
-                width: 17px;
-                height: 17px;
-              }
+              top: 40px;
+              left: 30px;
+              width: 17px;
+              height: 17px;
             }
           }
         }
-    
+
         @keyframes counterclockwiseRotation {
           from {
             transform: rotate(360deg);
@@ -113,7 +101,7 @@
             transform: rotate(0deg);
           }
         }
-      
+
         @keyframes hourlyRotation {
           from {
             transform: rotate(0deg);
@@ -121,7 +109,7 @@
           to {
             transform: rotate(360deg);
           }
-        }  
+        }
       }
 
       #horizontal-line {
@@ -130,24 +118,20 @@
         margin-top: 42px;
         margin-left: -45px;
         z-index: 2;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            margin-top: 30px;
-            width: 23%;
-          }
+          margin-top: 30px;
+          width: 23%;
         }
-        
+
         > div {
           width: 100%;
           height: 100%;
           background: linear-gradient(-45deg, transparent, transparent, #3c0a4a, #23a6d5, #23d5ab);
           filter: drop-shadow(0 0px 15px #0077cb);
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
-            }
+            background: linear-gradient(-45deg, transparent, #3c0a4a, #23a6d5, #23d5ab);
           }
         }
       }
@@ -162,13 +146,11 @@
         align-items: center;
         justify-content: space-between;
         background-color: var(--bg-panel);
-        border: 1px solid var(--color-border);  
-          
+        border: 1px solid var(--color-border);
+
         @media only screen and (max-width: 800px) {
-          & {
-            height: 40px;
-            padding: 25px 5px;
-          }
+          height: 40px;
+          padding: 25px 5px;
         }
 
         &:hover {
@@ -180,22 +162,20 @@
             display: flex;
           }
         }
-        
+
         &:active {
           transition: 0.1s;
           opacity: 20%;
         }
-        
+
         svg {
           &:nth-child(1) {
             width: 30%;
             height: 50px;
 
             @media only screen and (max-width: 800px) {
-              & {
-                width: 20%;
-                height: 35px;   
-              }
+              width: 20%;
+              height: 35px;
             }
           }
 
@@ -206,7 +186,7 @@
             margin-right: 15px;
           }
         }
-        
+
         > div {
           width: 55%;
           display: flex;
@@ -216,22 +196,18 @@
             color: var(--color-headings);
             font-weight: normal;
             font-size: 1.2rem;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                font-size: 0.9rem;
-              }
+              font-size: 0.9rem;
             }
           }
-          
+
           span {
             color: var(--color-text);
             font-size: 0.9rem;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                font-size: 0.7rem;
-              }
+              font-size: 0.7rem;
             }
           }
         }
@@ -244,22 +220,22 @@
 
     .line-field {
       width: 150px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: -15px;
 
       @media only screen and (max-width: 800px) {
-        & {
-          width: 40px;
-          height: 100%;
-        }
+        width: 40px;
+        height: 100%;
       }
 
       .vertical-line {
         width: 3px;
+        height: 100%;
         z-index: 2 !important;
-        
+
         > div {
           width: 100%;
           height: 100%;
@@ -270,32 +246,26 @@
 
         &:nth-child(1) {
           height: 15px;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              height: 1%;
-            }
+            height: 1%;
           }
         }
-        
+
         &:nth-child(3) {
-          height: 515px;
-          
+          height: 51%;
+
           @media only screen and (max-width: 800px) {
-            & {
-              height: 34%;
-            }
+            height: 35.5%;
           }
         }
-        
+
         &:nth-child(5) {
           animation: none !important;
-          height: 220px;
-          
+          height: 23%;
+
           @media only screen and (max-width: 800px) {
-            & {
-              height: 20%;
-            }
+            height: 17%;
           }
 
           > div {
@@ -303,7 +273,7 @@
           }
         }
       }
-  
+
       @keyframes gradient {
         0% {
           background-position: 50% 0%;

@@ -9,10 +9,15 @@ import Instagram from 'public/images/social-media/vetor-instagram.svg';
 import Whatsapp from 'public/images/social-media/vetor-whatsapp.svg';
 import Behance from 'public/images/social-media/vetor-behance.svg';
 import Linkedin from 'public/images/social-media/vetor-linkedin.svg';
+import Developer from 'public/images/developer.svg';
 import Typed from 'typed.js';
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
+import { Context } from '@/context/layout';
+import Image from 'next/image';
 
 export default function LandingPage() {
+  const { pageWidth }: any = useContext(Context);
+
   const typedRef = useRef<any>(null);
 
   useEffect(() => {
@@ -37,10 +42,18 @@ export default function LandingPage() {
       <div className="position">
         <div>
           <p>Olá, meu nome é</p>
-          <h1 >Davhy Andrade</h1>
+          <h1>Davhy Andrade</h1>
           <p>
             e sou <span ref={typedRef}></span>
           </p>
+          {pageWidth < 800 && (
+            <div className="profile-picture">
+              <div>
+                <Image src="https://github.com/davhyandrade.png" width={100} height={100} alt="profile picture" />
+              </div>
+              <Developer />
+            </div>
+          )}
           <a href="https://api.whatsapp.com/send?phone=5511934643395">
             <button id="btn-contato-landing-page" type="submit">
               Contratar-me
@@ -48,26 +61,26 @@ export default function LandingPage() {
           </a>
           <div className="social-media-field">
             <a href="mailto:davhydesign@gmail.com">
-              <Google/>
+              <Google />
             </a>
             <a href="https://github.com/davhyandrade">
-              <Github/>
+              <Github />
             </a>
             <a href="https://www.instagram.com/_davhy/">
-              <Instagram/>
+              <Instagram />
             </a>
             <a href="https://api.whatsapp.com/send?phone=5511934643395">
-              <Whatsapp/>
+              <Whatsapp />
             </a>
             <a href="https://www.behance.net/davhyandrade">
-              <Behance/>
+              <Behance />
             </a>
             <a href="https://www.linkedin.com/in/davhy-andrade-dev">
-              <Linkedin/>              
+              <Linkedin />
             </a>
           </div>
         </div>
-        <div className="computer-imaging-field">
+        <div className="computer-image-field">
           <Computer id="image-computer" />
           <OrangeGear id="image-orange-gear" />
           <BlueGear id="image-blue-gear" />

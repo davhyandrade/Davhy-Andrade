@@ -3,7 +3,7 @@
     height: 90px;
     background-color: black;
   }
-  
+
   .notfound {
     width: 100%;
     height: 350px;
@@ -13,12 +13,10 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    
+
     @media only screen and (max-width: 800px) {
-      & {
-        height: 300px;
-      }
-    }  
+      height: 300px;
+    }
 
     > div {
       display: flex;
@@ -37,15 +35,13 @@
 
         &:nth-child(1) {
           margin-right: 15px;
-          
+
           span {
             font-size: 8rem;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                font-size: 5rem;
-              }
-            }      
+              font-size: 5rem;
+            }
           }
         }
 
@@ -53,24 +49,20 @@
           span:nth-child(1) {
             font-size: 4.5rem;
             line-height: 65px;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                line-height: 55px;
-                font-size: 2.5rem;
-              }
-            }      
+              line-height: 55px;
+              font-size: 2.5rem;
+            }
           }
 
           span:nth-child(2) {
             letter-spacing: 0.5px;
             font-size: 2rem;
-            
+
             @media only screen and (max-width: 800px) {
-              & {
-                font-size: 1.1rem;
-              }
-            }      
+              font-size: 1.1rem;
+            }
           }
         }
 
@@ -81,7 +73,7 @@
       }
     }
   }
-  
+
   .other-pages {
     width: 100%;
     height: 60vh;
@@ -91,38 +83,32 @@
     background-color: black;
 
     @media only screen and (max-width: 800px) {
-      & {
-        height: auto;
-      }
+      height: auto;
     }
-  
+
     .position {
       width: 70%;
       display: flex;
-      
+
       @media only screen and (max-width: 800px) {
-        & {
-          flex-direction: column;
-          margin-top: 30px;
-          margin-bottom: 70px;
-        }
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 70px;
       }
-    
+
       > div {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         margin-right: 70px;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            width: 100% !important;
-            margin-right: 0 !important;
-            border-right: 0 !important;
-            margin-bottom: 50px;
-          }
+          width: 100% !important;
+          margin-right: 0 !important;
+          border-right: 0 !important;
+          margin-bottom: 50px;
         }
-      
+
         &:nth-last-child(1) {
           margin-right: 0 !important;
         }
@@ -151,25 +137,23 @@
           flex-direction: column;
 
           @media only screen and (max-width: 800px) {
-            & {
-              height: auto;
-              max-height: 310px
-            }
+            height: auto;
+            max-height: 310px;
           }
-    
+
           li {
             margin-bottom: 15px;
             margin-right: 50px;
-  
+
             a {
               color: var(--color-text2);
-              
+
               &:hover {
                 transition: 1s;
                 color: var(--color-primary);
                 text-decoration: underline;
               }
-  
+
               &:active {
                 transition: 1ms;
                 opacity: 20%;

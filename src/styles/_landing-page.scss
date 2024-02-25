@@ -7,13 +7,11 @@
   align-items: center;
   flex-direction: column;
   user-select: none;
-  
+
   @media only screen and (max-width: 800px) {
-    & {
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
+    height: 105vh;
+    position: relative;
+    overflow: hidden;
   }
 
   > .position {
@@ -23,25 +21,23 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
+
     @media only screen and (max-width: 800px) {
-      & {
-        flex-direction: column;
-        align-items: flex-start;
-        position: initial;
-        width: 80%;
-      }
+      flex-direction: column;
+      position: initial;
+      width: 80%;
     }
 
     > div {
       &:nth-child(1) {
         margin-top: 80px;
         z-index: 10;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            margin-top: 20px;
-          }
+          margin-top: 25px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
       }
 
@@ -49,25 +45,23 @@
         font-size: 2.9vw;
         margin-top: 5px;
         color: var(--color-headings);
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            font-size: 1.2rem;
-          }
+          font-size: 1.2rem;
+          width: 90%;
         }
 
         span {
           color: var(--color-primary);
-        }   
+        }
 
         &:nth-child(1) {
           font-size: 2.3vw;
           margin: 0px;
-          
+
           @media only screen and (max-width: 800px) {
-            & {
-              font-size: 1.35rem;              
-            }
+            width: auto;
+            font-size: 1.4rem;
           }
         }
       }
@@ -75,11 +69,41 @@
       h1 {
         color: var(--color-headings);
         font-size: 5vw;
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            font-size: 10.5vw;
-          }
+          font-size: 10vw;
+        }
+      }
+
+      .profile-picture {
+        max-width: 95vw;
+        width: 290px;
+        height: 155px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          width: 155px;
+          height: 120px;
+          background-color: var(--bg-panel);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          border: 2px solid var(--color-purple);
+          filter: drop-shadow(6px 8px 0px var(--bg-panel));
+        }
+
+        img {
+          object-fit: cover;
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        svg {
+          position: absolute;
         }
       }
 
@@ -93,11 +117,9 @@
         letter-spacing: 2px;
         cursor: pointer;
         border: 3px solid var(--color-primary);
-        
+
         @media only screen and (max-width: 800px) {
-          & {
-            display: none;
-          }
+          display: none;
         }
 
         &:hover {
@@ -120,9 +142,7 @@
         margin-top: 20px;
 
         @media only screen and (max-width: 800px) {
-          & {
-            display: none;    
-          }
+          display: none;
         }
 
         svg {
