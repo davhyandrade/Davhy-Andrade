@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Context } from '@/context/layout';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import VectorPhone from 'public/images/menu/vector-phone.svg';
 import Logo from 'public/images/menu/logo-davhy.svg';
@@ -47,10 +46,6 @@ export default function Menu() {
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
     isActive: false,
   });
-
-  useEffect(() => {
-    // if (isActiveButtonsMenu);
-  }, [isActiveButtonsMenu]);
 
   function handleButtonsMenu(urlName: string) {
     setIsactiveName(false);
@@ -171,12 +166,12 @@ export default function Menu() {
 
   function handleCloseDropdownMenuMobile() {
     return [
-      setIsactiveNameMenuMobile({ isActive: false, activeName: undefined }), // close dropdown menu mobile
+      setIsActiveNameMenuMobile({ isActive: false, activeName: undefined }), // close dropdown menu mobile
       setNumberDropdownMenuMobile(7), // defaul dropdown menu mobille
     ];
   }
 
-  const [isactiveNameMenuMobile, setIsactiveNameMenuMobile] = useState<IDropdownMenuMobile>({
+  const [isActiveNameMenuMobile, setIsActiveNameMenuMobile] = useState<IDropdownMenuMobile>({
     isActive: false,
     activeName: undefined,
   });
@@ -301,15 +296,15 @@ export default function Menu() {
         {isActiveToggleMenu && (
           <div className="menu-mobile">
             <nav className="position">
-              {isactiveNameMenuMobile.isActive ? (
-                typeof isactiveNameMenuMobile.activeName !== 'undefined' ? (
+              {isActiveNameMenuMobile.isActive ? (
+                typeof isActiveNameMenuMobile.activeName !== 'undefined' ? (
                   <div className="dropdwon-menu-mobile-field">
                     <ul className="dropdown-menu-mobile">
                       <div className="header" onClick={handleCloseDropdownMenuMobile}>
                         <Arrow />
-                        <h1>{buttonsMenu[isactiveNameMenuMobile.activeName].name}</h1>
+                        <h1>{buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].name}</h1>
                       </div>
-                      {buttonsMenu[isactiveNameMenuMobile.activeName].dropdown
+                      {buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown
                         .slice(0, numberDropdownMenuMobile)
                         .map((item: any, id: number) => {
                           return (
@@ -320,9 +315,9 @@ export default function Menu() {
                             </li>
                           );
                         })}
-                      {buttonsMenu[isactiveNameMenuMobile.activeName].dropdown.length > 7 &&
+                      {buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown.length > 7 &&
                         numberDropdownMenuMobile <
-                          buttonsMenu[isactiveNameMenuMobile.activeName].dropdown.length && (
+                          buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown.length && (
                           <div className="more-dropdown">
                             <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
                           </div>
@@ -361,7 +356,7 @@ export default function Menu() {
                           </Link>
                         ) : (
                           <button
-                            onClick={() => setIsactiveNameMenuMobile({ isActive: true, activeName: item.url })}
+                            onClick={() => setIsActiveNameMenuMobile({ isActive: true, activeName: item.urlName })}
                           >
                             {item.name}
                             <Arrow />
@@ -372,7 +367,7 @@ export default function Menu() {
                   })}
                   <li>
                     <button
-                      onClick={() => setIsactiveNameMenuMobile({ isActive: true, activeName: undefined })}
+                      onClick={() => setIsActiveNameMenuMobile({ isActive: true, activeName: undefined })}
                     >
                       Contact
                       <Arrow />

@@ -545,7 +545,7 @@ main {
 @media only screen and (max-width: 800px) {
   .landing-page > .position > div p {
     font-size: 1.2rem;
-    width: 90%;
+    width: 80%;
   }
 }
 .landing-page > .position > div p span {
@@ -2287,6 +2287,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .resume-field > .position {
     width: 95%;
+    padding-top: 75px;
   }
 }
 .resume-field > .position .header {
@@ -2301,49 +2302,106 @@ dialog::backdrop {
 }
 .resume-field > .position .header > .position {
   width: 98%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.resume-field > .position .header > .position > div {
+@media only screen and (max-width: 800px) {
+  .resume-field > .position .header > .position {
+    width: 95%;
+  }
+}
+.resume-field > .position .header > .position > div:nth-child(1) {
   display: flex;
   flex-direction: column;
 }
 @media only screen and (max-width: 800px) {
-  .resume-field > .position .header > .position > div {
-    margin-left: 10px;
+  .resume-field > .position .header > .position > div:nth-child(1) {
+    display: none;
   }
 }
-.resume-field > .position .header > .position > div > span {
+.resume-field > .position .header > .position > div:nth-child(1) > span {
   color: var(--color-text2);
   font-size: 0.7rem;
   margin-bottom: 2px;
 }
-.resume-field > .position .header > .position > div > div {
+.resume-field > .position .header > .position > div:nth-child(1) > div {
   display: flex;
   align-items: center;
   gap: 7px;
 }
-.resume-field > .position .header > .position > div > div svg {
+.resume-field > .position .header > .position > div:nth-child(1) > div svg {
   width: 20px;
   height: 20px;
   color: var(--color-headings);
 }
 @media only screen and (max-width: 800px) {
-  .resume-field > .position .header > .position > div > div svg {
+  .resume-field > .position .header > .position > div:nth-child(1) > div svg {
     width: 15px;
     height: 15px;
   }
 }
-.resume-field > .position .header > .position > div > div span {
+.resume-field > .position .header > .position > div:nth-child(1) > div span {
   color: var(--color-headings);
 }
 @media only screen and (max-width: 800px) {
-  .resume-field > .position .header > .position > div > div span {
+  .resume-field > .position .header > .position > div:nth-child(1) > div span {
     font-size: 0.7rem;
   }
 }
+.resume-field > .position .header > .position > div:nth-child(2) {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.1803921569);
+  overflow: hidden;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div:nth-child(1) label {
+  padding-left: 20px;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div:nth-last-child(1) label {
+  padding-right: 20px;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div input[type=radio] {
+  display: none;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  color: var(--color-headings);
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div label:active {
+  transition: 1ms;
+  opacity: 30%;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div label:hover {
+  transition: 1s;
+  opacity: 50%;
+}
+.resume-field > .position .header > .position > div:nth-child(2) > div .active-cv-button ~ label {
+  background-color: rgba(128, 128, 128, 0.1803921569);
+  color: var(--color-primary) !important;
+}
 .resume-field > .position .header > .position > a {
+  white-space: nowrap;
   color: var(--color-headings);
   font-size: 1rem;
   letter-spacing: 2px;
@@ -2355,6 +2413,7 @@ dialog::backdrop {
 @media only screen and (max-width: 800px) {
   .resume-field > .position .header > .position > a {
     font-size: 0.8rem;
+    margin-right: 0;
   }
 }
 .resume-field > .position .header > .position > a:hover {

@@ -17,9 +17,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
     @media only screen and (max-width: 800px) {
       width: 95%;
+      padding-top: 75px;
     }
 
     .header {
@@ -34,16 +35,21 @@
 
       > .position {
         width: 98%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        > div {
+        @media only screen and (max-width: 800px) {
+          width: 95%;
+        }
+
+        > div:nth-child(1) {
           display: flex;
           flex-direction: column;
 
           @media only screen and (max-width: 800px) {
-            margin-left: 10px;
+            display: none;
           }
 
           > span {
@@ -82,7 +88,65 @@
           }
         }
 
+        > div:nth-child(2) {
+          height: 65%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 5px;
+          background-color: #8080802e;
+          overflow: hidden;
+
+          > div:nth-child(1) label {
+            padding-left: 20px;
+          }
+
+          > div:nth-last-child(1) label {
+            padding-right: 20px;
+          }
+
+          > div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input[type='radio'] {
+              display: none;
+            }
+
+            label {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 15px;
+              cursor: pointer;
+              user-select: none;
+              transition: 0.5s;
+              font-size: 0.8rem;
+              color: var(--color-headings);
+
+              &:active {
+                transition: 1ms;
+                opacity: 30%;
+              }
+
+              &:hover {
+                transition: 1s;
+                opacity: 50%;
+              }
+            }
+
+            .active-cv-button ~ label {
+              background-color: #8080802e;
+              color: var(--color-primary) !important;
+            }
+          }
+        }
+
         > a {
+          white-space: nowrap;
           color: var(--color-headings);
           font-size: 1rem;
           letter-spacing: 2px;
@@ -93,6 +157,7 @@
 
           @media only screen and (max-width: 800px) {
             font-size: 0.8rem;
+            margin-right: 0;
           }
 
           &:hover {
