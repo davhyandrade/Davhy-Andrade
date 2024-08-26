@@ -11,6 +11,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="google-site-verification" content="XkGW891zLEowrfoj-68YJMFUDcQLKe_jqNEkFfDo1Rs" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Entusiasta de tecnologia, Desenvolvedor Web e Designer Digital." />
+        <meta name="keywords" content="davhy, davhy andrade, davhyandrade, web dev, developer, nextjs, design, designer" />
+        <meta name="author" content="Davhy Andrade"/>
       </Head>
       <Context>
         <Component {...pageProps} />

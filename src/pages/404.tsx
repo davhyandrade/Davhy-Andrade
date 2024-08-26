@@ -1,9 +1,13 @@
-import Link from "next/link";
-import { useSelector } from "react-redux"
+import { Context } from '@/context/layout';
+import Link from 'next/link';
+import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function NotFound() {
+  const { projects }: any = useContext(Context);
+
   const { buttonsMenu } = useSelector((rootReducer: any) => rootReducer.menuReducer);
-  
+
   return (
     <div className="notfound-field">
       <div className="header"></div>
@@ -30,27 +34,38 @@ export default function NotFound() {
       <div className="other-pages">
         <div className="position">
           {buttonsMenu.map((item: any, id: number) => {
-            return (
-              <>
-                {item.dropdown &&
-                  <div key={id}>
-                    <h1>{item.name}</h1>
-                    <ul>
-                      {item.dropdown?.map((item: any, id: number) => {
-                        return (
-                          <li key={id}>
-                            <Link href={item.url}>{item.name}</Link>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  </div>
-                }
-              </>
-            )
+            return item.urlName !== 'projects' ? (
+              item.dropdown && (
+                <div key={id}>
+                  <h1>{item.name}</h1>
+                  <ul>
+                    {item.dropdown?.map((item: any, id: number) => {
+                      return (
+                        <li key={id}>
+                          <Link href={item.url}>{item.name}</Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )
+            ) : (
+              <div key={id}>
+                <h1>{item.name}</h1>
+                <ul>
+                  {projects?.map((item: any, id: number) => {
+                    return (
+                      <li key={id}>
+                        <Link href={`/project/${item._id}`}>{item.title}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
           })}
         </div>
-      </div> 
-    </div>  
-  )
+      </div>
+    </div>
+  );
 }

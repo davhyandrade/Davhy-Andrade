@@ -10,8 +10,8 @@ export default async function handler(request: NextApiRequest, response: NextApi
   if (method === 'POST') {
     try {
       let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
+        host: 'smtp.titan.email',
+        port: 465,
         secure: false,
         auth: {
           user: process.env.USERMAIL,
@@ -20,6 +20,10 @@ export default async function handler(request: NextApiRequest, response: NextApi
         tls: {
           rejectUnauthorized: false,
         },
+        connectionTimeout: 10000,
+        greetingTimeout: 5000,
+        socketTimeout: 10000,
+        debug: true, // Ativa a depuração
       });
 
       let info = await transporter.sendMail({

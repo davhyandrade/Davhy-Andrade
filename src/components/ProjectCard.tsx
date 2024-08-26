@@ -24,7 +24,7 @@ export default function ProjectCard({ url, image, title, description, date }: IP
 
   return (
     <div className="project-card">
-      <Link href={url}>
+      <Link href={`project/${url}`}>
         {dateForDay > 365 ? (
           <span className="yellow-tag" id="tag-card">
             Antigo

@@ -1,0 +1,352 @@
+.project-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(180deg, var(--bg-panel), transparent, var(--bg-panel));
+    border-bottom: 1px solid var(--color-border);
+    margin-top: 55px;
+
+    @media only screen and (max-width: 800px) {
+      height: 130px;          
+    }
+
+    > h1 {
+      text-align: center;
+      width: 100%;
+      color: var(--color-headings);
+      font-size: 2.6rem;
+      font-weight: normal;
+      margin-top: 20px;
+      
+      @media only screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2rem;
+        width: 70%;
+        margin-top: 0;
+      }
+      
+      > b {
+        font-size: 3rem !important;
+
+        @media only screen and (max-width: 800px) {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+
+  > div:not(.header) {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, transparent 5%, var(--bg-color) 15%, var(--bg-color) 85%, transparent 95%);
+    width: 95%;
+
+    .position {
+      width: 100%;
+      max-width: 1270px;
+      margin-top: 30px;
+      margin-bottom: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media only screen and (max-width: 800px) {
+        margin-top: 20px;        
+        margin-bottom: 40px;
+      }
+
+      p {
+        font-family: 'glbOpenSans', 'Open Sans';
+      }
+
+      > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media only screen and (max-width: 800px) {
+          width: 100%;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        > div:nth-child(1) {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @media only screen and (max-width: 800px) {
+            width: 100%;  
+          }
+
+          .status-bar {
+            width: 100%;
+            background-color: var(--bg-panel);
+            border-radius: 5px;
+            padding: 5px 15px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            overflow-x: auto;
+
+            > div {
+              display: flex;
+              justify-content: center;
+              gap: 5px;
+
+              span {
+                color: var(--color-text);
+                font-size: .7rem;
+              }
+
+              > span:nth-child(1) {
+                font-weight: bold;
+                font-variant: all-small-caps;
+              }
+            }
+          }
+
+          .image-field {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+  
+            > div:nth-child(1) {
+              width: 100%;   
+              min-height: 150px;
+              max-height: 400px;
+              background-color: var(--bg-panel);
+              border-radius: 5px;
+              overflow: hidden;
+              display: flex !important;
+              align-items: center;
+              justify-content: center;
+  
+              @media only screen and (max-width: 800px) {
+                min-height: 130px;
+                max-height: 170px;
+              }
+
+              * {
+                height: 100%;
+              }
+  
+              img, video {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        > div:nth-last-child(1) {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+
+          @media only screen and (max-width: 800px) {
+            width: 100%;  
+          }
+          
+          > p {
+            font-size: 1.1rem;
+            color: #c5c5c5;
+            text-align: justify;
+
+            @media only screen and (max-width: 800px) {
+              font-size: .9rem;
+            }
+          }
+
+          #project-link-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            font-size: 1.1rem;
+            color: var(--color-headings);
+            border: 1px solid transparent;
+            opacity: 80%;
+            border-radius: 10px;
+            background-color: var(--bg-panel);
+            cursor: pointer;
+
+            &:hover {
+              transition: 1s;
+              opacity: 100;
+              color: var(--color-primary);
+              border: 1px solid var(--color-border);
+            }
+          }
+
+          > div:nth-last-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+            margin-top: 5px;
+
+            > div:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              gap: 2px;
+              
+              > span {
+                color: var(--color-text);
+                font-size: 0.9rem;
+              }
+
+              > span:nth-child(1) {
+                font-size: 0.7rem !important;
+              }
+
+              > span:nth-last-child(1) {
+                font-weight: bold;
+              }
+            }
+
+            #share-button {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              background-color: var(--bg-panel);
+              border-radius: 15px;
+              color: var(--color-text);
+              cursor: pointer;
+              font-size: 0.65rem;
+              padding: 8px 15px;
+              border: 1px solid transparent;
+              opacity: 80%;
+              margin-top: 5px;
+
+              @media only screen and (max-width: 800px) {
+                margin: 0 !important;
+              }
+
+              svg {
+                width: 10px;
+                height: 10px;
+              }
+
+              &:hover {
+                transition: 1s;
+                border: 1px solid var(--color-border);
+                color: var(--color-headings);
+                opacity: 100%;
+              }
+
+              &:active {
+                transition: 1ms;
+                opacity: 30%;
+              }
+            }
+          }
+        }
+      }
+
+      > div:nth-child(2) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 100px;
+
+        @media only screen and (max-width: 800px) {
+          margin-top: 70px;      
+        }
+
+        > p {
+          color: var(--color-text2);
+          font-size: 1.1rem;
+          text-align: justify;
+
+          @media only screen and (max-width: 800px) {
+              font-size: .8rem;
+          }
+        }
+
+        .image-field {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          > div:nth-child(1) {
+            width: 100%;
+            min-height: 150px;
+            background-color: var(--bg-panel);
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          > span {
+            width: 100%;
+            color: var(--color-text);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            padding: 15px;
+            border-bottom: 1px solid var(--color-border);
+            opacity: 70%;
+          }
+        }
+
+        .tags-field {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 15px;
+
+          h2 {
+            width: 100%;
+            font-weight: normal;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+          }
+        
+          > span {
+            font-size: .8rem;
+            color: var(--color-text);
+            background-color: var(--bg-panel);
+            border-radius: 15px;
+            padding: 7px 20px;
+
+            &:hover {
+              transition: 7ms;
+              filter: brightness(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -295,6 +295,7 @@ main {
   height: 55px;
   background-color: var(--bg-color);
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.356));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0705882353);
 }
 .menu-small .position {
   width: 80%;
@@ -2970,4 +2971,330 @@ dialog::backdrop {
 }
 .about-section > .position .specialties-field .graphic-field .column .bar .progress[data-progress="5"] {
   width: calc(50% * 2);
+}
+
+.project-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  background-image: url(https://i.postimg.cc/3JVQkNDL/background-landing-page4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project-page .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(180deg, var(--bg-panel), transparent, var(--bg-panel));
+  border-bottom: 1px solid var(--color-border);
+  margin-top: 55px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page .header {
+    height: 130px;
+  }
+}
+.project-page .header > h1 {
+  text-align: center;
+  width: 100%;
+  color: var(--color-headings);
+  font-size: 2.6rem;
+  font-weight: normal;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page .header > h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 70%;
+    margin-top: 0;
+  }
+}
+.project-page .header > h1 > b {
+  font-size: 3rem !important;
+}
+@media only screen and (max-width: 800px) {
+  .project-page .header > h1 > b {
+    font-size: 1.5rem !important;
+  }
+}
+.project-page > div:not(.header) {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, transparent 5%, var(--bg-color) 15%, var(--bg-color) 85%, transparent 95%);
+  width: 95%;
+}
+.project-page > div:not(.header) .position {
+  width: 100%;
+  max-width: 1270px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+.project-page > div:not(.header) .position p {
+  font-family: "glbOpenSans", "Open Sans";
+}
+.project-page > div:not(.header) .position > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) {
+    width: 100%;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .status-bar {
+  width: 100%;
+  background-color: var(--bg-panel);
+  border-radius: 5px;
+  padding: 5px 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .status-bar > div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .status-bar > div span {
+  color: var(--color-text);
+  font-size: 0.7rem;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .status-bar > div > span:nth-child(1) {
+  font-weight: bold;
+  font-variant: all-small-caps;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field > div:nth-child(1) {
+  width: 100%;
+  min-height: 150px;
+  max-height: 400px;
+  background-color: var(--bg-panel);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field > div:nth-child(1) {
+    min-height: 130px;
+    max-height: 170px;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field > div:nth-child(1) * {
+  height: 100%;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field > div:nth-child(1) img, .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-child(1) .image-field > div:nth-child(1) video {
+  width: 100%;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) {
+    width: 100%;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > p {
+  font-size: 1.1rem;
+  color: #c5c5c5;
+  text-align: justify;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > p {
+    font-size: 0.9rem;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) #project-link-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  font-size: 1.1rem;
+  color: var(--color-headings);
+  border: 1px solid transparent;
+  opacity: 80%;
+  border-radius: 10px;
+  background-color: var(--bg-panel);
+  cursor: pointer;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) #project-link-button:hover {
+  transition: 1s;
+  opacity: 100;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: 5px;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 2px;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) > div:nth-child(1) > span {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) > div:nth-child(1) > span:nth-child(1) {
+  font-size: 0.7rem !important;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) > div:nth-child(1) > span:nth-last-child(1) {
+  font-weight: bold;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) #share-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-panel);
+  border-radius: 15px;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 0.65rem;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  opacity: 80%;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) #share-button {
+    margin: 0 !important;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) #share-button svg {
+  width: 10px;
+  height: 10px;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) #share-button:hover {
+  transition: 1s;
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  opacity: 100%;
+}
+.project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) #share-button:active {
+  transition: 1ms;
+  opacity: 30%;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 100px;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(2) {
+    margin-top: 70px;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(2) > p {
+  color: var(--color-text2);
+  font-size: 1.1rem;
+  text-align: justify;
+}
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(2) > p {
+    font-size: 0.8rem;
+  }
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .image-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .image-field > div:nth-child(1) {
+  width: 100%;
+  min-height: 150px;
+  background-color: var(--bg-panel);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .image-field > div:nth-child(1) img {
+  width: 100%;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .image-field > span {
+  width: 100%;
+  color: var(--color-text);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 15px;
+  border-bottom: 1px solid var(--color-border);
+  opacity: 70%;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .tags-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .tags-field h2 {
+  width: 100%;
+  font-weight: normal;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .tags-field > span {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  background-color: var(--bg-panel);
+  border-radius: 15px;
+  padding: 7px 20px;
+}
+.project-page > div:not(.header) .position > div:nth-child(2) .tags-field > span:hover {
+  transition: 7ms;
+  filter: brightness(1.5);
 }/*# sourceMappingURL=globals.css.map */

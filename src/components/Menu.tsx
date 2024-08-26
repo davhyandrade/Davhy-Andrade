@@ -41,6 +41,7 @@ export default function Menu() {
     pageWidth,
     setIsActiveToggleMenu,
     isActiveToggleMenu,
+    projects,
   }: any = useContext(Context);
 
   const [isActiveButtonsMenu, setIsActiveButtonsMenu] = useState<IActiveButtonMenu>({
@@ -62,7 +63,10 @@ export default function Menu() {
 
   function handleClickOutside(event: any) {
     if (menu.current && !menu.current.contains(event.target)) {
-      return [setIsActiveButtonsMenu({ isActive: false, activeName: Router.pathname.split('/')[1] }), setIsactiveName(false)];
+      return [
+        setIsActiveButtonsMenu({ isActive: false, activeName: Router.pathname.split('/')[1] }),
+        setIsactiveName(false),
+      ];
     }
   }
 
@@ -231,18 +235,31 @@ export default function Menu() {
                             }`}
                           >
                             <div className="header"></div>
-                            {item.dropdown?.slice(0, 5).map((item: any, id: number) => {
-                              return (
-                                <li key={id}>
-                                  <Link
-                                    onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
-                                    href={item.url}
-                                  >
-                                    {item.name}
-                                  </Link>
-                                </li>
-                              );
-                            })}
+                            {item.urlName !== 'projects'
+                              ? item.dropdown?.slice(0, 5).map((item: any, id: number) => {
+                                  return (
+                                    <li key={id}>
+                                      <Link
+                                        onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
+                                        href={item.url}
+                                      >
+                                        {item.name}
+                                      </Link>
+                                    </li>
+                                  );
+                                })
+                              : projects?.slice(0, 5).map((item: any, id: number) => {
+                                  return (
+                                    <li key={id}>
+                                      <Link
+                                        onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
+                                        href={`project/${item._id}`}
+                                      >
+                                        {item.title}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                             {item.dropdown?.length > 5 && (
                               <div className="more-dropdown">
                                 <span onClick={() => handleMoreButton(item.name)}>more...</span>
@@ -302,22 +319,43 @@ export default function Menu() {
                     <ul className="dropdown-menu-mobile">
                       <div className="header" onClick={handleCloseDropdownMenuMobile}>
                         <Arrow />
-                        <h1>{buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].name}</h1>
+                        <h1>
+                          {
+                            buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
+                              .name
+                          }
+                        </h1>
                       </div>
+                      {isActiveNameMenuMobile.activeName !== 'projects'
+                        ? buttonsMenu
+                            .filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
+                            .dropdown.slice(0, numberDropdownMenuMobile)
+                            .map((item: any, id: number) => {
+                              return (
+                                <li key={id}>
+                                  <Link onClick={() => [setIsActiveMenu(true), toggleMenu()]} href={item.url}>
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              );
+                            })
+                        : projects.slice(0, numberDropdownMenuMobile).map((item: any, id: number) => {
+                            return (
+                              <li key={id}>
+                                <Link
+                                  onClick={() => [setIsActiveMenu(true), toggleMenu()]}
+                                  href={`/project/${item._id}`}
+                                >
+                                  {item.title}
+                                </Link>
+                              </li>
+                            );
+                          })}
                       {buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown
-                        .slice(0, numberDropdownMenuMobile)
-                        .map((item: any, id: number) => {
-                          return (
-                            <li key={id}>
-                              <Link onClick={() => [setIsActiveMenu(true), toggleMenu()]} href={item.url}>
-                                {item.name}
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      {buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown.length > 7 &&
+                        .length > 7 &&
                         numberDropdownMenuMobile <
-                          buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown.length && (
+                          buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
+                            .dropdown.length && (
                           <div className="more-dropdown">
                             <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
                           </div>
@@ -366,9 +404,7 @@ export default function Menu() {
                     );
                   })}
                   <li>
-                    <button
-                      onClick={() => setIsActiveNameMenuMobile({ isActive: true, activeName: undefined })}
-                    >
+                    <button onClick={() => setIsActiveNameMenuMobile({ isActive: true, activeName: undefined })}>
                       Contact
                       <Arrow />
                     </button>

@@ -4,13 +4,14 @@ import { Dispatch, ReactNode, SetStateAction, createContext, useEffect, useRef, 
 import { createGlobalStyle } from 'styled-components';
 import store from '@/redux/store';
 import { Provider } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import EmailModal from '@/components/EmailModal';
 import Footer from '@/components/Footer';
 import LoadingPage from '@/components/LoadingPage';
 import TopButton from '@/components/TopButton';
 import Menu from '@/components/Menu';
 import Router from 'next/router';
+import axios from 'axios';
 
 interface IContext {
   handleOpenEmailModal?: () => void;
@@ -25,6 +26,7 @@ interface IContext {
   pageWidth?: number | undefined;
   setIsActiveToggleMenu?: Dispatch<SetStateAction<boolean>>;
   isActiveToggleMenu?: boolean | undefined;
+  projects?: any;
 }
 
 export const Context = createContext<IContext>({});
@@ -124,11 +126,37 @@ export default function Layout({ children }: ComponentProps) {
 
   const [pageWidth, setpageWidth] = useState<number>(0);
 
-  useEffect(() => {
+  useEffect(() => { 
     return setpageWidth(window.innerWidth);
   }, []);
 
   const [isActiveToggleMenu, setIsActiveToggleMenu] = useState<boolean>(false); // enable menu mobile
+
+  const [projects, setProjects] = useState<any>();
+
+  const fetchProjects = async () => {
+    setIsActiveLoading(true);
+
+    try {
+      await axios.get("/api/project").then((response) => {
+        setProjects(response.data.projects);
+        setTimeout(() => {
+          setIsActiveLoading(false);
+        }, 2000);
+      })
+    } catch (error: any) {
+      setTimeout(() => {
+        setIsActiveLoading(false);
+      }, 2000);
+      if (error.response?.data.msg) toast.error(error.response?.data.msg, {
+        theme: 'colored',
+      })
+    }
+  }
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   return (
     <>
@@ -152,6 +180,7 @@ export default function Layout({ children }: ComponentProps) {
           pageWidth,
           setIsActiveToggleMenu,
           isActiveToggleMenu,
+          projects,
         }}
       >
         <Provider store={store}>

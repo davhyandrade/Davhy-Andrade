@@ -1,25 +1,41 @@
 import { useContext, useState } from 'react';
-import { useSelector } from 'react-redux';
 import ProjectCard from './ProjectCard';
 import CodeIcon from 'public/images/timeline/code.svg';
 import { Context } from '@/context/layout';
 
 interface IProject {
-  name: string;
-  url: string;
-  imageUrl: string;
   description: string;
-  date: string;
+  url: String;
+  title: String;
+  subtitle: String;
+  status_bar: Array<
+    {
+      name: String;
+      value: String;
+    }
+  >;
+  creationDate: Date;
+  introduction: String;
+  image: {
+    url: String;
+    subtitle: String;
+  };
+  paragraphs: Array<
+    {
+      type: String;
+      value?: String;
+      url?: String;
+      subtitle?: String;
+      width?: Number;
+    }
+  >;
+  tags: String[];
 }
 
 export default function Projects() {
-  const { pageWidth }: any = useContext(Context);
-
-  const { buttonsMenu } = useSelector((rootReducer: any) => rootReducer.menuReducer);
+  const { pageWidth, projects }: any = useContext(Context);
 
   let [quantCards, setQuantCards] = useState<number>(8);
-
-  const [projects, setProjects] = useState(buttonsMenu.filter((item: any) => item.name === 'Projects')[0].dropdown);
 
   function handleMoreButton() {
     return setQuantCards((quantCards += 4));
@@ -49,27 +65,27 @@ export default function Projects() {
           </div>
         </div>
         <div className="cards-field">
-          {projects
-            .slice(0, quantCards)
+          {projects && projects
             .sort((project1: IProject, project2: IProject) => {
-              const date1 = new Date(project1.date.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1')).getTime();
-              const date2 = new Date(project2.date.replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$3-$2-$1')).getTime();
+              const date1 = new Date(project1.creationDate.toString().replace(/(\d{4})\/(\d{2})\/(\d{2})/, '$3-$2-$1')).getTime();
+              const date2 = new Date(project2.creationDate.toString().replace(/(\d{4})\/(\d{2})\/(\d{2})/, '$3-$2-$1')).getTime();
               return date2 - date1;
             })
+            .slice(0, quantCards)
             .map((item: any, id: number) => {
               return (
                 <ProjectCard
                   key={id}
-                  url={item.url}
-                  image={item.imageUrl}
-                  title={item.name}
+                  url={item._id}
+                  image={item.image.url}
+                  title={item.title}
                   description={item.description}
-                  date={item.date}
+                  date={item.creationDate.split("T")[0].split("-").reverse().join("/")}
                 />
               );
             })}
         </div>
-        {quantCards < projects.length && (
+        {projects && quantCards < projects.length && (
           <div id="more-button">
             <span onClick={handleMoreButton}>load more...</span>
           </div>

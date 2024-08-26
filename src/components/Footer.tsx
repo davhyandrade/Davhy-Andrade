@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
         <span>My Portfólio ©2022</span>
         <div className="social-media-field">
-          <a href="mailto:davhydesign@gmail.com">
+          <a href="mailto:contato@davhyandrade.com.br">
             <Google />
           </a>
           <a href="https://github.com/davhyandrade">

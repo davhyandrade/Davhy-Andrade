@@ -60,7 +60,7 @@ export default function LandingPage() {
             </button>
           </a>
           <div className="social-media-field">
-            <a href="mailto:davhydesign@gmail.com">
+            <a href="mailto:contato@davhyandrade.com.br">
               <Google />
             </a>
             <a href="https://github.com/davhyandrade">
