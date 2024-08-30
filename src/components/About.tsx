@@ -38,7 +38,7 @@ export default function About() {
             <span>
               <span>Entusiasta da tecnologia</span>, fissurado pela sensação de desenvolver e resolver problemas.
             </span>
-            <br /> Sou Desenvolvedor Web focado em NextJS e Typescript com 2 anos focado na área de programação
+            <br /> Sou Desenvolvedor Web focado em NextJS e Typescript com 4 anos focado na área de programação
             desenvolvendo projetos além de ser Designer Digital com experiência freelancer.
           </p>
         </div>
