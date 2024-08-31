@@ -8,6 +8,7 @@ const initialState = {
     {
       name: 'Projects',
       urlName: 'projects',
+      dropdown: [],
     },
     {
       name: 'Resume',

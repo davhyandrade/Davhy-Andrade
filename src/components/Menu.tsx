@@ -151,10 +151,10 @@ export default function Menu() {
         setIsActiveMenu(true); // enable menu small
         Router.push('/');
         setTimeout(() => {
-          return window.scrollTo({ top: 2700, left: 0 });
+          return window.scrollTo({ top: 2500, left: 0 });
         }, 1000);
       }
-      return window.scrollTo({ top: 2700, left: 0 });
+      return window.scrollTo({ top: 2500, left: 0 });
     }
   }
 
@@ -260,11 +260,13 @@ export default function Menu() {
                                     </li>
                                   );
                                 })}
-                            {item.dropdown?.length > 5 && (
-                              <div className="more-dropdown">
-                                <span onClick={() => handleMoreButton(item.name)}>more...</span>
-                              </div>
-                            )}
+                            {item.urlName !== 'projects'
+                              ? item.dropdown?.length > 5
+                              : projects?.length > 5 && (
+                                  <div className="more-dropdown">
+                                    <span onClick={() => handleMoreButton(item.name)}>more...</span>
+                                  </div>
+                                )}
                           </ul>
                         )}
                       </li>
