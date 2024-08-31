@@ -151,10 +151,10 @@ export default function Menu() {
         setIsActiveMenu(true); // enable menu small
         Router.push('/');
         setTimeout(() => {
-          return window.scrollTo({ top: 2500, left: 0 });
+          return window.scrollTo({ top: 2000, left: 0 });
         }, 1000);
       }
-      return window.scrollTo({ top: 2500, left: 0 });
+      return window.scrollTo({ top: 2000, left: 0 });
     }
   }
 
