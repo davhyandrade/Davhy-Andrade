@@ -11,15 +11,6 @@
     position: relative;
   }
 
-  > .header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    height: 100px;
-    background: linear-gradient(180deg, var(--bg-panel), transparent);
-  }
-
   > .position {
     width: 80% !important;
     max-width: 1200px !important;
@@ -32,7 +23,7 @@
     @media only screen and (max-width: 800px) {
       width: 100% !important;
       align-items: flex-end;
-      margin: 60px 0;
+      margin-bottom: 60px;
     }
 
     .introduction-field {

@@ -21,14 +21,17 @@ interface IDropdownMenuMobile {
 
 interface IProps {
   numberDropdownMenuMobile: number;
+  isActiveToggleMenu: string | undefined;
 }
 
-const GlobalStyles = createGlobalStyle<IProps>`    
-  ${(props) =>
-    props.numberDropdownMenuMobile > 5 &&
-    `.dropdwon-menu-mobile-field {
-        overflow-y: scroll;
-      }`}
+const GlobalStyles = createGlobalStyle<IProps>`
+  .dropdwon-menu-mobile-field {
+    ${(props) => props.numberDropdownMenuMobile > 5 && 'overflow-y: scroll;'}
+  }
+
+  .landing-page {
+    ${(props) => props.isActiveToggleMenu && 'height: 105vh;'}
+  }
 `;
 
 export default function Menu() {
@@ -188,7 +191,7 @@ export default function Menu() {
 
   return (
     <>
-      <GlobalStyles numberDropdownMenuMobile={numberDropdownMenuMobile} />
+      <GlobalStyles numberDropdownMenuMobile={numberDropdownMenuMobile} isActiveToggleMenu={isActiveToggleMenu} />
       <header className={`menu ${scroll > 1200 && 'menu-small'} ${isActiveMenu && 'menu-small'}`}>
         <div className="position">
           <Link href="/" id="logo">

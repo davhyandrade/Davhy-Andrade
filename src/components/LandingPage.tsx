@@ -9,15 +9,10 @@ import Instagram from 'public/images/social-media/vetor-instagram.svg';
 import Whatsapp from 'public/images/social-media/vetor-whatsapp.svg';
 import Behance from 'public/images/social-media/vetor-behance.svg';
 import Linkedin from 'public/images/social-media/vetor-linkedin.svg';
-import Developer from 'public/images/developer.svg';
 import Typed from 'typed.js';
-import { useContext, useEffect, useRef } from 'react';
-import { Context } from '@/context/layout';
-import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 export default function LandingPage() {
-  const { pageWidth }: any = useContext(Context);
-
   const typedRef = useRef<any>(null);
 
   useEffect(() => {
@@ -46,14 +41,6 @@ export default function LandingPage() {
           <p>
             e sou <span ref={typedRef}></span>
           </p>
-          {pageWidth < 800 && (
-            <div className="profile-picture">
-              <div>
-                <Image src="https://github.com/davhyandrade.png" width={100} height={100} alt="profile picture" />
-              </div>
-              <Developer />
-            </div>
-          )}
           <a href="https://api.whatsapp.com/send?phone=5511934643395">
             <button id="btn-contato-landing-page" type="submit">
               Contratar-me

@@ -1,15 +1,10 @@
-import { useContext } from 'react';
 import ProgrammingCode from './ProgrammingCode';
 import Graphic from './Graphic';
 import Timeline from './Timeline';
-import { Context } from '@/context/layout';
 
 export default function About() {
-  const { pageWidth }: any = useContext(Context);
-
   return (
     <section className="about-section">
-      {pageWidth < 800 && <div className="header"></div>}
       <div className="position">
         <Timeline />
         <div className="introduction-field">

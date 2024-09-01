@@ -9,7 +9,7 @@
   user-select: none;
 
   @media only screen and (max-width: 800px) {
-    height: 105vh;
+    height: 85vh;
     position: relative;
     overflow: hidden;
   }
@@ -34,7 +34,7 @@
         z-index: 10;
 
         @media only screen and (max-width: 800px) {
-          margin-top: 25px;
+          margin-top: 30px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -72,38 +72,6 @@
 
         @media only screen and (max-width: 800px) {
           font-size: 10vw;
-        }
-      }
-
-      .profile-picture {
-        max-width: 95vw;
-        width: 290px;
-        height: 155px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        > div {
-          width: 155px;
-          height: 120px;
-          background-color: var(--bg-panel);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-          border: 2px solid var(--color-purple);
-          filter: drop-shadow(6px 8px 0px var(--bg-panel));
-        }
-
-        img {
-          object-fit: cover;
-          width: 100% !important;
-          height: 100% !important;
-        }
-
-        svg {
-          position: absolute;
         }
       }
 
