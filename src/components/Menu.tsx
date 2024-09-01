@@ -87,7 +87,7 @@ export default function Menu() {
 
   useEffect(() => {
     setPathname(Router.pathname.split('/')[1]);
-    setIsActiveButtonsMenu({ isActive: true, activeName: Router.pathname.split('/')[1] });
+    setIsActiveButtonsMenu({ isActive: false, activeName: Router.pathname.split('/')[1] });
   }, []);
 
   const handleRouteChange = () => {
@@ -244,7 +244,7 @@ export default function Menu() {
                         {item.dropdown && (
                           <ul
                             className={`dropdown ${
-                              isActiveButtonsMenu.activeName === item.urlName && 'active-dropdown'
+                              isActiveButtonsMenu.isActive && isActiveButtonsMenu.activeName === item.urlName && 'active-dropdown'
                             }`}
                           >
                             <div className="header"></div>
