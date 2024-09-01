@@ -3138,6 +3138,14 @@ dialog::backdrop {
   gap: 5px;
   margin-top: 5px;
 }
+@media only screen and (max-width: 800px) {
+  .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) {
+    flex-direction: row-reverse;
+    gap: 15px;
+    margin-top: 0;
+    justify-content: end;
+  }
+}
 .project-page > div:not(.header) .position > div:nth-child(1) > div:nth-last-child(1) > div:nth-last-child(1) > div:nth-child(1) {
   display: flex;
   flex-direction: column;
@@ -3196,7 +3204,7 @@ dialog::backdrop {
 }
 @media only screen and (max-width: 800px) {
   .project-page > div:not(.header) .position > div:nth-child(2) {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 }
 .project-page > div:not(.header) .position > div:nth-child(2) > p {
