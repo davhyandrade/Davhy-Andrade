@@ -189,6 +189,16 @@ export default function Menu() {
     return setNumberDropdownMenuMobile(numberDropdownMenuMobile + 7);
   }
 
+  const [buttonsMenuFilteredActiveNameMenu, setButtonsMenuFilteredActiveNameMenu] = useState<any>(
+    buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
+  );
+
+  useEffect(() => {
+    setButtonsMenuFilteredActiveNameMenu(
+      buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
+    );
+  }, [isActiveNameMenuMobile]);
+
   return (
     <>
       <GlobalStyles numberDropdownMenuMobile={numberDropdownMenuMobile} isActiveToggleMenu={isActiveToggleMenu} />
@@ -324,12 +334,7 @@ export default function Menu() {
                     <ul className="dropdown-menu-mobile">
                       <div className="header" onClick={handleCloseDropdownMenuMobile}>
                         <Arrow />
-                        <h1>
-                          {
-                            buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
-                              .name
-                          }
-                        </h1>
+                        <h1>{buttonsMenuFilteredActiveNameMenu?.name}</h1>
                       </div>
                       {isActiveNameMenuMobile.activeName !== 'projects'
                         ? buttonsMenu
@@ -356,15 +361,19 @@ export default function Menu() {
                               </li>
                             );
                           })}
-                      {buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0].dropdown
-                        .length > 7 &&
-                        numberDropdownMenuMobile <
-                          buttonsMenu.filter((item: any) => item.urlName === isActiveNameMenuMobile.activeName)[0]
-                            .dropdown.length && (
-                          <div className="more-dropdown">
-                            <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
-                          </div>
-                        )}
+                      {buttonsMenuFilteredActiveNameMenu?.urlName !== 'projects'
+                        ? buttonsMenuFilteredActiveNameMenu?.dropdown.length > 7 &&
+                          numberDropdownMenuMobile < buttonsMenuFilteredActiveNameMenu?.dropdown.length && (
+                            <div className="more-dropdown">
+                              <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
+                            </div>
+                          )
+                        : projects?.length > 7 &&
+                          numberDropdownMenuMobile < projects.length && (
+                            <div className="more-dropdown">
+                              <span onClick={() => handleMoreButtonMenuMobile()}>more...</span>
+                            </div>
+                          )}
                     </ul>
                   </div>
                 ) : (
