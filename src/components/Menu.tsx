@@ -229,7 +229,7 @@ export default function Menu() {
                               item.url !== '/' && setIsActiveMenu(true),
                               setPathname(item.urlName),
                             ]}
-                            href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
+                            href={`/${typeof item.url !== 'undefined' ? item.url : ''}`}
                           >
                             {item.name}
                           </Link>
@@ -254,7 +254,7 @@ export default function Menu() {
                                     <li key={id}>
                                       <Link
                                         onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
-                                        href={item.url}
+                                        href={`/${item.url}`}
                                       >
                                         {item.name}
                                       </Link>
@@ -266,7 +266,7 @@ export default function Menu() {
                                     <li key={id}>
                                       <Link
                                         onClick={() => [setIsActiveMenu(true), setPathname(item.urlName)]}
-                                        href={`project/${item._id}`}
+                                        href={`/project/${item._id}`}
                                       >
                                         {item.title}
                                       </Link>
@@ -302,7 +302,7 @@ export default function Menu() {
                         {contactDropdown.map((item: any, id: number) => {
                           return (
                             <li key={id} onClick={() => handleOptionsContactButton(item.name)}>
-                              <Link href={item.url}>{item.name}</Link>
+                              <Link href={`/${item.url}`}>{item.name}</Link>
                             </li>
                           );
                         })}
@@ -343,7 +343,7 @@ export default function Menu() {
                             .map((item: any, id: number) => {
                               return (
                                 <li key={id}>
-                                  <Link onClick={() => [setIsActiveMenu(true), toggleMenu()]} href={item.url}>
+                                  <Link onClick={() => [setIsActiveMenu(true), toggleMenu()]} href={`/${item.url}`}>
                                     {item.name}
                                   </Link>
                                 </li>
@@ -387,7 +387,7 @@ export default function Menu() {
                       {contactDropdown.map((item: any, id: number) => {
                         return (
                           <li key={id} onClick={() => handleOptionsContactButton(item.name)}>
-                            <Link href={item.url}>{item.name}</Link>
+                            <Link href={`/${item.url}`}>{item.name}</Link>
                           </li>
                         );
                       })}
@@ -402,7 +402,7 @@ export default function Menu() {
                         {typeof item.url !== 'undefined' ? (
                           <Link
                             onClick={() => [toggleMenu(), item.url !== '/' && setIsActiveMenu(true)]}
-                            href={`${typeof item.url !== 'undefined' ? item.url : ''}`}
+                            href={`/${typeof item.url !== 'undefined' ? item.url : ''}`}
                           >
                             {item.name}
                           </Link>
