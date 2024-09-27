@@ -122,7 +122,7 @@ export default function Project() {
                           .catch(() => {
                             toast('Algo deu errado!', {
                               theme: 'colored',
-                            });
+                            }); 
                           })
                       }
                       id="share-button"

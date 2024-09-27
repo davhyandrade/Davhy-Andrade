@@ -1,3 +1,4 @@
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Context from '@/context/layout';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
@@ -23,17 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="https://i.postimg.cc/Qtch9s7s/screencapture-davhyandrade-br-2024-09-04-09-53-57.png"/>
         <meta property="og:type" content="website"/>
       </Head>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-QMB3N8TTYK"></Script>
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-QMB3N8TTYK');
-        `}
-      </Script>
+      <GoogleAnalytics/>
       <Context>
         <Component {...pageProps} />
       </Context>
